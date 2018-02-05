@@ -2,6 +2,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {1}Introduction}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {2}Background}{10}
+\contentsline {chapter}{\chapternumberline {2}Background}{11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}First Principles}{10}
+\contentsline {section}{\numberline {2.1}First Principles}{12}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {3}Theory}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {4}Equipment}{15}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {5}Method}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {6}Results}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {7}Discussion}{21}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {8}Conclusion}{23}
