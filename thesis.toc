@@ -2,18 +2,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {1}Introduction}{9}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {2}Background}{11}
+\contentsline {chapter}{\chapternumberline {2}Theory}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}First Principles}{12}
+\contentsline {section}{\numberline {2.1}Reverse osmosis membrane}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {3}Theory}{13}
+\contentsline {section}{\numberline {2.2}System identification}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {4}Equipment}{15}
+\contentsline {section}{\numberline {2.3}Control theory}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {5}Method}{17}
+\contentsline {chapter}{\chapternumberline {3}Equipment}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {6}Results}{19}
+\contentsline {section}{\numberline {3.1}Reverse osmosis membrane}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {7}Discussion}{21}
+\contentsline {chapter}{\chapternumberline {4}Method}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {8}Conclusion}{23}
+\contentsline {chapter}{\chapternumberline {5}Results}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {6}Discussion}{20}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {7}Conclusion}{22}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  6 FEB 2018 13:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  7 FEB 2018 12:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1136,7 +1136,8 @@ File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 \@quotelevel=\count347
 \@quotereset=\count348
 
-No file thesis.aux.
+(./thesis.aux (./introduction.aux) (./theory.aux) (./equipment.aux)
+(./method.aux) (./results.aux) (./discussion.aux) (./conclusion.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -1152,6 +1153,7 @@ LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 12.
+
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -1440,77 +1442,100 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 ]
 \openout2 = `introduction.aux'.
 
- (./introduction.tex) [10
-
-] [11
-
-
-]
-\openout2 = `background.aux'.
-
- (./background.tex
+ (./introduction.tex
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 4.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 4.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 3.
 
 
-LaTeX Warning: Citation 'ast_wit2011' on page 12 undefined on input line 5.
+LaTeX Warning: Citation 'Dow' on page 10 undefined on input line 5.
 
-) [12
 
-] [13
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
+
+ []
+
+[10
+
+]) [11] [12
 
 
 ]
 \openout2 = `theory.aux'.
 
- (./theory.tex) [14
+ (./theory.tex) [13
 
-] [15
+] [14
 
 
 ]
 \openout2 = `equipment.aux'.
 
- (./equipment.tex) [16
+ (./equipment.tex) [15
 
-] [17
+] [16
 
 
 ]
 \openout2 = `method.aux'.
 
- (./method.tex) [18
 
-] [19
+(./method.tex) [17
+
+] [18
 
 
 ]
 \openout2 = `results.aux'.
 
- (./results.tex) [20
+ (./results.tex) [19
 
-] [21
+] [20
 
 
 ]
 \openout2 = `discussion.aux'.
 
- (./discussion.tex) [22
+ (./discussion.tex) [21
 
-] [23
+]
+[22
 
 
 ]
 \openout2 = `conclusion.aux'.
 
-
-(./conclusion.tex) [24
+ (./conclusion.tex) [23
 
 ]
 
-LaTeX Warning: Empty bibliography on input line 52.
+LaTeX Warning: Empty bibliography on input line 51.
 
 \tf@thm=\write6
 \openout6 = `thesis.thm'.
@@ -1518,9 +1543,8 @@ LaTeX Warning: Empty bibliography on input line 52.
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
-(./thesis.aux (./introduction.aux) (./background.aux) (./theory.aux)
-(./equipment.aux) (./method.aux) (./results.aux) (./discussion.aux)
-(./conclusion.aux))
+(./thesis.aux (./introduction.aux) (./theory.aux) (./equipment.aux)
+(./method.aux) (./results.aux) (./discussion.aux) (./conclusion.aux))
 
 LaTeX Warning: There were undefined references.
 
@@ -1534,10 +1558,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 13998 strings out of 492995
- 217358 string characters out of 6132705
- 488083 words of memory out of 5000000
- 17320 multiletter control sequences out of 15000+600000
+ 14015 strings out of 492995
+ 217550 string characters out of 6132705
+ 489083 words of memory out of 5000000
+ 17326 multiletter control sequences out of 15000+600000
  39345 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,10n,39p,875b,1213s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1548,10 +1572,10 @@ mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist
 /fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on thesis.pdf (24 pages, 114875 bytes).
+Output written on thesis.pdf (23 pages, 118010 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 106 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
