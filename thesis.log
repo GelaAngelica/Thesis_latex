@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  6 FEB 2018 12:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  6 FEB 2018 13:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1136,9 +1136,7 @@ File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 \@quotelevel=\count347
 \@quotereset=\count348
 
-(./thesis.aux (./introduction.aux) (./background.aux) (./theory.aux)
-(./equipment.aux) (./method.aux) (./results.aux) (./discussion.aux)
-(./conclusion.aux))
+No file thesis.aux.
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -1154,7 +1152,6 @@ LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 12.
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -1537,10 +1534,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14024 strings out of 492995
- 217694 string characters out of 6132705
+ 13998 strings out of 492995
+ 217358 string characters out of 6132705
  488083 words of memory out of 5000000
- 17328 multiletter control sequences out of 15000+600000
+ 17320 multiletter control sequences out of 15000+600000
  39345 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,10n,39p,875b,1213s stack positions out of 5000i,500n,10000p,200000b,80000s
