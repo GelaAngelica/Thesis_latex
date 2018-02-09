@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  7 FEB 2018 12:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  9 FEB 2018 11:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1489,7 +1489,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 ]
 \openout2 = `theory.aux'.
 
- (./theory.tex) [13
+ (./theory.tex
+
+LaTeX Warning: Citation 'Singh' on page 13 undefined on input line 3.
+
+) [13
 
 ] [14
 
@@ -1505,8 +1509,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 ]
 \openout2 = `method.aux'.
 
-
-(./method.tex) [17
+ (./method.tex) [17
 
 ] [18
 
@@ -1524,8 +1527,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  (./discussion.tex) [21
 
-]
-[22
+] [22
 
 
 ]
@@ -1535,7 +1537,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
 ]
 
-LaTeX Warning: Empty bibliography on input line 51.
+LaTeX Warning: Empty bibliography on input line 55.
 
 \tf@thm=\write6
 \openout6 = `thesis.thm'.
@@ -1572,7 +1574,7 @@ mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist
 /fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on thesis.pdf (23 pages, 118010 bytes).
+Output written on thesis.pdf (23 pages, 120543 bytes).
 PDF statistics:
  106 PDF objects out of 1000 (max. 8388607)
  73 compressed objects within 1 object stream

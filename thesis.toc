@@ -4,11 +4,17 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {2}Theory}{12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Reverse osmosis membrane}{13}
+\contentsline {section}{\numberline {2.1}Semi-permeable membrane}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}System identification}{13}
+\contentsline {section}{\numberline {2.2}Osmosis}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Control theory}{13}
+\contentsline {section}{\numberline {2.3}Reverse osmosis}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Modeling}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}System identification}{13}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.6}Control theory}{13}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {3}Equipment}{14}
 \defcounter {refsection}{0}\relax 
