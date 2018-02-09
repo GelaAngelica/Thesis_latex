@@ -2,6 +2,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {1}Introduction}{9}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.1}Background}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.2}Motivation}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.3}Goal}{10}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.4}Method}{11}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\chapternumberline {2}Theory}{12}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Semi-permeable membrane}{13}
@@ -10,20 +18,42 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}Reverse osmosis}{13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Modeling}{13}
+\contentsline {subsection}{Fouling}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}System identification}{13}
+\contentsline {section}{\numberline {2.4}Modeling}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Control theory}{13}
+\contentsline {section}{\numberline {2.5}System identification}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {3}Equipment}{14}
+\contentsline {section}{\numberline {2.6}Control theory}{14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Reverse osmosis membrane}{15}
+\contentsline {chapter}{\chapternumberline {3}Equipment}{15}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {4}Method}{16}
+\contentsline {section}{\numberline {3.1}Reverse osmosis membrane}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {5}Results}{18}
+\contentsline {section}{\numberline {3.2}Pumps}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {6}Discussion}{20}
+\contentsline {section}{\numberline {3.3}Simscape}{16}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\chapternumberline {7}Conclusion}{22}
+\contentsline {section}{\numberline {3.4}Simulink}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}Measurement instruments}{16}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {4}Method/Implementation}{17}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Research}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Modeling}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Design control algorithms}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Control simulations}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.5}Implementation test rig}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}Improvements}{18}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {5}Results}{19}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {6}Discussion}{21}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\chapternumberline {7}Conclusion}{23}
