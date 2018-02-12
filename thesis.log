@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  9 FEB 2018 16:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  12 FEB 2018 09:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1492,7 +1492,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--24
 
 [10
 
-]) [11] [12
+]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 25.
+) [11] [12
 
 
 ]
@@ -1513,9 +1516,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--13
 [13
 
 ]
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 37.
-
 
 LaTeX Warning: Citation 'Puretech' on page 14 undefined on input line 38.
 
@@ -1533,7 +1533,27 @@ LaTeX Warning: Citation 'Puretech' on page 14 undefined on input line 38.
 ]
 \openout2 = `method.aux'.
 
- (./method.tex) [18
+ (./method.tex
+Underfull \hbox (badness 10000) in paragraph at lines 15--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--25
+
+ []
+
+) [18
 
 ] [19
 
@@ -1557,7 +1577,8 @@ LaTeX Warning: Citation 'Puretech' on page 14 undefined on input line 38.
 ]
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex) [24
+
+(./conclusion.tex) [24
 
 ]
 
@@ -1584,10 +1605,10 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14021 strings out of 492995
- 217625 string characters out of 6132705
+ 14023 strings out of 492995
+ 217644 string characters out of 6132705
  491083 words of memory out of 5000000
- 17331 multiletter control sequences out of 15000+600000
+ 17333 multiletter control sequences out of 15000+600000
  42075 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,11n,39p,1142b,1213s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1598,7 +1619,7 @@ mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist
 /fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on thesis.pdf (24 pages, 125262 bytes).
+Output written on thesis.pdf (24 pages, 125841 bytes).
 PDF statistics:
  109 PDF objects out of 1000 (max. 8388607)
  75 compressed objects within 1 object stream
