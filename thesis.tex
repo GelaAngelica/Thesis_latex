@@ -1,16 +1,20 @@
 \documentclass{LTHthesis}
-%\documentclass[svenska]{LTHthesis} % Om rapporten är på svenska, så är det
-                                    % den här raden som skall användas, och 
-                                    % den föregående skall tas bort.
+
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}  %% Comment if you are not using utf8
 \usepackage{mathptmx, helvet}
 \usepackage{graphicx}
 \usepackage{biblatex}
 \usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{ntheorem}
+\usepackage{latexsym}
+\usepackage{framed}
 
-\addbibresource{mybib.bib}  %%  Comment if you don't want to use bibtex.
 
+\addbibresource{mybib.bib} 
 \begin{document}
 \begin{titlepages}
 \author{Angelica Persson \\ Pontus Lundberg}
@@ -24,18 +28,17 @@
 A condensed description of my work.
 \chapter*{Acknowledgements}
 These people helped me a lot with my work.
+
 \tableofcontents
+
 
 %\include{ordlista}
 
-%symbolf�rteckning
+%symbolf�rteckning - tecken tabell
 
 \chapter{Introduction}
 \include{introduction}
 
-
-%\chapter{Background}
-%\include{background}
 
 \chapter{Theory}
 \include{theory}
@@ -55,7 +58,7 @@ These people helped me a lot with my work.
 \chapter{Conclusion}
 \include{conclusion}
 
-\printbibliography  %% Comment if you don't want to use bibtex
+\printbibliography 
 
 \end{document}
 

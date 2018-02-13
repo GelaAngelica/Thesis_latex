@@ -1,0 +1,92 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: thesis.aux
+The style file: biblatex.bst
+A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: theory.aux
+A level-1 auxiliary file: equipment.aux
+A level-1 auxiliary file: method.aux
+A level-1 auxiliary file: results.aux
+A level-1 auxiliary file: discussion.aux
+A level-1 auxiliary file: conclusion.aux
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: thesis-blx.bib
+Database file #2: mybib.bib
+I was expecting a `,' or a `}'---line 15 of file mybib.bib
+ :  
+ :  volume = {435}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 28 of file mybib.bib
+ : 
+ : %AUTHOR = {M. C. Golumbic},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 36 of file mybib.bib
+ : 
+ : %AUTHOR = {W. Vickrey},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 44 of file mybib.bib
+ :    
+ :    % author = "Donald Knuth",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Biblatex version: 3.3
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 4 entries,
+            6256 wiz_defined-function locations,
+            1200 strings with 8983 characters,
+and the built_in function-call counts, 12990 in all, are:
+= -- 731
+> -- 286
+< -- 72
++ -- 224
+- -- 97
+* -- 884
+:= -- 1272
+add.period$ -- 0
+call.type$ -- 4
+change.case$ -- 31
+chr.to.int$ -- 30
+cite$ -- 6
+duplicate$ -- 1316
+empty$ -- 1351
+format.name$ -- 142
+if$ -- 2805
+int.to.chr$ -- 0
+int.to.str$ -- 6
+missing$ -- 0
+newline$ -- 89
+num.names$ -- 123
+pop$ -- 1025
+preamble$ -- 1
+purify$ -- 37
+quote$ -- 0
+skip$ -- 517
+stack$ -- 0
+substring$ -- 1106
+swap$ -- 367
+text.length$ -- 86
+text.prefix$ -- 4
+top$ -- 1
+type$ -- 124
+warning$ -- 0
+while$ -- 167
+width$ -- 0
+write$ -- 86
+(There were 4 error messages)
