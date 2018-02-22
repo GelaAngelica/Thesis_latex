@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  12 FEB 2018 09:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  22 FEB 2018 14:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1127,32 +1127,311 @@ File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
 \Gin@req@height=\dimen164
 \Gin@req@width=\dimen165
 )
+(/usr/local/texlive/2017/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2017/05/13 L3 programming layer (loader) 
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3-code.tex
+Package: expl3 2017/05/13 L3 programming layer (code)
+\c_max_int=\count347
+\l_tmpa_int=\count348
+\l_tmpb_int=\count349
+\g_tmpa_int=\count350
+\g_tmpb_int=\count351
+\g__prg_map_int=\count352
+\c_log_iow=\count353
+\l_iow_line_count_int=\count354
+\l__iow_line_target_int=\count355
+\l__iow_one_indent_int=\count356
+\l__iow_indent_int=\count357
+\c_zero_dim=\dimen166
+\c_max_dim=\dimen167
+\l_tmpa_dim=\dimen168
+\l_tmpb_dim=\dimen169
+\g_tmpa_dim=\dimen170
+\g_tmpb_dim=\dimen171
+\c_zero_skip=\skip273
+\c_max_skip=\skip274
+\l_tmpa_skip=\skip275
+\l_tmpb_skip=\skip276
+\g_tmpa_skip=\skip277
+\g_tmpb_skip=\skip278
+\c_zero_muskip=\muskip12
+\c_max_muskip=\muskip13
+\l_tmpa_muskip=\muskip14
+\l_tmpb_muskip=\muskip15
+\g_tmpa_muskip=\muskip16
+\g_tmpb_muskip=\muskip17
+\l_keys_choice_int=\count358
+\c__fp_leading_shift_int=\count359
+\c__fp_middle_shift_int=\count360
+\c__fp_trailing_shift_int=\count361
+\c__fp_big_leading_shift_int=\count362
+\c__fp_big_middle_shift_int=\count363
+\c__fp_big_trailing_shift_int=\count364
+\c__fp_Bigg_leading_shift_int=\count365
+\c__fp_Bigg_middle_shift_int=\count366
+\c__fp_Bigg_trailing_shift_int=\count367
+\c__fp_rand_size_int=\count368
+\c__fp_rand_four_int=\count369
+\c__fp_rand_eight_int=\count370
+\l__sort_length_int=\count371
+\l__sort_min_int=\count372
+\l__sort_top_int=\count373
+\l__sort_max_int=\count374
+\l__sort_true_max_int=\count375
+\l__sort_block_int=\count376
+\l__sort_begin_int=\count377
+\l__sort_end_int=\count378
+\l__sort_A_int=\count379
+\l__sort_B_int=\count380
+\l__sort_C_int=\count381
+\c_empty_box=\box31
+\l_tmpa_box=\box32
+\l_tmpb_box=\box33
+\g_tmpa_box=\box34
+\g_tmpb_box=\box35
+\l__box_top_dim=\dimen172
+\l__box_bottom_dim=\dimen173
+\l__box_left_dim=\dimen174
+\l__box_right_dim=\dimen175
+\l__box_top_new_dim=\dimen176
+\l__box_bottom_new_dim=\dimen177
+\l__box_left_new_dim=\dimen178
+\l__box_right_new_dim=\dimen179
+\l__box_internal_box=\box36
+\l__coffin_internal_box=\box37
+\l__coffin_internal_dim=\dimen180
+\l__coffin_offset_x_dim=\dimen181
+\l__coffin_offset_y_dim=\dimen182
+\l__coffin_x_dim=\dimen183
+\l__coffin_y_dim=\dimen184
+\l__coffin_x_prime_dim=\dimen185
+\l__coffin_y_prime_dim=\dimen186
+\c_empty_coffin=\box38
+\l__coffin_aligned_coffin=\box39
+\l__coffin_aligned_internal_coffin=\box40
+\l_tmpa_coffin=\box41
+\l_tmpb_coffin=\box42
+\l__coffin_display_coffin=\box43
+\l__coffin_display_coord_coffin=\box44
+\l__coffin_display_pole_coffin=\box45
+\l__coffin_display_offset_dim=\dimen187
+\l__coffin_display_x_dim=\dimen188
+\l__coffin_display_y_dim=\dimen189
+\l__coffin_bounding_shift_dim=\dimen190
+\l__coffin_left_corner_dim=\dimen191
+\l__coffin_right_corner_dim=\dimen192
+\l__coffin_bottom_corner_dim=\dimen193
+\l__coffin_top_corner_dim=\dimen194
+\l__coffin_scaled_total_height_dim=\dimen256
+\l__coffin_scaled_width_dim=\dimen257
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
+File: l3pdfmode.def 2017/03/18 v L3 Experimental driver: PDF mode
+\l__driver_color_stack_int=\count382
+\l__driver_tmp_box=\box46
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2017/05/13 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count383
+\g__xparse_grabber_int=\count384
+\l__xparse_m_args_int=\count385
+\l__xparse_mandatory_args_int=\count386
+\l__xparse_v_nesting_int=\count387
+)
+Package: siunitx 2017/05/19 v2.7g A comprehensive (SI) units package
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2017/05/13 LaTeX2e option processing using LaTeX3 keys
+)
+\l__siunitx_tmp_box=\box47
+\l__siunitx_tmp_dim=\dimen258
+\l__siunitx_tmp_int=\count388
+\l__siunitx_number_mantissa_length_int=\count389
+\l__siunitx_number_uncert_length_int=\count390
+\l__siunitx_round_int=\count391
+\l__siunitx_process_decimal_int=\count392
+\l__siunitx_process_uncertainty_int=\count393
+\l__siunitx_process_fixed_int=\count394
+\l__siunitx_process_integer_min_int=\count395
+\l__siunitx_process_precision_int=\count396
+\l__siunitx_group_min_int=\count397
+\l__siunitx_angle_marker_box=\box48
+\l__siunitx_angle_unit_box=\box49
+\l__siunitx_angle_marker_dim=\dimen259
+\l__siunitx_angle_unit_dim=\dimen260
+\l__siunitx_unit_int=\count398
+\l__siunitx_unit_denominator_int=\count399
+\l__siunitx_unit_numerator_int=\count400
+\l__siunitx_unit_prefix_int=\count401
+\l__siunitx_unit_prefix_base_int=\count402
+\l__siunitx_unit_prefix_gram_int=\count403
+\l__siunitx_number_product_int=\count404
+\c__siunitx_one_fill_skip=\skip279
+\l__siunitx_table_unit_align_skip=\skip280
+\l__siunitx_table_exponent_dim=\dimen261
+\l__siunitx_table_integer_dim=\dimen262
+\l__siunitx_table_mantissa_dim=\dimen263
+\l__siunitx_table_marker_dim=\dimen264
+\l__siunitx_table_result_dim=\dimen265
+\l__siunitx_table_uncert_dim=\dimen266
+\l__siunitx_table_fill_pre_dim=\dimen267
+\l__siunitx_table_fill_post_dim=\dimen268
+\l__siunitx_table_fill_mid_dim=\dimen269
+\l__siunitx_table_pre_box=\box50
+\l__siunitx_table_post_box=\box51
+\l__siunitx_table_mantissa_box=\box52
+\l__siunitx_table_result_box=\box53
+\l__siunitx_table_number_align_skip=\skip281
+\l__siunitx_table_text_align_skip=\skip282
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareBinaryPrefix with sig. 'mmm' on line 7251.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIPostPower with sig. 'mm' on line 7254.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIPrefix with sig. 'mmm' on line 7257.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIPrePower with sig. 'mm' on line 7260.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIQualifier with sig. 'mm' on line 7263.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIUnit with sig. 'O{}mm' on line 7266.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \DeclareSIUnitWithOptions with sig. 'mmm' on line 7269.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \ang with sig. 'o>{\SplitArgument {2}{;}}m' on line 7284.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \num with sig. 'om' on line 7293.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \numlist with sig. 'o>{\SplitList {;}}m' on line 7302.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \numrange with sig. 'omm' on line 7311.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIlist with sig. 'o>{\SplitList {;}}mm' on line 7323.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIrange with sig. 'ommm' on line 7335.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SI with sig. 'omom' on line 7347.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \sisetup with sig. 'm' on line 7350.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \tablenum with sig. 'om' on line 7365.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \si with sig. 'om' on line 7377.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \numInBookmark with sig. 'om' on line 7424.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \numrangeInBookmark with sig. 'omm' on line 7426.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIInBookmark with sig. 'omom' on line 7428.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIlistInBookmark with sig. 'omm' on line 7430.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \SIrangeInBookmark with sig. 'ommm' on line 7432.
+.................................................
+.................................................
+. LaTeX info: "xparse/define-command"
+. 
+. Defining command \siInBookmark with sig. 'om' on line 7433.
+.................................................
+\g__file_internal_ior=\read3
+(/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/translator/translator.sty
+Package: translator 2010/06/12 ver 1.10
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/translator/translator-lang
+uage-mappings.tex)))
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/biblatex/lbx/english.lbx
 File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 )
-\@quotelevel=\count347
-\@quotereset=\count348
+\@quotelevel=\count405
+\@quotereset=\count406
 
 (./thesis.aux (./introduction.aux) (./theory.aux) (./equipment.aux)
 (./method.aux) (./results.aux) (./discussion.aux) (./conclusion.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 20.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -1322,23 +1601,22 @@ Package biblatex Info: Data encoding 'utf8' specified.
 \openout5 = `thesis-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'thesis.bbl' not found.
-
-No file thesis.bbl.
-Package biblatex Info: Reference section=0 on input line 13.
-Package biblatex Info: Reference segment=0 on input line 13.
+Package biblatex Info: ... file 'thesis.bbl' found.
+ (./thesis.bbl)
+Package biblatex Info: Reference section=0 on input line 20.
+Package biblatex Info: Reference segment=0 on input line 20.
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count349
-\scratchdimen=\dimen166
-\scratchbox=\box31
-\nofMPsegments=\count350
-\nofMParguments=\count351
+\scratchcounter=\count407
+\scratchdimen=\dimen270
+\scratchbox=\box54
+\nofMPsegments=\count408
+\nofMParguments=\count409
 \everyMPshowfont=\toks49
-\MPscratchCnt=\count352
-\MPscratchDim=\dimen167
-\MPnumerator=\count353
-\makeMPintoPDFobject=\count354
+\MPscratchCnt=\count410
+\MPscratchDim=\dimen271
+\MPnumerator=\count411
+\makeMPintoPDFobject=\count412
 \everyMPtoPDFconversion=\toks50
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -1360,7 +1638,55 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for T1+phv on input line 21.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/translator/dicts/translato
+r-basic-dictionary/translator-basic-dictionary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
+File: siunitx-abbreviations.cfg 2017/05/19 v2.7g siunitx: Abbreviated units
+)
+\c__siunitx_mathsf_int=\count413
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 20
+.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
+File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 20
+.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omlztmcm.fd
+File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 20
+.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omsztmcm.fd
+File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 20
+.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omxztmcm.fd
+File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
+)
+LaTeX Font Info:    Try loading font information for U+lasy on input line 20.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 20.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 20.
+\c__siunitx_mathtt_int=\count414
+LaTeX Font Info:    Try loading font information for T1+phv on input line 28.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
@@ -1368,18 +1694,18 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 <LUBWen.pdf, id=1, 287.25731pt x 383.66518pt>
 File: LUBWen.pdf Graphic file (type pdf)
  <use LUBWen.pdf>
-Package pdftex.def Info: LUBWen.pdf used on input line 21.
+Package pdftex.def Info: LUBWen.pdf used on input line 28.
 (pdftex.def)             Requested size: 71.13188pt x 95.00279pt.
  [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./LUBWe
 n.pdf>]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 21.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 28.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 ) [2]
-LaTeX Font Info:    Try loading font information for T1+pbk on input line 22.
+LaTeX Font Info:    Try loading font information for T1+pbk on input line 29.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1pbk.fd
 File: t1pbk.fd 2001/06/04 font definitions for T1/pbk.
@@ -1393,49 +1719,8 @@ File: t1pbk.fd 2001/06/04 font definitions for T1/pbk.
 
 ] (./thesis.toc
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 3.
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 3.
-
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
-File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 3.
-
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omlztmcm.fd
-File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 3.
-
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omsztmcm.fd
-File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 3.
-
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/omxztmcm.fd
-File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
-)
-LaTeX Font Info:    Try loading font information for U+lasy on input line 3.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 3.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ptm.fd
-File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
- [7]) [8]
-[9
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
+ [7]) [8] [9
 
 
 ]
@@ -1446,10 +1731,6 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 3.
-
-
-LaTeX Warning: Citation 'Dow' on page 10 undefined on input line 5.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--10
 
@@ -1501,73 +1782,100 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
 ]
 \openout2 = `theory.aux'.
 
- (./theory.tex
+ (./theory.tex <Osmosis.png, id=49, 353.32pt x 345.29pt>
+File: Osmosis.png Graphic file (type png)
 
-LaTeX Warning: Citation 'Singh' on page 13 undefined on input line 3.
+<use Osmosis.png>
+Package pdftex.def Info: Osmosis.png used on input line 11.
+(pdftex.def)             Requested size: 132.79797pt x 129.77847pt.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 12.
 
 
-LaTeX Warning: Citation 'Puretech' on page 13 undefined on input line 10.
+LaTeX Warning: Reference `fig:ReverseOsmosis' on page 13 undefined on input lin
+e 17.
 
+<ReverseOsmosis.png, id=51, 372.39125pt x 342.27875pt>
+File: ReverseOsmosis.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--13
+<use ReverseOsmosis.png>
+Package pdftex.def Info: ReverseOsmosis.png used on input line 20.
+(pdftex.def)             Requested size: 132.79797pt x 122.06079pt.
+ [13
+
+ <./Osmosis.png>] [14 <./ReverseOsmosis.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 51--52
 
  []
 
-[13
-
-]
-
-LaTeX Warning: Citation 'Puretech' on page 14 undefined on input line 38.
-
-) [14] [15
+) [15] [16
 
 
 ]
 \openout2 = `equipment.aux'.
 
- (./equipment.tex) [16
+ (./equipment.tex
 
-] [17
+LaTeX Warning: Citation 'DOW' on page 17 undefined on input line 17.
+
+) [17
+
+] [18
 
 
 ]
 \openout2 = `method.aux'.
 
- (./method.tex) [18
+ (./method.tex) [19
 
-] [19
+] [20
 
 
 ]
 \openout2 = `results.aux'.
 
- (./results.tex) [20
+ (./results.tex
+Overfull \hbox (2.36787pt too wide) in paragraph at lines 10--10
+[]|\T1/ptm/m/n/10 Case| 
+ []
 
-] [21
+) [21
+
+] [22
 
 
 ]
 \openout2 = `discussion.aux'.
 
- (./discussion.tex) [22
+ (./discussion.tex) [23
 
-] [23
+] [24
 
 
 ]
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex) [24
+ (./conclusion.tex)
+Underfull \hbox (badness 1742) in paragraph at lines 64--64
+[][]\T1/ptm/m/n/10 R, S. (2015). \T1/ptm/m/it/10 "Mem-brane Tech-nol-ogy and En
+-gi-neer-ing for Wa-ter Pu-rifi-ca-
+ []
 
-]
-
-LaTeX Warning: Empty bibliography on input line 57.
-
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 63.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
 \tf@thm=\write6
 \openout6 = `thesis.thm'.
 
+ [25
+
+
+
+]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
+
 
 (./thesis.aux (./introduction.aux) (./theory.aux) (./equipment.aux)
 (./method.aux) (./results.aux) (./discussion.aux) (./conclusion.aux))
@@ -1584,24 +1892,29 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 14023 strings out of 492995
- 217644 string characters out of 6132705
- 491083 words of memory out of 5000000
- 17333 multiletter control sequences out of 15000+600000
- 42075 words of font info for 66 fonts, out of 8000000 for 9000
+ 23719 strings out of 492995
+ 435246 string characters out of 6132705
+ 660523 words of memory out of 5000000
+ 26962 multiletter control sequences out of 15000+600000
+ 66404 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,11n,39p,1142b,1213s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2017/texmf-dist/fonts/type1/urw/bookman/ubkl8a.pfb></usr/local/texlive/2
-017/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2017/tex
-mf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist
-/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
-e1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/tim
-es/utmri8a.pfb>
-Output written on thesis.pdf (24 pages, 126113 bytes).
+ 46i,14n,45p,10357b,1487s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/urw/bookman/ubkl8a.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
+ype1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
+imes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri
+8a.pfb>
+Output written on thesis.pdf (25 pages, 351867 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
- 75 compressed objects within 1 object stream
+ 135 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
