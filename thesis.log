@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  22 FEB 2018 14:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  23 FEB 2018 14:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1835,8 +1835,28 @@ LaTeX Warning: Citation 'DOW' on page 17 undefined on input line 17.
 \openout2 = `results.aux'.
 
  (./results.tex
-Overfull \hbox (2.36787pt too wide) in paragraph at lines 10--10
-[]|\T1/ptm/m/n/10 Case| 
+Overfull \hbox (3.47798pt too wide) in paragraph at lines 10--10
+[]|\T1/ptm/b/n/10 Case| 
+ []
+
+
+Overfull \hbox (5.55804pt too wide) in paragraph at lines 10--10
+[]|\T1/ptm/m/n/10 Temp
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
+[]|\T1/ptm/m/n/10 Feed
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
+[]|\T1/ptm/m/n/10 Feed
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
+[]|\T1/ptm/m/n/10 Perm
  []
 
 ) [21
@@ -1894,7 +1914,7 @@ Package logreq Info: Writing requests to 'thesis.run.xml'.
 Here is how much of TeX's memory you used:
  23719 strings out of 492995
  435246 string characters out of 6132705
- 660523 words of memory out of 5000000
+ 664523 words of memory out of 5000000
  26962 multiletter control sequences out of 15000+600000
  66404 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1911,7 +1931,7 @@ fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/t
 ype1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/t
 imes/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on thesis.pdf (25 pages, 351867 bytes).
+Output written on thesis.pdf (25 pages, 352086 bytes).
 PDF statistics:
  135 PDF objects out of 1000 (max. 8388607)
  92 compressed objects within 1 object stream
