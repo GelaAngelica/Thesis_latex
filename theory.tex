@@ -39,8 +39,9 @@ In order to obtain good performace over the RO membrane there are some parameter
 \subsection{Fouling}
 Fouling occurs when contaminants accumulate on the surface of the membrane. The fouling contributes to a pressure drop that will decrease the performance of the membrane and cause less permeate flow. Fouling will happen eventually to some extent given the fine pore size of the membrane. A high reject flow and proper pretreatment will extend the operational time between cleaning procedures of the membrane\cite{Puretech}. 
 
-\section{Mathematical modeling of reverse osmosis} \label{SD}
-There are different models to describe the flow of solutes and solvents in the reverse osmosis process. The mass balance equations are central in modeling the process. Figure \ref{ReverseOsmosis} shows the main process. \\
+\section{Mathematical modeling of reverse osmosis} 
+\label{soldiff}
+There are different models to describe the flow of solutes and solvents in the reverse osmosis process. The mass balance equations are central in modeling the process. Figure \ref{fig:ReverseOsmosis} shows the main process. \\
 
 A hydraulic pressure is applied to to the feed stream of concentration, $C_{f}$ and results in a flow rate $Q_{f}$. Some of the solvent, pure water, passes through the RO-membrane  characterized by solvent permeability, solute permeability and surface area. The product water (purified water), is called permeate and has the concentration $C_p$ and flow $Q_p$. The concentration, called reject has the concentration $C_r$ with flow $Q_r$. The study objective of this basic RO-modeling is to calculate output concentrations and flow rates in terms of input and operation conditions. Parameters used to evaluate the performance of the RO-membrane is rejection ratio:
 \begin{equation}
@@ -104,27 +105,11 @@ In order to model the osmotic pressure the van't Hoff principle can be used. It 
 where b is a proportionality. In van't Hoff's equation b=RT, where R is the gas constant and T is the absolute temperature om the membrane system. 
 
 
-
-
-
-
-
-
-
-
-%The solution-diffussion model are based on the assumption that the driving force of the solvent through the RO-membrane is the gradient of its chemical potential. It is assumed that the solvent is pure water and that the solute is salt. The pressure within the membrane through which transportation takes place is uniform and the chemical potential gradient can be expressed in Fick's law, where the flux of a component i can be described as:
-
-%\begin{equation}
-%J_{i}=-D\frac{dC_{i}}{dz} 
-%\end{equation}
-%where $D_{i}$ is the component diffusivity and $C_{i}$ is the component concentration within the membrane module. 
-
-
-
-
 \section{Control theory}
 
 %All reglerteori
+
+The system is considered a slow system
 
 
 

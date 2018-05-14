@@ -1,39 +1,77 @@
 % !TEX root = /Users/Gela/Desktop/Thesis_latex/thesis.tex
 
-\section{Tests on current system}
-In order to compare results of the current system and the updated system some test will be done on the current setup. Reasonable values for the test cases were set to:
+\section{Flowchart investigation}
+To obtain a system to run tests on some different flowchart are considered. The current pump will be replaced by two pumps. Following requirements will be desirable when obtaining a updated model of the flowchart:
 \begin{itemize}
 \renewcommand\labelitemi{ }
-\item Temperature 5-45 $^\circ$C
-\item Conductivity 70-2000 \SI{}{\micro\siemens}
-\end{itemize}
-
-\section{Flowchart investigation}
-To obtain a system to run tests on some different flowcharts will be considered. The current pump will be replaced by two pumps. Following requirements will be desirable when obtaining a updated model of the flowchart:
-\begin{itemize}
-\renewcommand\labelitemi{-}
 \item Pressure drop over the membrane is high
 \item Flow through membrane is high
 \end{itemize}
-The model shall contribute with the following:
+\textbf{The model shall contribute with the following:}
 \begin{itemize}
-\renewcommand\labelitemi{-}
-\item Permeate conductivity is minimized
-\item Fouling on the membrane is minimized
-\item Temperature dependencies will be taken in concern
-\item Waste water going through drain is minimized
+\renewcommand\labelitemi{ }
+\item Permeate conductivity (minimized)
+\item Fouling on the membrane (minimized)
+\item Temperature dependencies 
+\item Waste water going through drain (minimized)
 \end{itemize}
 
+Mainly two different systems containing two pumps were considered. 
+
+\subsection{System 1}
+The first system with one with pump on feed side and one pump on permeate side, as seen in Figure \ref{XXXXX}. Benefits with this setup is 
+
+\subsection{System 2}
+The second system considered with one pump on feed side and one pump on rejectside, in recirculation path, seen in Figure \ref{XXX}.
+
+\section{Tests on current system}
+In order to compare results of the current system, furthermore called "System 1" and the updated system, "System 2", some test will be done on the current setup. Reasonable values for the test cases were set and can be seen in Table \ref{tab:testcases}:\\
+\begin{table}[h]
+\begin{tabular}{ |p{1cm}||p{3cm}|p{4cm}|}
+ \hline
+ \textbf{Case}&Temperature $^\circ$C& Feed Conductivity (\SI{}{\micro\siemens}) \\
+ \hline
+ 1   &   20 $^\circ$C  & 500 \SI{}{\micro\siemens}  \\
+ 2 &  20 $^\circ$C & 1000 \SI{}{\micro\siemens}  \\
+ 3 &20 $^\circ$C& 2000 \SI{}{\micro\siemens}\\
+ 4   &20 $^\circ$C& 3000 \SI{}{\micro\siemens}\\
+ \hline
+ 5 & 30 $^\circ$C & 500 \SI{}{\micro\siemens}\\
+ 6 & 30 $^\circ$C& 1000 \SI{}{\micro\siemens}\\
+ 7 & 30 $^\circ$C& 2000 \SI{}{\micro\siemens}\\
+ 8 & 30 $^\circ$C& 3000 \SI{}{\micro\siemens}\\
+ \hline
+ 9 & 40 $^\circ$C& 500 \SI{}{\micro\siemens}\\
+ 10 & 40 $^\circ$C & 1000 \SI{}{\micro\siemens}\\
+ 11 & 40 $^\circ$C& 2000 \SI{}{\micro\siemens}\\
+ 12 & 40$^\circ$C & 3000 \SI{}{\micro\siemens}\\
+\hline
+\end{tabular}
+\caption{Testcases for System 1 and 2}
+    \label{tab:testcases} 
+\end{table}
 
 
 \section{Modeling}
-Simscape software tool described in section \ref{Simscape} is used to do a physical modeling in order to achieve the characteristics of the membrane. Mathematical equations from the manufacturer of the membrane and physics of the solution-diffussion model described in section \ref(SD) is used and implemented.
+Simscape software tool described in section \ref{Simscape} is used to do a physical modeling in order to achieve the characteristics of the membrane. Mathematical equations from the manufacturer of the membrane and physics of the solution-diffussion model described in section \ref{soldiff} were used and implemented.
+
+\section{Implementation Test Rig}
+In order to run all tests a physical rig was built. A first version to meet the specifications of the system used in the current water device were built according to Figure \ref{XXXX} and tests were executed.
+A new, second, system were built, according to Figure \ref{XXXX} in order to do the tests for the modified system including two pumps. In order to log all signals and to run the system the Real-Time Target Machine described in section \ref{speedgoat} were connected with all significant signals.
+Different interfaces, as $i^{2}c$, XXXXX were used to implement the communication between the Real-Time Target Machine and measurement instruments. Circuits were built to transform voltage supply to required level for each component. 
+
+
+FIGURES
+
+
+
 
 \section{Design of control algorithms}
+Control algoritms were developed in Matlab Simulink for the updated system. 
 
 \section{Control simulations}
 
-\section{Implementation test rig}
+
 
 
 
