@@ -1,7 +1,11 @@
 % !TEX root = /Users/Gela/Desktop/Thesis_latex/thesis.tex
 
 \section{Flowchart investigation}
+\label{Flowchart}
 To obtain a system to run tests on some different flowchart are considered. The current pump will be replaced by two pumps. Following requirements will be desirable when obtaining a updated model of the flowchart:
+
+
+
 \begin{itemize}
 \renewcommand\labelitemi{ }
 \item Pressure drop over the membrane is high
@@ -16,7 +20,7 @@ To obtain a system to run tests on some different flowchart are considered. The 
 \item Waste water going through drain (minimized)
 \end{itemize}
 
-Mainly two different systems containing two pumps were considered. 
+\textbf{Mainly two different systems containing two pumps were considered:}
 
 \subsection{System 1}
 The first system with one with pump on feed side and one pump on permeate side, as seen in Figure \ref{fig:FlowCInves1}. This setup contributes with the ability to create a net pressure over the membrane with a low, or even a under pressure on permeate side, whilst the feed pressure pump
@@ -24,7 +28,7 @@ The first system with one with pump on feed side and one pump on permeate side, 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{FlowCInves1}
-    \caption{Flowchart 1}
+    \caption{System 1}
     \label{fig:FlowCInves1}
 \end{figure}
 
@@ -71,7 +75,7 @@ Simscape software tool described in section \ref{Simscape} is used to do a physi
 \section{Implementation Test Rig}
 In order to run all tests a physical rig was built. A first version to meet the specifications of the system used in the current water device were built according to Figure \ref{fig:Sys1} and tests were executed.
 A new, second system were built, according to Figure \ref{fig:Sys2} in order to do the tests for the modified system including two pumps. In order to log all signals and to run the system the Real-Time Target Machine described in section \ref{speedgoat} were connected with all significant signals.
-Different interfaces, as $i^{2}c$, XXXXX were used to implement the communication between the Real-Time Target Machine and measurement instruments. Circuits were built to transform voltage supply to required level for each component. 
+Different interfaces, as $i^{2}c$, Analog I/O, Digital inputs, PWM were used to implement the communication between the Real-Time Target Machine and measurement instruments. Circuits were built to transform voltage supply to required level for each component. All implementation of the communication and power supply can be seen in XXXXXXX
 
 \begin{figure}[h]
     \centering
@@ -85,8 +89,6 @@ Different interfaces, as $i^{2}c$, XXXXX were used to implement the communicatio
 Control algoritms were developed in Matlab Simulink for the updated system. 
 
 \section{Control simulations}
-
-
 
 
 

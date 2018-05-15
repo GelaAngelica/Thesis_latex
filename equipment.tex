@@ -16,8 +16,14 @@ The system control is implemented in Simulink.
 
 \section{Speedgoat Real-Time Target Machine}
 \label{speedgoat}
-Speedgoat is a realtime target machine used for development. It is an FPGA I/O module with Simulink driver blocks. It is capable of simultaneous sampling and is used to drive the system rig. It contains an Intel 2.0 GHz quad core CPU. More technical information can be seen in Appendix 
+Speedgoat is a realtime target machine used for development. It is an FPGA I/O module with Simulink driver blocks. It is capable of simultaneous sampling and is used to drive the system rig. It contains an Intel 2.0 GHz quad core CPU. 
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Speedgoat}
+    \caption{Speedgoat (Speedgoat real time simulation and testing, 2018)}
+    \label{fig:speedgoat}
+\end{figure}
 
 \section{Measurement instruments} 
 \label{measure}
@@ -36,9 +42,17 @@ The C3 cell described in section \ref{senscond} contains sensors for temperature
 Pressure sensors where implemented in the C3 block, described in section \ref{senscond}, and calibrated in order to achieve the pressure at feed, recirculation and permeate side of the membrane. The pressure sensors range is between 0-20 bar.
 
 
-\subsection{Flow sensor}
+\subsection{Flow meter}
 \label{sensflow}
 A flowsensor from Bronkhorst High-Tech B.V is used to measure the flow on permeate side. The flowmeter works in 4-1500 ml/min range and 0-100 bar with water as liquid flowing through. It has an accuracy of +- 1 ml/min. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Flowmeter}
+    \caption{Flowmeter (BRONKHORST HIGH-TECH B.V.)}
+    \label{fig:flowmeter}
+\end{figure}
+
 
 
 
