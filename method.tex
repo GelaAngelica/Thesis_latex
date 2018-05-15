@@ -19,13 +19,26 @@ To obtain a system to run tests on some different flowchart are considered. The 
 Mainly two different systems containing two pumps were considered. 
 
 \subsection{System 1}
-The first system with one with pump on feed side and one pump on permeate side, as seen in Figure \ref{XXXXX}. Benefits with this setup is 
+The first system with one with pump on feed side and one pump on permeate side, as seen in Figure \ref{fig:FlowCInves1}. This setup contributes with the ability to create a net pressure over the membrane with a low, or even a under pressure on permeate side, whilst the feed pressure pump
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{FlowCInves1}
+    \caption{Flowchart 1}
+    \label{fig:FlowCInves1}
+\end{figure}
 
 \subsection{System 2}
-The second system considered with one pump on feed side and one pump on rejectside, in recirculation path, seen in Figure \ref{XXX}.
+The second system considered with one pump on feed side and one pump on rejectside, in recirculation path, seen in Figure \ref{fig:Sys2}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Sys2}
+    \caption{System 2}
+    \label{fig:Sys2}
+\end{figure}
 
 \section{Tests on current system}
-In order to compare results of the current system, furthermore called "System 1" and the updated system, "System 2", some test will be done on the current setup. Reasonable values for the test cases were set and can be seen in Table \ref{tab:testcases}:\\
+In order to compare results of the current system, furthermore called "Current System" and the updated system, some test will be done on the current setup. Reasonable values were investigated in order to meet requirements of the Water device. Points to investigate can be seen in Table \ref{tab:testcases}:\\
 \begin{table}[h]
 \begin{tabular}{ |p{1cm}||p{3cm}|p{4cm}|}
  \hline
@@ -47,7 +60,7 @@ In order to compare results of the current system, furthermore called "System 1"
  12 & 40$^\circ$C & 3000 \SI{}{\micro\siemens}\\
 \hline
 \end{tabular}
-\caption{Testcases for System 1 and 2}
+\caption{Testcases}
     \label{tab:testcases} 
 \end{table}
 
@@ -56,14 +69,16 @@ In order to compare results of the current system, furthermore called "System 1"
 Simscape software tool described in section \ref{Simscape} is used to do a physical modeling in order to achieve the characteristics of the membrane. Mathematical equations from the manufacturer of the membrane and physics of the solution-diffussion model described in section \ref{soldiff} were used and implemented.
 
 \section{Implementation Test Rig}
-In order to run all tests a physical rig was built. A first version to meet the specifications of the system used in the current water device were built according to Figure \ref{XXXX} and tests were executed.
-A new, second, system were built, according to Figure \ref{XXXX} in order to do the tests for the modified system including two pumps. In order to log all signals and to run the system the Real-Time Target Machine described in section \ref{speedgoat} were connected with all significant signals.
+In order to run all tests a physical rig was built. A first version to meet the specifications of the system used in the current water device were built according to Figure \ref{fig:Sys1} and tests were executed.
+A new, second system were built, according to Figure \ref{fig:Sys2} in order to do the tests for the modified system including two pumps. In order to log all signals and to run the system the Real-Time Target Machine described in section \ref{speedgoat} were connected with all significant signals.
 Different interfaces, as $i^{2}c$, XXXXX were used to implement the communication between the Real-Time Target Machine and measurement instruments. Circuits were built to transform voltage supply to required level for each component. 
 
-
-FIGURES
-
-
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{Sys1}
+    \caption{Current System}
+    \label{fig:Sys1}
+\end{figure}
 
 
 \section{Design of control algorithms}
