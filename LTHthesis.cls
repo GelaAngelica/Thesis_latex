@@ -687,3 +687,6 @@
   editors = {Eds.},
 }
 
+\\
+%This is the cls file
+
