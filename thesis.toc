@@ -15,32 +15,42 @@
 \contentsline {chapter}{\chapternumberline {3}Equipment}{18}
 \contentsline {section}{\numberline {3.1}Reverse Osmosis Membrane}{19}
 \contentsline {section}{\numberline {3.2}Pumps}{19}
-\contentsline {section}{\numberline {3.3}Simscape/Simulink}{19}
-\contentsline {section}{\numberline {3.4}Speedgoat Real-Time Target Machine}{19}
-\contentsline {section}{\numberline {3.5}Measurement instruments}{19}
-\contentsline {subsection}{Conductivity sensor block}{19}
+\contentsline {section}{\numberline {3.3}Drain valve}{19}
+\contentsline {section}{\numberline {3.4}Simscape/Simulink}{19}
+\contentsline {section}{\numberline {3.5}Speedgoat Real-Time Target Machine}{19}
+\contentsline {section}{\numberline {3.6}Measurement instruments}{19}
+\contentsline {subsection}{Conductivity sensor block}{20}
 \contentsline {subsection}{Temperature sensor}{20}
 \contentsline {subsection}{Pressure sensor}{20}
-\contentsline {subsection}{Flow sensor}{20}
-\contentsline {chapter}{\chapternumberline {4}Method/Implementation}{21}
-\contentsline {section}{\numberline {4.1}Flowchart investigation}{22}
-\contentsline {subsection}{System 1}{22}
-\contentsline {subsection}{System 2}{22}
-\contentsline {section}{\numberline {4.2}Tests on current system}{22}
-\contentsline {section}{\numberline {4.3}Modeling}{23}
-\contentsline {section}{\numberline {4.4}Implementation Test Rig}{23}
-\contentsline {section}{\numberline {4.5}Design of control algorithms}{24}
-\contentsline {section}{\numberline {4.6}Control simulations}{24}
-\contentsline {section}{\numberline {4.7}Improvements}{24}
-\contentsline {chapter}{\chapternumberline {5}Results}{25}
-\contentsline {section}{\numberline {5.1}Test on current system}{26}
-\contentsline {section}{\numberline {5.2}Flowchart investigation}{26}
-\contentsline {section}{\numberline {5.3}Modeling}{26}
-\contentsline {section}{\numberline {5.4}Design of control algorithms}{26}
-\contentsline {section}{\numberline {5.5}Control simulations}{26}
-\contentsline {section}{\numberline {5.6}Implementation test rig}{26}
-\contentsline {section}{\numberline {5.7}Improvements}{26}
-\contentsline {chapter}{\chapternumberline {6}Discussion}{27}
-\contentsline {chapter}{\chapternumberline {7}Conclusion}{29}
-\contentsline {chapter}{Bibliography}{31}
-\contentsline {appendix}{\chapternumberline {A}Appendix A}{32}
+\contentsline {subsection}{Flow meter}{20}
+\contentsline {chapter}{\chapternumberline {4}Method/Implementation}{22}
+\contentsline {section}{\numberline {4.1}Flowchart investigation}{23}
+\contentsline {subsection}{System 1}{23}
+\contentsline {subsection}{System 2}{23}
+\contentsline {section}{\numberline {4.2}Tests}{24}
+\contentsline {section}{\numberline {4.3}Modeling}{24}
+\contentsline {section}{\numberline {4.4}Implementation Test Rig}{24}
+\contentsline {subsection}{Current System}{24}
+\contentsline {subsection}{System 2 "Comparing system"}{24}
+\contentsline {section}{\numberline {4.5}Connections}{25}
+\contentsline {section}{\numberline {4.6}Mapping}{25}
+\contentsline {section}{\numberline {4.7}Design of control algorithms}{26}
+\contentsline {section}{\numberline {4.8}Control simulations}{26}
+\contentsline {section}{\numberline {4.9}Improvements}{26}
+\contentsline {chapter}{\chapternumberline {5}Results}{27}
+\contentsline {section}{\numberline {5.1}Flowchart investigation}{28}
+\contentsline {section}{\numberline {5.2}Tests}{28}
+\contentsline {subsection}{Current system}{28}
+\contentsline {subsection}{System 2}{28}
+\contentsline {section}{\numberline {5.3}Modeling}{28}
+\contentsline {section}{\numberline {5.4}Implementation Test Rig}{28}
+\contentsline {subsection}{Connections}{28}
+\contentsline {section}{\numberline {5.5}Mapping}{28}
+\contentsline {section}{\numberline {5.6}Design of control algorithms}{28}
+\contentsline {section}{\numberline {5.7}Control simulations}{29}
+\contentsline {section}{\numberline {5.8}Improvements}{29}
+\contentsline {chapter}{\chapternumberline {6}Discussion}{34}
+\contentsline {chapter}{\chapternumberline {7}Conclusion}{36}
+\contentsline {chapter}{\chapternumberline {8}Future Prospects}{38}
+\contentsline {section}{\numberline {8.1}Future Prospects}{39}
+\contentsline {appendix}{\chapternumberline {A}Appendix A}{40}

@@ -42,27 +42,36 @@ The second system considered with one pump on feed side and one pump on rejectsi
 \section{Tests}
 In order to compare results of the current system, furthermore called "Current System" and the updated system, some test will be done on the current setup. Reasonable values were investigated in order to meet requirements of the Water device. Same points will be tested on the comparing system to evaluate any improvements on the membrane performance. Points to investigate can be seen in Table \ref{tab:testcases}:\\
 \begin{table}[h]
-\begin{tabular}{ |p{1cm}||p{3cm}|p{4cm}|}
+\begin{tabular}{|p{1.4cm}||p{2cm}|p{3.2cm}|p{1.8cm}|}
  \hline
- \textbf{Case}&Temperature $^\circ$C& Feed Conductivity (\SI{}{\micro\siemens}) \\
+ \textbf{Steady state }&Temperature&Feed Conductivity&Motor effect \\
  \hline
- 1 & 18 $^\circ$C  & 280 \SI{}{\micro\siemens}  \\
- 2   &  18 $^\circ$C  & 500 \SI{}{\micro\siemens}  \\
- 3 &  18 $^\circ$C & 1000 \SI{}{\micro\siemens}  \\
- 4 &18 $^\circ$C& 2000 \SI{}{\micro\siemens}\\
- 5   &18 $^\circ$C& 3000 \SI{}{\micro\siemens}\\
+ 1.1 & 18 $^\circ$C   & 280 \SI{}{\micro\siemens} & 60 \% \\
+ 1.2   &  18 $^\circ$C   & 500 \SI{}{\micro\siemens} & 60 \% \\
+ 1.3 &  18 $^\circ$C  &1000 \SI{}{\micro\siemens} & 60 \% \\
+ 1.4 &  18 $^\circ$C  &1000 \SI{}{\micro\siemens} & \textbf{80 \%} \\
+ 1.5 &18 $^\circ$C &2000 \SI{}{\micro\siemens}& 60 \%\\
+ 1.6 &18 $^\circ$C  &2000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
+ 1.7   &18 $^\circ$C & 3000 \SI{}{\micro\siemens}&60 \% \\
+ 1.8   &18 $^\circ$C&3000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
  \hline
- 6 & 30 $^\circ$C & 280 \SI{}{\micro\siemens}\\
- 7 & 30 $^\circ$C & 500 \SI{}{\micro\siemens}\\
- 8 & 30 $^\circ$C& 1000 \SI{}{\micro\siemens}\\
- 9 & 30 $^\circ$C& 2000 \SI{}{\micro\siemens}\\
- 10 & 30 $^\circ$C& 3000 \SI{}{\micro\siemens}\\
- \hline
- 11 & 40 $^\circ$C& 280 \SI{}{\micro\siemens}\\
- 12 & 40 $^\circ$C& 500 \SI{}{\micro\siemens}\\
- 13 & 40 $^\circ$C & 1000 \SI{}{\micro\siemens}\\
- 14 & 40 $^\circ$C& 2000 \SI{}{\micro\siemens}\\
- 15 & 40$^\circ$C & 3000 \SI{}{\micro\siemens}\\
+ 2.1 & 30 $^\circ$C & 280 \SI{}{\micro\siemens}&60 \%\\
+ 2.2 & 30 $^\circ$C &500 \SI{}{\micro\siemens}& 60 \%\\
+ 2.3 & 30 $^\circ$C&1000 \SI{}{\micro\siemens}& 60 \%\\
+ 2.4 & 30 $^\circ$C&1000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
+ 2.5 & 30 $^\circ$C&2000 \SI{}{\micro\siemens}& 60 \%\\
+ 2.6 & 30 $^\circ$C&2000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
+ 2.7 & 30 $^\circ$C& 3000 \SI{}{\micro\siemens}&60 \%\\
+ 2.8 & 30 $^\circ$C& 3000 \SI{}{\micro\siemens}&\textbf{80 \%}\\
+ \hline 
+ 3.1 & 40 $^\circ$C& 280 \SI{}{\micro\siemens}& 60 \%\\
+ 3.2 & 40 $^\circ$C &500 \SI{}{\micro\siemens}& 60 \%\\
+ 3.3 & 40 $^\circ$C  & 1000 \SI{}{\micro\siemens}& 60 \%\\
+ 3.4 & 40 $^\circ$C  & 1000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
+ 3.5 & 40 $^\circ$C&2000 \SI{}{\micro\siemens}& 60 \%\\
+ 3.6 & 40 $^\circ$C &2000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
+ 3.7 & 40$^\circ$C &3000 \SI{}{\micro\siemens}& 60 \%\\
+ 3.8 & 40$^\circ$C &3000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
 \hline
 \end{tabular}
 \caption{Testcases}
@@ -71,7 +80,7 @@ In order to compare results of the current system, furthermore called "Current S
 
 
 \section{Modeling}
-Simscape software tool described in section \ref{Simscape} is used to do a physical modeling in order to achieve the characteristics of the membrane. Mathematical equations from the manufacturer of the membrane and physics of the solution-diffussion model described in section \ref{soldiff} were used and implemented.
+Simscape software tool described in section \ref{Simscape} is used to do a physical modeling in order to achieve the characteristics of the membrane. Mathematical equations from the manufacturer of the membrane and physics of the solution-diffussion model described in section \ref{soldiff} were used and implemented. 
 
 \section{Implementation Test Rig}
 \subsection{Current System}
@@ -98,48 +107,23 @@ A new, second system were built, according to Figure \ref{fig:MeasSys2} in order
 
 \section{Connections} \label{Connections}
 
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{PressConn}
-    \caption{Connections Pressure sensors}
-    \label{fig:PressConn}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{C3Conn}
-    \caption{Connections measurement blocks, C3}
-    \label{fig:C3Conn}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{ValveConn}
-    \caption{Connections Drain Valve}
-    \label{fig:ValveConn}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{PumpConn}
-    \caption{Connections pumps}
-    \label{fig:PumpConn}
-\end{figure}
-
 
 \section{Mapping}
 In order to investigate the performance of the membrane pressure, flow, conductivity and temperature is to be measures. In the systems there are critical values of high pressure on feed side and reject side which makes it difficult to find measurement equipment that can handle both the high pressure and relatively low flows with no loss of pressure and required accuracy. Therefore some mapping of the flow were done and used. 
 
-RPM - 
-
-Flow - 
-
-
 
 \section{Design of control algorithms}
-Control algoritms were developed in Matlab Simulink for the updated system. 
+
+Investigating tests on System 2, Figure \ref{fig:Sys2}, were executed prior the design of the control algorithms to recieve required reference signals to the pumps and drain valve. During the tests one parameter at a time changed while the others were kept constant. In test 1, seen in Figure \ref{fig:PreTestReg1} the pump in recycle path were the changing parameter and in Test 2, seen in Figure \ref{fig:PreTestReg3} the pressurizing pump on inlet side were the changing parameter.
+
+
+
+
+Control algoritms were developed in Matlab - Simulink. 
 
 \section{Control simulations}
+
+INSERT PICTURES
 
 
 

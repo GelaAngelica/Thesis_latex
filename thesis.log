@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  15 MAY 2018 10:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.2)  7 JUN 2018 13:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1445,7 +1445,7 @@ File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 
 (./thesis.aux (./ordlista.aux) (./introduction.aux) (./theory.aux)
 (./equipment.aux) (./method.aux) (./results.aux) (./discussion.aux)
-(./conclusion.aux))
+(./conclusion.aux) (./prospects.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
@@ -1630,8 +1630,9 @@ Package biblatex Info: Data encoding 'utf8' specified.
 \openout5 = `thesis-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'thesis.bbl' found.
- (./thesis.bbl)
+Package biblatex Info: ... file 'thesis.bbl' not found.
+
+No file thesis.bbl.
 Package biblatex Info: Reference section=0 on input line 22.
 Package biblatex Info: Reference segment=0 on input line 22.
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1752,7 +1753,12 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
  [7]) [8]
 \openout2 = `ordlista.aux'.
 
- (./ordlista.tex) [9
+ (./ordlista.tex
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 5.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 5.
+) [9
 
 
 ] [10
@@ -1762,10 +1768,9 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 \openout2 = `introduction.aux'.
 
  (./introduction.tex
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 3.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 3.
+
+LaTeX Warning: Citation 'Dow' on page 11 undefined on input line 5.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--10
 
@@ -1817,15 +1822,22 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10.95> not available
 ]
 \openout2 = `theory.aux'.
 
- (./theory.tex <Osmosis.png, id=53, 353.32pt x 345.29pt>
-File: Osmosis.png Graphic file (type png)
+ (./theory.tex
 
-<use Osmosis.png>
+LaTeX Warning: Citation 'Singh' on page 14 undefined on input line 5.
+
+<Osmosis.png, id=53, 353.32pt x 345.29pt>
+File: Osmosis.png Graphic file (type png)
+ <use Osmosis.png>
 Package pdftex.def Info: Osmosis.png used on input line 14.
 (pdftex.def)             Requested size: 132.79797pt x 129.77847pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 15.
- <ReverseOsmosis.png, id=55, 372.39125pt x 342.27875pt>
+
+
+LaTeX Warning: Citation 'Puretech' on page 14 undefined on input line 21.
+
+<ReverseOsmosis.png, id=55, 372.39125pt x 342.27875pt>
 File: ReverseOsmosis.png Graphic file (type png)
 
 <use ReverseOsmosis.png>
@@ -1834,6 +1846,10 @@ Package pdftex.def Info: ReverseOsmosis.png used on input line 24.
  [14
 
  <./Osmosis.png>]
+
+LaTeX Warning: Citation 'Puretech' on page 15 undefined on input line 40.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 44--45
 
  []
@@ -1844,126 +1860,263 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--45
 ]
 \openout2 = `equipment.aux'.
 
- (./equipment.tex [19
+ (./equipment.tex
+<Speedgoat.png, id=77, 721.69624pt x 409.53pt>
+File: Speedgoat.png Graphic file (type png)
+ <use Speedgoat.png>
+Package pdftex.def Info: Speedgoat.png used on input line 26.
+(pdftex.def)             Requested size: 132.79797pt x 75.35568pt.
 
-]) [20]
-[21
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[19
+
+] <Flowmeter.png, id=82, 272.01625pt x 249.93375pt>
+File: Flowmeter.png Graphic file (type png)
+ <use Flowmeter.png>
+Package pdftex.def Info: Flowmeter.png used on input line 54.
+(pdftex.def)             Requested size: 132.79797pt x 122.0224pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [20 <./Speedgoat.png>] [21 <./Flowmeter.png>] [22
 
 
 ]
 \openout2 = `method.aux'.
 
- (./method.tex <FlowCInves1.png, id=87, 433.62pt x 213.79875pt>
+ (./method.tex
+<FlowCInves1.png, id=94, 433.62pt x 213.79875pt>
 File: FlowCInves1.png Graphic file (type png)
-
-<use FlowCInves1.png>
-Package pdftex.def Info: FlowCInves1.png used on input line 26.
+ <use FlowCInves1.png>
+Package pdftex.def Info: FlowCInves1.png used on input line 28.
 (pdftex.def)             Requested size: 132.79797pt x 65.47766pt.
- <Sys2.png, id=88, 422.57875pt x 191.71625pt>
-File: Sys2.png Graphic file (type png)
 
-<use Sys2.png>
-Package pdftex.def Info: Sys2.png used on input line 35.
+<Sys2.png, id=95, 422.57875pt x 191.71625pt>
+File: Sys2.png Graphic file (type png)
+ <use Sys2.png>
+Package pdftex.def Info: Sys2.png used on input line 37.
 (pdftex.def)             Requested size: 132.79797pt x 60.24759pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 47--47
+[]|\T1/ptm/b/n/10 Steady
+ []
 
-[22
+[23
 
- <./FlowCInves1.png>] <Sys1.png, id=93, 419.5675pt x 194.7275pt>
-File: Sys1.png Graphic file (type png)
-
-<use Sys1.png>
-Package pdftex.def Info: Sys1.png used on input line 78.
-(pdftex.def)             Requested size: 132.79797pt x 61.63364pt.
-
+ <./FlowCInves1.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[23 <./Sys2.png>]) [24 <./Sys1.png>] [25
+<MeasCurrSys.png, id=100, 497.86pt x 231.86626pt>
+File: MeasCurrSys.png Graphic file (type png)
+ <use MeasCurrSys.png>
+Package pdftex.def Info: MeasCurrSys.png used on input line 93.
+(pdftex.def)             Requested size: 132.79797pt x 61.84758pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<MeasSys2.png, id=101, 486.81876pt x 233.87375pt>
+File: MeasSys2.png Graphic file (type png)
+ <use MeasSys2.png>
+Package pdftex.def Info: MeasSys2.png used on input line 103.
+(pdftex.def)             Requested size: 132.79797pt x 63.79623pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[24 <./Sys2.png>] [25 <./MeasCurrSys.png>]) [26 <./MeasSys2.png>] [27
 
 
 ]
 \openout2 = `results.aux'.
 
- (./results.tex) [26
 
-] [27
+(./results.tex <Sys1.png, id=118, 419.5675pt x 194.7275pt>
+File: Sys1.png Graphic file (type png)
+ <use Sys1.png>
+Package pdftex.def Info: Sys1.png used on input line 12.
+(pdftex.def)             Requested size: 132.8005pt x 61.63364pt.
+File: Sys2.png Graphic file (type png)
+
+<use Sys2.png>
+Package pdftex.def Info: Sys2.png used on input line 18.
+(pdftex.def)             Requested size: 132.8005pt x 60.25052pt.
+
+
+LaTeX Warning: Reference `fig:Sys1' on page 28 undefined on input line 26.
+
+<PressConn.png, id=119, 651.43375pt x 446.66875pt>
+File: PressConn.png Graphic file (type png)
+ <use PressConn.png>
+Package pdftex.def Info: PressConn.png used on input line 45.
+(pdftex.def)             Requested size: 232.39899pt x 159.34889pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<C3Conn.png, id=120, 562.1pt x 388.45125pt>
+File: C3Conn.png Graphic file (type png)
+ <use C3Conn.png>
+Package pdftex.def Info: C3Conn.png used on input line 52.
+(pdftex.def)             Requested size: 232.39899pt x 160.60559pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<ValveConn.png, id=121, 641.39626pt x 366.36874pt>
+File: ValveConn.png Graphic file (type png)
+ <use ValveConn.png>
+Package pdftex.def Info: ValveConn.png used on input line 59.
+(pdftex.def)             Requested size: 232.39899pt x 132.74796pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<PumpConn.png, id=122, 571.13374pt x 384.43625pt>
+File: PumpConn.png Graphic file (type png)
+ <use PumpConn.png>
+Package pdftex.def Info: PumpConn.png used on input line 66.
+(pdftex.def)             Requested size: 232.39899pt x 156.42908pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<RPM.png, id=123, 421.575pt x 316.18124pt>
+File: RPM.png Graphic file (type png)
+ <use RPM.png>
+Package pdftex.def Info: RPM.png used on input line 75.
+(pdftex.def)             Requested size: 232.39899pt x 174.30064pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<Flow.png, id=124, 421.575pt x 316.18124pt>
+File: Flow.png Graphic file (type png)
+ <use Flow.png>
+Package pdftex.def Info: Flow.png used on input line 83.
+(pdftex.def)             Requested size: 232.39899pt x 174.30064pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<PreTestReg1.png, id=125, 1445.4pt x 725.71124pt>
+File: PreTestReg1.png Graphic file (type png)
+ <use PreTestReg1.png>
+Package pdftex.def Info: PreTestReg1.png used on input line 93.
+(pdftex.def)             Requested size: 547.79797pt x 275.04228pt.
+
+
+LaTeX Warning: Float too large for page by 54.94736pt on input line 96.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<PreTestReg3.png, id=126, 1445.4pt x 725.71124pt>
+File: PreTestReg3.png Graphic file (type png)
+ <use PreTestReg3.png>
+Package pdftex.def Info: PreTestReg3.png used on input line 100.
+(pdftex.def)             Requested size: 547.79797pt x 275.04228pt.
+
+
+LaTeX Warning: Float too large for page by 54.94736pt on input line 103.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [28
+
+ <./Sys1.png>] [29 <./PressConn.png> <./C3Conn.png>] [30 <./ValveConn.png> <./P
+umpConn.png>] [31 <./RPM.png (PNG copy)> <./Flow.png (PNG copy)>]
+Overfull \vbox (5.0pt too high) has occurred while \output is active []
+
+ [32 <./PreTestReg1.png (PNG copy)>]
+Overfull \vbox (5.0pt too high) has occurred while \output is active []
+
+ [33 <./PreTestReg3.png (PNG copy)>] [34
 
 
 ]
 \openout2 = `discussion.aux'.
 
+ (./discussion.tex) [35
 
-(./discussion.tex) [28
-
-] [29
+] [36
 
 
 ]
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex) [30
+ (./conclusion.tex)
+[37
 
-]
-Underfull \hbox (badness 1742) in paragraph at lines 66--66
-[][]\T1/ptm/m/n/10 R, S. (2015). \T1/ptm/m/it/10 "Mem-brane Tech-nol-ogy and En
--gi-neer-ing for Wa-ter Pu-rifi-ca-
- []
-
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 65.
-(/usr/local/texlive/2017/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [31
+] [38
 
 
 ]
+\openout2 = `prospects.aux'.
+
+ (./prospects.tex) [39
+
+]
+
+LaTeX Warning: Empty bibliography on input line 68.
+
 \tf@thm=\write6
 \openout6 = `thesis.thm'.
 
- [32
+[40
+
 
 
 ]
 \tf@toc=\write7
 \openout7 = `thesis.toc'.
 
-
-(./thesis.aux (./ordlista.aux) (./introduction.aux) (./theory.aux)
+ (./thesis.aux (./ordlista.aux) (./introduction.aux) (./theory.aux)
 (./equipment.aux) (./method.aux) (./results.aux) (./discussion.aux)
-(./conclusion.aux))
+(./conclusion.aux) (./prospects.aux))
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                thesis
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'thesis.run.xml'.
 \openout1 = `thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24434 strings out of 492995
- 447946 string characters out of 6132705
- 692706 words of memory out of 5000000
- 27653 multiletter control sequences out of 15000+600000
- 63312 words of font info for 94 fonts, out of 8000000 for 9000
+ 24468 strings out of 492995
+ 448050 string characters out of 6132705
+ 701280 words of memory out of 5000000
+ 27676 multiletter control sequences out of 15000+600000
+ 57783 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,16n,45p,10379b,1487s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
-live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texli
-ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
-e/2017/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/
-2017/texmf-dist/fonts/type1/urw/bookman/ubkl8a.pfb></usr/local/texlive/2017/tex
-mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2017/texmf-dist
-/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/
-type1/urw/symbol/usyr.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/s
-ymbol/usyr.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a
-.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (32 pages, 422615 bytes).
+ 46i,16n,39p,10379b,1213s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/urw/bookman/ubkl8a.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2017/texmf-dist/fo
+nts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/u
+rw/symbol/usyr.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/ut
+mb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (40 pages, 2635572 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 110 compressed objects within 2 object streams
+ 210 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
