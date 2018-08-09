@@ -2,28 +2,27 @@
 
 
 \section{Flowchart investigation}
-Two different setups for a comparing system to the current system were investigated, section \ref{Flowchart}, and System 2 were chosen to be the comparing system. Both Systems were considered fulfilling most of the requirements, section \ref{framing}, for an updated version. \\
+By changing the flow path in the test setup both the one pump system and two pump system could be investigated and their performance could be compared. Both Systems were considered fulfilling most of the requirements, section \ref{framing}, for an updated version. \\
 
-In order to choose one comparing system benefits and disadvantages with the two system were investigated. \\
-
-System 1, figure \ref{fig:FlowCInves1}, is considered capable of creating a high pressure drop over the membrane. The hypothesis is also that it is capable of creating the biggest pressure drop with the least amount of energy needed. A disadvantage is considered  that implementing a pump in the purified water path will increase the risk that the pump may release particles into purified water which is, from a patient safety perspective, a high risk factor. \\
-
-System 2, figure \ref{fig:Sys2}, is considered capable of creating a high pressure drop over the membrane. It is also capable of controlling the recovery factor which, due to theory increases the membrane life time and performance. It might also be capable of minimize the salt concentration close to membrane surface area if increasing recirculation flow, e.g, create turbulence close to the membrane surface. \\
+One pump system, figure \ref{fig:FlowCInves1}, The one pump system was designed to use both a tank and the recirculation loop as a water source and to create pressure by generating a large flow over the membrane and recirculation restrictor. \\
 
 
-The two comparing systems were set to:\\
+Two pump system, figure \ref{fig:Sys2}, In the two pump system the water path was modified so that the feed pump only used a tank as a source and pressureized the entire recirculation loop. The recirculation pump was used to recirculate the already\\ pressureized water within the recirculation loop.\\
+
+
+An overview of the systems can be seen below.\\
 \begin{figure}[h]
 \centering
 \begin{minipage}{.5\textwidth}
     \centering
     \includegraphics[width=0.8\textwidth]{Sys1}
-    \caption{Current System}
+    \caption{One pump system}
     \label{fig:System1}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=.8\linewidth]{Sys2}
-  \caption{System 2}
+  \caption{Two pump system}
   \label{fig:System2}
 \end{minipage}
 \end{figure}
@@ -31,12 +30,10 @@ The two comparing systems were set to:\\
 \newpage
 
 \section{Investigation}
-\subsection{Current system}
 
-Temperature, feed pressure and feed water conductivity were the three main factors that was identified to have a significant impact on the performance of the membrane. However, testing was needed to conclude how much and in what way these parameters affect the membrane. The goal of the first round of tests was to investigate how much these parameters affected the current one pump system. 
-The system was specified to be able to operate from 20 to 40 degrees celsius and from 300 to 3000 uS/cm in the recirculation loop. A simple controller was implemented to run the feed pump at 60\% if the conductivity was lower than 1000 uS/cm and increase the pump to 80\% if the conductivtity was higher than 1000 uS/cm.  
-To be able to determine the impact of changes in these parameters three tests were needed. A fixed temperature was maintained with a heating bath and by increasing the conductivity in the bath from 280 uS/cm to 3000 uS/cm and varying the pump speed from 60 \% to 80\% it was possible to simulate how the membrane performed within the operating range. Eight steady states were investigated in each test according to the test plan. The system logged all signals during the test and the data could be analyzed to determine how all interesting parameters were affected during the different steady states.
+In order to compare the two systems and understand how the membrane performed in different working conditions both systems needed to be tested. The tests were conducted by controlling the temperature, pumps and the conductivity in the recirculation loop and log how the different conditions affected the system and the membrane. 
 
+The tests were conducted by changing the temperature, recirculation conductivity and pump speed and meassure how the system behaved once it had reached steady state. The tests were divided into three test sequences. One test sequence was performed with room temperatured water (19 C), one with water heated to 30 C and in the last test sequence the water was heated to 40 C. Every test sequence included data from 8 steady state points with different settings on feed conductivity and pump speed. The test sequences are displayed in the table below. 
 
 \begin{table}[H]
 \centering
@@ -73,12 +70,13 @@ To be able to determine the impact of changes in these parameters three tests we
 \hline
 \end{tabular}
 \caption{Testcases}
-    \label{tab:testcases} 
+    \label{tab:test cases} 
 \end{table}
 
-\newpage
-Test number one was split up in two parts. First the heating bath was set to 18 degrees and the feed pump was set to 60 \%. Thereafter, the conductivity in the tank was adjusted to 280 uS/cm and increased in steps to 3000 uS/cm. The graph below show an overview of the test.
 
+\subsection{Current system, Test sequence 1, part 1}
+
+The water in the tank was heated while the test was running. Because of this, the test was split up in two parts, first the motor was set to 60\% and steady state 1.1, 1.2, 1.3, 1.5 and 1.7 were investigated. In the part 2, the motor was set to 80 \% and steady state 1.4, 1.6 and 1.8 were investigated. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{overview20_60}
@@ -88,7 +86,7 @@ Test number one was split up in two parts. First the heating bath was set to 18 
 
 \newpage
 
-The second part of the first test was carried out with the pump running at 80\%. In this test the conductivity was decreased from 3000 uS/cm to 280 uS/cm.
+\subsection{Current system, Test sequence 1, part 2}
   
 \begin{figure}[H]
     \centering
@@ -99,7 +97,10 @@ The second part of the first test was carried out with the pump running at 80\%.
 
 \newpage
 
-By post post-procesing the data from test one in Matlab it was possible to visually show how the system parameters were affected by the changed pump speed and feed conductivity. 
+By post-procesing the data from test one in Matlab it was possible to visually show how the system parameters were affected by the changed pump speed and feed conductivity. 
+
+
+insert table, results on how the different graphs changed!!!
 
 \begin{figure}[H]
     \centering
@@ -109,7 +110,10 @@ By post post-procesing the data from test one in Matlab it was possible to visua
 \end{figure}
 
 \newpage
-The second test was carried out by setting the heater bath to 30 degrees celsius and sweeping the conductivity from 280 uS/cm to 3000 uS/cm. To save time, all steady states were investigated in the same test.  
+
+\subsection{Current system, Test sequence 2}
+
+The second test was carried out by setting the heater bath to 30 degrees celsius and and adjusting the conductivity and pump speed according to the test plan. Since the water was much warmer than the air in the room, the heating caused by the pump was not as prominent and allowed all steady states to be examined in one contimous test.
 
 \begin{figure}[H]
     \centering
@@ -120,7 +124,9 @@ The second test was carried out by setting the heater bath to 30 degrees celsius
 
 \newpage
 
-The important parameters were investigated for every steady state.
+
+
+The data from the test was post proccesed in Matlab in exactly the same way as the previous test.
 
 \begin{figure}[H]
     \centering
@@ -131,7 +137,9 @@ The important parameters were investigated for every steady state.
 
 \newpage
 
-The heating bath was set to 40 degrees celsius before running test 3.
+\subsection{Current system, Test sequence 3}
+
+Finally the heating bath was set to 40 C and the test sequence was performed just like test sequence 2. 
 
 \begin{figure}[H]
     \centering
@@ -142,7 +150,8 @@ The heating bath was set to 40 degrees celsius before running test 3.
 
 \newpage
 
-The important parameters were investigated for every steady state.
+Post processing in matlab generated the following data from the steady states.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{Key40}
@@ -150,14 +159,21 @@ The important parameters were investigated for every steady state.
     \label{fig:PressConn}
 \end{figure}
 
-By plotting the data from the three tests it was possible to generate graphs that could visualize how temperature, conductivity and feed pressure affected the membrane.
+\newpage
+
+In order to understand how the system current performed in different working conditions all plots from the post processing in Matlab was put togheter. 
+
+Net driving pressure was decreased when the temperature was increased. Higher feed conductivity resulted in a decreased net driving pressure. As expected, running the feed pump at a higher RPM also increased the net driving pressure.
+
+
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.1\textwidth]{Recovery}
+    \includegraphics[width=1.1\textwidth]{NDP}
     \caption{Connections Pressure sensors}
     \label{fig:PressConn}
 \end{figure}
+
 
 \begin{figure}[H]
     \centering
@@ -180,12 +196,17 @@ By plotting the data from the three tests it was possible to generate graphs tha
     \label{fig:PressConn}
 \end{figure}
 
+Summary results recovery:
+
+Warmer water enabled more feed water to pass through the membrane and therefore the recovery was increased. Increased conductivity reduced recovery due to the increased net driving pressure. 
+
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.1\textwidth]{NDP}
+    \includegraphics[width=1.1\textwidth]{Recovery}
     \caption{Connections Pressure sensors}
     \label{fig:PressConn}
 \end{figure}
+
 
 \begin{figure}[H]
     \centering
