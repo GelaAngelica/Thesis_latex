@@ -170,7 +170,34 @@ Control theory deals with the behaviour of dynamical systems. The inputs and out
 \textbf{Steady-state error:} the difference between the steady-state output and the desired output.\\
 \textbf{Transfer function:} Gives the system output for each possible input.\\
 
-\subsection{Linear Quadratic Gaussian control}
+\subsection{Linear Quadratic Gaussian control (LQG)}
+Linear Quadratic Gaussian is considered being a combination of a Kalman filter, linear quadratic estimator (LQE) with a linear quadratic regulator (LQR). The method is called LQG since the regulator is linear, works with quadratic criterias and the noise is normally distributed, Gaussian. LQG control applies to both linear time-invariant systems as well as linear time-varying systems. The controller is a dynamic system and often has the same state dimensions as the system it is controlling. The optimum problem is separable in two independent parts: to calculate the optimum estimated states, the kalman filter, and to calculate the optimum feedback from the estimated states. Below describes briefly how a LQG controller is designed for a continuous system. The system can be displayed as:
+
+\begin{equation}
+\label{eq:LQG1}
+\begin{array}{lcl}
+\dot x(t) = A(t)x(t) + B(t)u(t) + v(t) \\ y(t) = C(t)x(t) + w(t)
+\end{array}
+\end{equation}
+where x(t) represents the vector of state variables in the system, u(t) the vector of control inputs and y(t) the vector of measured outputs available for feedback. The v(t) is white Gaussian system noise and the w(t) is white Gaussian measurement noise, both affecting the system. If searching for the 
+\begin{equation}
+\label{eq:LQG2}
+u(t) = - F_{y}(p)y(t)
+\end{equation}
+that minimize
+\begin{equation}
+\label{eq:LQG3} 
+V= \| z \| ^{2}_{Q_{1}} + \| u \| ^{2}_{Q_{2}}
+\end{equation} 
+for a positive definit matrice $ Q_{2} $ and a positive semi definit matrice $ Q_{1} $. The regulator is assumed causal. The optimum linear controller is:
+\begin{equation}
+\label{eq:LQG4}
+\begin{array}{lcl}
+u(t) =  -L \hat{x}(t) \\  \hat{\dot x} = A\hat{x} + Bu(t) + K(y(t)-C\hat{x}(t)) 
+\end{array}
+\end{equation}
+
+
 
 \subsection{PID control}
 The PID controller is the most commonly used algorithm for process control. 

@@ -1,4 +1,89 @@
 % !TEX root = /Users/Gela/Desktop/Thesis_latex/thesis.tex
+\section{Modeling}
+A physical model of the membrane were made and the given results can be seen below:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{simscape_fc1.PNG}
+\caption{Model made in Matlab tool Simscape}
+\label{fig:simscape}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+    \includegraphics[width=0.5\textwidth]{msalt_feed.PNG}
+    \caption{Salt concentration feedwater}
+    \label{fig:msaltf}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+  \includegraphics[width=0.5\linewidth]{msalt_prod.PNG}
+  \caption{Salt concentration productwater}
+  \label{fig:msalp}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\linewidth]{msalt_rej.PNG}
+  \caption{Salt concentration reject water}
+  \label{fig:msaltr}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\linewidth]{q_feed.PNG}
+  \caption{Flow feed side}
+  \label{fig:qf}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\linewidth]{q_prod.PNG}
+  \caption{Flow product side}
+  \label{fig:qp}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\linewidth]{q_rej.PNG}
+  \caption{Flow reject side}
+  \label{fig:qrej}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\begin{minipage}{.5\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{tcf.PNG}
+    \caption{Temperature correction factor}
+    \label{fig:tcf}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{temp.PNG}
+  \caption{Temperature}
+  \label{fig:temp}
+\end{minipage}
+\end{figure}
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\linewidth]{deltap.PNG}
+  \caption{Pressure drop feed side to product side}
+  \label{fig:deltap}
+\end{figure}
+
+
+\begin{figure}[h]
+\raggedleft
+  \includegraphics[width=1.1\linewidth]{cond.PNG}
+  \caption{Conductivity in feed, reject and product side}
+  \label{fig:cond}
+\end{figure}
+
+\newpage
 
 
 \section{Flowchart investigation}
@@ -35,7 +120,7 @@ In order to compare the two systems and understand how the membrane performed in
 
 The tests were conducted by changing the temperature, recirculation conductivity and pump speed and meassure how the system behaved once it had reached steady state. The tests were divided into three test sequences. One test sequence was performed with room temperatured water (19 C), one with water heated to 30 C and in the last test sequence the water was heated to 40 C. Every test sequence included data from 8 steady state points with different settings on feed conductivity and pump speed. The test sequences are displayed in the table below. 
 
-\begin{table}[H]
+\begin{table}[h]
 \centering
 \begin{tabular}{|p{1.4cm}||p{2cm}|p{3.2cm}|p{1.8cm}|}
  \hline
@@ -243,7 +328,11 @@ Kommentar.
 
 Först lägger vi in plottarna som utvärderar hur de olika parametrarna påverkar systemet med två pumpar.
 
+<<<<<<< HEAD
 Därefter kom vi på hur man skulle optimera systemet.
+=======
+Test: increased feed pressure
+>>>>>>> 57f707d54aef439a94eaf1727263de512f53e6e1
 
 Sen körde vi tester för att hitta en optimal kurva.
 
@@ -318,14 +407,6 @@ Recovery Increase
 
 
 
-
-
-
-
-
-\section{Modeling}
-A physical model of the membrane were made and the given results can be seen in: 
-
 \section{Implementation Test Rig}
 
 
@@ -399,12 +480,3 @@ In Figure (\ref{fig:PressConn}-\ref{fig:PumpConn}) all connections in the test r
 
 
 
-FIGURES AND PLOTS FROM SIMSCAPE
-
-
-\section{Control simulations}
-
-
-
-
-\section{Improvements}
