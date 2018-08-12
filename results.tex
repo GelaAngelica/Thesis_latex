@@ -1,13 +1,39 @@
 % !TEX root = /Users/Gela/Desktop/Thesis_latex/thesis.tex
 \section{Modeling}
-A physical model of the membrane were made and the given results can be seen below:
-
+A physical model of the membrane were made and the given results can be seen below. In figure \ref{fig:simscape} the flowchart is given. The RO-membrane is simulated with three nodes; feed, product and reject, and an extra input temp. The temp node gives freedom to simulate the behaviour of the membrane in different temperature ranges. The model consists the pump, pipes, valves and tank. The water in the tank can be set to contain any salt koncentration to be able to simulate different conductivity values. The speed of the pumps can be changed to change the flow and pressure characteristic over the membrane in the model.\\
+\\
 \begin{figure}[h]
+\label{fig:simscape}
 \centering
 \includegraphics[width=\textwidth]{simscape_fc1.PNG}
 \caption{Model made in Matlab tool Simscape}
-\label{fig:simscape}
 \end{figure}
+
+
+\subsection{Temperature}
+In figure \ref{fig:temp} the simulated temperature, 278-316 K is shown. All plots \ref{fig:msaltf} - \ref{fig:conden} shows the behaviour over a simulated time of 2000 s and a temperature range of 278-316 K. Pump speed is kept constant. The temperature correction factor, TCF, in figure \ref{fig:tcf} is the temperature dependent parameter implemented in the simulated model to receive the differences of the behaviour of the membrane. At 298 K TCF is equal to 1. Below and above it is adjusted to compensate for the differences of the membrane behaviour. \\
+\\
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\linewidth]{temp.PNG}
+  \caption{Temperature}
+  \label{fig:temp}
+\end{figure}
+\begin{figure}[h]
+\centering
+    \centering
+    \includegraphics[width=0.5\textwidth]{tcf.PNG}
+    \caption{Temperature correction factor}
+    \label{fig:tcf}
+\end{figure}
+
+\subsection{Salt koncentration}
+
+In figure \ref{fig:msaltf} the salt koncentration in kg/s on feed side of the membrane is shown. The concentration increases over the simulated time and change in temperature. \\
+In figure \ref{fig:msaltp} the salt koncentration on product side is shown. Due to the mass balance equation in XXXX the sign is negative, and the koncentration increases with temperature.\\
+In figure \ref{fig:msaltr} the salt koncentration on reject side is shown. It increases a little with temperature (negative sign due to the mass balance equations).\\
+The product salt koncentration increases with from a value of  0.8 - 0.96 kg/s. The product water koncentration increases from (-) 0.2 - 1.8 kg/s. The reject salt koncentration increases from (-) 0.8 - 0.96 kg/s.\\
+\\
 \begin{figure}[h]
 \centering
     \includegraphics[width=0.5\textwidth]{msalt_feed.PNG}
@@ -18,7 +44,7 @@ A physical model of the membrane were made and the given results can be seen bel
 \centering
   \includegraphics[width=0.5\linewidth]{msalt_prod.PNG}
   \caption{Salt concentration productwater}
-  \label{fig:msalp}
+  \label{fig:msaltp}
 \end{figure}
 \begin{figure}[h]
   \centering
@@ -26,6 +52,10 @@ A physical model of the membrane were made and the given results can be seen bel
   \caption{Salt concentration reject water}
   \label{fig:msaltr}
 \end{figure}
+Figure \ref{fig:qf} - \ref{fig:qrej} shows the flow in the three nodes; feed, product and reject. The mass balance equation in XXXX gives negative sign on reject and product side. The feed water flow increases negligible from 8.441-8.444 l/min. Product water flow increases from (-) 0.62-1.42 l/min. Reject water flow decreases from (-) 7.82-7.2 l/min. \\
+\\
+
+\subsection{Flow}
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.5\linewidth]{q_feed.PNG}
@@ -44,32 +74,24 @@ A physical model of the membrane were made and the given results can be seen bel
   \caption{Flow reject side}
   \label{fig:qrej}
 \end{figure}
-\begin{figure}[h]
-\centering
-\begin{minipage}{.5\textwidth}
-    \centering
-    \includegraphics[width=\textwidth]{tcf.PNG}
-    \caption{Temperature correction factor}
-    \label{fig:tcf}
-\end{minipage}
-\begin{minipage}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{temp.PNG}
-  \caption{Temperature}
-  \label{fig:temp}
-\end{minipage}
-\end{figure}
+
+\subsection{Pressure}
+Figure \ref{fig:deltap} shows pressure difference from feed side to product side. The pressure decreases from (-) 11.5-7.7 bar when temperature changes from 278-316 K. \\
+\\
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.5\linewidth]{deltap.PNG}
   \caption{Pressure drop feed side to product side}
   \label{fig:deltap}
 \end{figure}
+
+\subsection{Conductivity}
+Figure \ref{fig:conden} displays the conductivity in feed, product and reject side. The conductivity in all nodes increases when temperature increases.\\
+\\
 \begin{figure}[h]
-\raggedleft
+  \label{fig:conden}
   \includegraphics[width=1.1\linewidth]{cond.PNG}
   \caption{Conductivity in feed, reject and product side}
-  \label{fig:cond}
 \end{figure}
 
 \newpage
@@ -103,7 +125,72 @@ An overview of the systems can be seen below.\\
 
 \newpage
 
-\section{Investigation on membran behaviour}
+\section{Implementation Test Rig}
+
+
+\subsection{Connections}
+In Figure (\ref{fig:PressConn}-\ref{fig:PumpConn}) all connections in the test rig is displayed. The whole rig can be seen in \ref{fig:Rig1} and \ref{fig:Rig2}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Rig1}
+    \caption{The rig built at Baxter Lund AB, with RO-membrane, pumps, pipes, flowmeter, measuremet sensors and valves}
+    \label{fig:Rig1}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{Rig2}
+    \caption{The full setup built at Baxter Lund AB, with simulink implementation, GUI, display and water bath}
+    \label{fig:Rig2}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{PressConn}
+    \caption{Connections Pressure sensors}
+    \label{fig:PressConn}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{C3Conn}
+    \caption{Connections measurement blocks, C3}
+    \label{fig:C3Conn}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{ValveConn}
+    \caption{Connections Drain Valve}
+    \label{fig:ValveConn}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{PumpConn}
+    \caption{Connections pumps}
+    \label{fig:PumpConn}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Display}
+    \caption{The Display with all key values, read from sensors in the rig}
+    \label{fig:display}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{GUI}
+    \caption{The GUI implemented in Simulink and used to control the rig}
+    \label{fig:gui}
+\end{figure}
+
+\newpage
+
+
+
+\section{Investigation on membrane behaviour}
 
 In order to compare the two systems and understand how the membrane performed in different working conditions both systems needed to be tested. The tests were conducted by controlling the temperature, pumps and the conductivity in the recirculation loop and log how the different conditions affected the system and the membrane. 
 
@@ -171,7 +258,7 @@ The water in the tank was heated while the test was running. Because of this, th
 
 \newpage
 
-By post-procesing the data from test one in Matlab it was possible to visually show how the system parameters were affected by the changed pump speed and feed conductivity. 
+By post-proccesing the data from test one in Matlab it was possible to visually show how the system parameters were affected by the changed pump speed and feed conductivity. 
 
 
 insert table, results on how the different graphs changed!!!
@@ -187,7 +274,7 @@ insert table, results on how the different graphs changed!!!
 
 \subsection{Current system, Test sequence 2}
 
-The second test was carried out by setting the heater bath to 30 degrees celsius and and adjusting the conductivity and pump speed according to the test plan. Since the water was much warmer than the air in the room, the heating caused by the pump was not as prominent and allowed all steady states to be examined in one contimous test.
+The second test was carried out by setting the heater bath to 30 degrees celsius and and adjusting the conductivity and pump speed according to the test plan. Since the water was much warmer than the air in the room, the heating caused by the pump was not as prominent and allowed all steady states to be examined in one continous test.
 
 \begin{figure}[H]
     \centering
@@ -390,47 +477,12 @@ Recovery Increase
 
 
 
-\section{Implementation Test Rig}
-
-
-\subsection{Connections}
-In Figure (\ref{fig:PressConn}-\ref{fig:PumpConn}) all connections in the test rig is displayed.
-
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{PressConn}
-    \caption{Connections Pressure sensors}
-    \label{fig:PressConn}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{C3Conn}
-    \caption{Connections measurement blocks, C3}
-    \label{fig:C3Conn}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{ValveConn}
-    \caption{Connections Drain Valve}
-    \label{fig:ValveConn}
-\end{figure}
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{PumpConn}
-    \caption{Connections pumps}
-    \label{fig:PumpConn}
-\end{figure}
-
-
 \section{Mapping}
+The mapping of the pumps RPM and flowrate can be seen in \ref{fig:RPM} and \ref{fig:Flowrate}.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{RPM.png}
-    \caption{RPM Pumps}
+    \caption{RPM of the Pumps at different control signals/duty cycles}
     \label{fig:RPM}
 \end{figure}
 
@@ -438,12 +490,15 @@ In Figure (\ref{fig:PressConn}-\ref{fig:PumpConn}) all connections in the test r
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{Flow.png}
-    \caption{Flowrate}
+    \caption{Flow rate at different control signals/duty cycles}
     \label{fig:Flowrate}
 \end{figure}
 
 
 \section{Design of control algorithms}
+In order to design control for driving the system some investigations on System 2, the two pump solution were done. In picture \ref{fig:PreTestReg1}, the results from test with all parameters except the speed of the recycle pump were kept constant, can be seen. \\
+\\
+In picture \ref{fig:PreTestReg3}, the results from test with all parameters except the speed of the feed pump were kept constant, can be seen.
 
 \begin{figure}[h]
     \centering
@@ -455,7 +510,7 @@ In Figure (\ref{fig:PressConn}-\ref{fig:PumpConn}) all connections in the test r
 \begin{figure}[h]
     \centering 
     \includegraphics[width=1.65\textwidth, angle=270]{PreTestReg3.png}
-    \caption{Tests with inlet pump as changing parameter}
+    \caption{Tests with feed pump as changing parameter}
     \label{fig:PreTestReg3}
 \end{figure}
 
