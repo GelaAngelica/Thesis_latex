@@ -153,6 +153,8 @@ In Figure (\ref{fig:PressConn}-\ref{fig:PumpConn}) all connections in the test r
     \label{fig:PressConn}
 \end{figure}
 
+\newpage
+
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{C3Conn}
@@ -167,27 +169,29 @@ In Figure (\ref{fig:PressConn}-\ref{fig:PumpConn}) all connections in the test r
     \label{fig:ValveConn}
 \end{figure}
 
-\begin{figure}[h]
+\newpage
+
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{PumpConn}
     \caption{Connections pumps}
     \label{fig:PumpConn}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Display}
     \caption{The Display with all key values, read from sensors in the rig}
     \label{fig:display}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{GUI}
     \caption{The GUI implemented in Simulink and used to control the rig}
     \label{fig:gui}
 \end{figure}
 
-\newpage
 
+\newpage
 
 
 \section{Investigation on membrane behaviour}
@@ -235,10 +239,12 @@ The tests were conducted by changing the temperature, recirculation conductivity
 \end{table}
 
 
+\newpage
 \subsection{Current system, Test sequence 1, part 1}
 
 The water in the tank was heated while the test was running. Because of this, the test was split up in two parts, first the motor was set to 60\% and steady state 1.1, 1.2, 1.3, 1.5 and 1.7 were investigated. In the part 2, the motor was set to 80 \% and steady state 1.4, 1.6 and 1.8 were investigated. 
-\begin{figure}[H]
+
+\begin{figure}[h]
     \centering
     \includegraphics[width=1.1\textwidth]{overview20_60}
     \caption{Test 1, Current system, 18 degrees celsius. Steady states 1.1, 1.2, 1.3, 1.5 and 1.7 }
@@ -331,7 +337,7 @@ Net driving pressure was decreased when the temperature was increased. Higher fe
     \centering
     \includegraphics[width=0.8\textwidth]{NDP}
     \caption{Net driving pressure}
-    \label{fig:PressConn}
+    \label{fig:NDP}
 \end{figure}
 
 \subsection{Permeate flow}
@@ -364,7 +370,7 @@ By looking at plot 5.13 the deterimental effects of both increased temperature a
     \centering
     \includegraphics[width=0.8\textwidth]{SaltRejection}
     \caption{Saltrejection}
-    \label{fig:PressConn}
+    \label{fig:SalrRejectionResult}
 \end{figure}
  
 \subsection{Permeate conductivity}
@@ -391,89 +397,116 @@ Water efficiency increased when the temperature increased due to more permeate w
     \label{fig:PressConn}
 \end{figure}
 
+\newpage
+
 \subsection{System 2}
 
-Test: increased feed pressure:
-
-Add all plots from test with two pump system. TBD 
-
-Section not finished! 
+The circulation pump and a flow meter was added to the system and the flow path was modified according to figure XXXX. The rig was also reprogrammed to be able to measure all flows in the flow path in real time. This could be done because now both the feed flow, circulation flow and permeate flow could be measured and from this data, the inlet and drain flow could be calculated. 
 
 
+\newpage
+\subsubsection{increased circulation}
 
-Test: increased feed pressure
+The Initial idea for optimizing the membrane was to use the circulation pump to create a turbulent flow close to the membrane surface. Therefore, a test was set up to test this idea.
+During the test, the feed pump and drain valve was set to a fixed value and the circulation pump was increased from 5\% to 35\%. Figure \ref{fig:RecIncrease} show the permeate conductivity, circulation flow and feed pressure and 7 steady state points from the test.
 
-
-Sen körde vi tester för att hitta en optimal kurva.
-
-Tanken är att presentera resultat, beskriva varför vi valde att optimera systemet på det här sättet och till slut visa hur vi testade oss fram till och beräknade en kurva för att omvända temperatur till en setpoint för permeatflöded.
-
+The circulation flow was increased from 1500 ml/min to 5000 ml/min and the increased circulation flow caused the pressure to increase from 5.5 to 7 bar. The permeate conductivity remained unchanged. 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.1\textwidth]{FeedPumpIncrease21}
-    \caption{Insert caption}
-    \label{fig:PressConn}
-\end{figure}
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.1\textwidth]{FeedPumpIncrease21Key}
+    \includegraphics[width=1.1\textwidth]{RecIncrease40}
     \caption{Caption missing}
-    \label{fig:PressConn}
-\end{figure}
+    \label{fig:RecIncrease}
+\end{figure}  
 
-30
-
-
+More information about how the system performed during the test was calculated and can be seen in figure \ref{RecIncreaseKey}. The Recovery decreased from 22\% to 14\%  but salt rejection and permeate conductivity did only increase slightly. 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.1\textwidth]{FeedPumpIncrease30}
+    \includegraphics[width=1.1\textwidth]{RecIncrease40Key}
     \caption{Caption missing}
-    \label{fig:PressConn}
-\end{figure}
+    \label{fig:RecIncreaseKey}
+\end{figure} 
+\par\bigskip 
+\noindent
+The test concluded that the initial theory that increased circulation flow would lead to better system performance was false. Increasing the circulation has no measureable positive effect on the system. 
 
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.1\textwidth]{FeedPumpIncrease30Key}
-    \caption{Caption missing}
-    \label{fig:PressConn}
-\end{figure}
-
-40
-
+\newpage
+\subsubsection{increased circulation}
+The next test was set up to investigate the effect of an increased feed pressure. During the test all parameters were kept constant except the rpm of the feed pump. An overview of the test can be seen in figure \ref{fig:FeedPumpIncrease40} and the key parameters calculated after the test can be seen in figure \ref{fig:FeedPumpIncrease40Key} 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{FeedPumpIncrease40}
     \caption{Caption missing}
-    \label{fig:PressConn}
+    \label{fig:FeedPumpIncrease40}
 \end{figure}
-
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{FeedPumpIncrease40Key}
     \caption{Caption missing}
-    \label{fig:PressConn}
+    \label{fig:FeedPumpIncrease40Key}
 \end{figure}
 
-Recovery Increase
+From figure \ref{fig:FeedPumpIncrease40} it can be seen that the circulation flow remained constant and that the feed side pressure was increased from 1.5 to 8 bars. The permeate quality increased from 100 uS/cm to 30 uS/cm. As a result, it could be concluded that it was possbile to increase the performance of the membrane by increasing feed side pressure without the increased circulation flow. It should be noted that  the membrane recovery increased from 28\% to 36\% during the test and this is far above the maximum limit specified by the manufacturer. Therefore, it should also be concluded that only controlling the feed pump without controlling membrane recovery could damage the membrane. 
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.1\textwidth]{RecIncrease40}
-    \caption{Caption missing}
-    \label{fig:PressConn}
-\end{figure}
+SAVING ENERGY COSTS WATER / VICE VERSA!
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.1\textwidth]{RecIncrease40Key}
-    \caption{Caption missing}
-    \label{fig:PressConn}
-\end{figure}
+
+ 
+\newpage
+\subsection{Optimization algorithm}
+
+Previous tests concluded that it was ineffective to increase salt rejection by increasing the circulation flow, that it was possible to increase feed side pressure to increase salt rejection and that water temperature was the parameter that had the largest deterimental effect on salt rejection. Increased feed water conductivity also decreased the performance of the system, but not as much as increased temperature and the negative effect of high conductivity was more prominant at higher temperatures. Increased feed side pressure has a larger possitive effect on salt rejection at high temperature.
+Since test showed that increased temperature decreased net driving pressure (See figure \ref{fig:NDP}) and that decreased feed pressure reduced salt rejection (see figure \ref{fig:SalrRejectionResult} it could be concluded that using a fixed value setpoint at either feed side pressure or permeate flow would not work. Instead a setpoint could be calculated for a given temperature and pressure or permeate flow could be used as a setpoint.
+By using permeate flow instead of feed side pressure as a setpoint, factors such as membrane fouling, scaling and individual differences in the membrane could be compensated by the controller.
+
+\subsection{Finding an optimal plane}
+
+the purpose was to find a permeate flow setpoint that would ensure good quality peremeate at all temperatures without wasting more water and energy than needed. Since it was concluded in previous tests that membrane recovery did not improve saltrejection it was determined that this parameter should be set to 20\%. 
+
+The test was conducted according to the test case below.  
+
+\begin{center}
+    \begin{tabular}{ | p{1cm} |  p{1cm} |  p{1cm} | p{1cm} |p{1cm} |p{1cm} |p{1cm}|}
+    \hline
+    Temp. & Feed Cond. & Rec.  &  Feed pump & Circ. pump & Perm. cond. & Perm. flow \\ \hline
+    20&270&20&X&X&X&X\\
+    20&500&20&X&X&X&X\\
+    20&1000&20&X&X&X&X\\
+    20&2000&20&X&X&X&X\\
+    20&3000&20&X&X&X&X\\
+    30&270&20&X&X&X&X\\
+    30&500&20&X&X&X&X\\
+    30&1000&20&X&X&X&X\\
+    30&2000&20&X&X&X&X\\
+    30&3000&20&X&X&X&X\\
+    40&270&20&X&X&X&X\\
+    40&500&20&X&X&X&X\\
+    40&1000&20&X&X&X&X\\
+    40&2000&20&X&X&X&X\\
+    40&3000&20&X&X&X&X\\
+    \end{tabular}
+\end{center}
+
+
+
+
+ 
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
 
 
 
