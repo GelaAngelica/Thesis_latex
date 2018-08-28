@@ -4,30 +4,30 @@
 
 The Water Technologies department at Baxter develops water systems for use in mixing fluid for dialysis treatments. The water quality is important in order not to harm the patients when using the final product. The water systems used for water purification are using the reverse osmosis (RO) method as the first stage in the purification process. It remove impurities, as salt and inorganic molecules from the water\cite{Dow}.\\
 \\
-In a RO-system the feed water is pressurized by a pump and forced through the RO-membrane to overcome the osmotic pressure. The RO-membrane is a semi-permeable membrane and let water passes freely true the membrane creating a purified product stream. \\
+In a RO-system the feed water is pressurized by a pump and forced through the RO-membrane to overcome the osmotic pressure. The RO-membrane is a semi-permeable membrane and let water passes freely true the membrane creating a purified product stream. This product water is used by the dialysis machine in order to give the patients a safe treatment. If the water is not pure enough the patient is exposed to a high risk and it is of great importance that the purification plant, e.g the water device delivers good quality on the water at all times.\\
 \\
-The pump in the current system has two purposes, creating a pressure to overcome the osmotic pressure and creating a flow on the reject side of the RO-membrane to prevent aggregation of impurities on the membrane surface.\\
+The water device has a current system containing one pump, which has two purposes, creating a pressure to overcome the osmotic pressure and creating a flow on the reject side of the RO-membrane to prevent aggregation of impurities on the membrane surface. Both flow rate and pressure has a significant impact on the membrane behaviour in order to deliver pure water.\\
 
 
 \section{Motivation}
-By using two pumps instead of one in the RO-system it will be possible to control the pressure on the membrane and the flow on the reject side independently and thus it might be possible to optimize the performance of the RO-system, focusing on reducing impurities, energy consumtion and water consumption. \\
+By using two pumps instead of one in the RO-system it will be possible to control the pressure on the membrane and the flow on the reject side independently and thus it might be possible to optimise the performance of the RO-system, focusing on reducing impurities, energy consumption and water consumption. \\
 \\
-Currently there is a simulink model of the RO-membrane from an earlier masters thesis. However, this model does not include the temperatue dependencies of the membrane and therefor these dependancies should be investigated and added to the model. 
+Currently there is a simulink model of the RO-membrane from an earlier masters thesis. However, this model does not include the temperature dependencies of the membrane and therefor these dependancies should be investigated and added to the model. 
 \section{Goal}
-The purpose of this masters thesis is to evaluate the feasibility of replacing the main RO-pump with two pumps, one for controlling the flow through the membrane and one for controlling the pressure. The positioning of the pumps, membrane and other component sould be investigated and tested. \\
+The purpose of this masters thesis is to evaluate the feasibility of replacing the main RO-pump with two pumps, one for controlling the flow through the membrane and one for controlling the pressure. The positioning of the pumps, membrane and other component should be investigated and tested. \\
 \\
 The temperature dependencies of the RO-membrane should be added into the current simscape model.
 \\
-To achieve good performance it will be necessary to design a realistic model of the system, once the model has been designed and tested a control algorithm is to be developed and implementet on a physical test setup. This algorithm, should be able to control the flow and pressure over the RO-membrane to maximize the performance of the membrane while minimizing waste water and energy consumtion. \\
+To achieve good performance it will be necessary to design a realistic model of the system, once the model has been designed and tested a control algorithm is to be developed and implementet on a physical test setup. This algorithm, should be able to control the flow and pressure over the RO-membrane to maximize the performance of the membrane while minimising waste water and energy consumption. \\
 
 
 \subsection{Framing of questions}
 \label{framing}
 \begin{itemize}
 \renewcommand\labelitemi{-}
-   \item Is it possible to upgrade the RO-membrane model to include temperature dependencies?
-   \item Is it possible to control the system with two pumps instead of one, which is used today?
-   \item Is it possible to design a control algorithm using two pumps that will optimize the performance of the membrane while reducing waste water, power and possibly noise? (In comparison with the current system).   
+   \item \textbf{Is it possible to upgrade the RO-membrane model to include temperature dependencies?}\\ Due to the fact that the membrane is temperature dependent and considered non linear in a high spectra of different temperatures, is it possible to implement the temperature dependencies in full range or is it preferable to limit the membrane to work in a set range in order to handle the temperature dependencies linearly?
+   \item \textbf{Is it possible to control the system with two pumps instead of one?}\\ Will the two pump system increase the performance of the membrane under all circumstances, or even some? Will it ensure the quality on the water in a higher range than today?   
+   \item \textbf{Is it possible to design a control algorithm using two pumps that will optimise the performance of the membrane while reducing waste water, power and possibly noise? (In comparison with the current system)}\\ The belief is that the two pump system will give a higher degree of freedom to control pressure and flow in the system. However, parameters as the amount of waste water, the uses energy to deliver pure water and even noise level is parameters that can be improved by a two pumps system.  
 \end{itemize}
 
 
