@@ -2,12 +2,12 @@
 
 \section{Semi-permeable membrane}
 \label{membrane}
-A membrane is defined as a barrier between two homogeneous phases. The process is a continuos steady-state operation consisting three streams: feed, permeate and reject. Main concern in the process boundary is the semipermeable barrier that selectively allows the passage of some components but not others. \cite{Singh}
+A membrane is defined as a barrier between two homogeneous phases. The process is a continuous steady-state operation consisting three streams: feed, permeate and reject. Main concern in the process boundary is the semipermeable barrier that selectively allows the passage of some components but not others. \cite{Singh}
 
 \section{Osmosis} 
 \label{osmosis}
 The osmosis process occurs when two solutions of different chemical concentration are separated by a semi-permeable membrane. The two different solutions will try to reach equilibrium. The solution with less concentration will have a natural tendency to migrate through the membrane over to the side with higher concentration.  
-Osmosis is a naturally occurring phenomenon and one of the most important processes in nature. The pressure that occurs is called the osmotic pressure. The phenomenon can be seen in Figure \ref{fig:osmosis}
+Osmosis is a naturally occurring phenomenon and one of the most important processes in nature. The pressure that occurs is called the osmotic pressure. The phenomenon can be seen in Figure \ref{fig:osmosis}. The fresh water on right side inte figure wants to contract through the semi-permeable membrane in order to reach a equilibrium with the salt water on the left side. This creates a stream of water from right side of the membrane to the left side. The osmotic pressure created by the different salute concentration in the fresh and salt water creates the flow. A greater difference in concentration creates a higher osmotic pressure than lower concentration difference.
 
 \begin{figure}[h]
     \centering
@@ -18,31 +18,42 @@ Osmosis is a naturally occurring phenomenon and one of the most important proces
 
 \section{Reverse osmosis}
 \label{RO}
-The reverse osmosis(RO) process is the reverse process of the osmosis. When pressure is applied to a semipermeable membrane, the water molecules are forced through the semipermeable membrane and the contaminants are not allowed true. The amount of pressure required depends on the salt concentration of the water. In order to gain reverse osmosis the pressure applied must be greater than the osmosis pressure. The membrane employs cross filtration rather than standard filtration. With cross filtration, the solution passes through the filter with two outlets. One solution passes true the membrane and is called permeate and is the filtered solution. The other solution can be drained or be fed back into the filtering system. The contaminants build up att the surface area and it is of great importance to try to sweep them away and hold the surface clean. If the contaminants builds up the performance of the membrane will decrease, and cleaning with chemicals or heat water might be necessary\cite{Puretech}. The phenomenon of reverse osmosis can be seen in \ref{fig:ReverseOsmosis}.
+The reverse osmosis(RO) process is the reverse process of the osmosis. The idea is putting a pressure on the high concentration side in order to overcome the osmotic pressure, created by the difference in contaminant concentration. When pressure is applied to a semipermeable membrane, the water molecules are forced through the semipermeable membrane and the contaminants are not allowed true. The amount of pressure required depends on the salt concentration of the water. In order to gain reverse osmosis the pressure applied must be greater than the osmosis pressure. The membrane employs cross filtration rather than standard filtration. With cross filtration, the solution passes through the filter with two outlets. One solution passes true the membrane and is called permeate and is the filtered, pure, solution. The other solution can be drained or fed back into the filtering system, and is called reject. This can be seen in figure \ref{fig:ROsystem}. \\
+\\
+The contaminants build up att the surface area and it is of great importance to try to sweep them away and hold the surface clean. If the contaminants builds up the performance of the membrane will decrease, and cleaning with chemicals or heat water might be necessary\cite{Puretech}. The phenomenon of reverse osmosis can be seen in \ref{fig:ReverseOsmosis}. The water on left side is pressured through the membrane to the right side since the applied pressure is higher than the osmotic pressure. The result is a pure water with only small amount of contaminants in the fresh water stream. 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{ReverseOsmosis}
     \caption{Reverse Osmosis}
     \label{fig:ReverseOsmosis}
 \end{figure}
-In order to obtain good performace over the RO membrane there are some parameters that should be taken in consideration when designing a RO system. These are:
 
-\begin{labeling}{alligator}
-\renewcommand\labelitemi{ }
-\item [Pressure:]  feed ($P_{f}$), permeate ($P_{p}$), reject, ($P_{r}$)
-\item [Conductivity:] feed, $C_{f}$, permeate ($C_{p}$), reject ($C_{r}$)
-\item [Flow:] feed ($Q_{f}$), permeate ($Q_{p}$), reject($Q_{r}$)
-\item [Temperature:] feed ($T_{f}$), permeate ($T_{p}$), reject ($T_{r}$)
-\end{labeling}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.4\textwidth]{ROsystem}
+    \caption{RO-system}
+    \label{fig:ROsystem}
+\end{figure}
+
+
+%In order to obtain good performace over the RO membrane there are some parameters that should be taken in consideration when designing a RO system. These are:
+
+%\begin{labeling}{alligator}
+%\renewcommand\labelitemi{ }
+%\item [Pressure:]  feed ($P_{f}$), permeate ($P_{p}$), reject, ($P_{r}$)
+%\item [Conductivity:] feed, $C_{f}$, permeate ($C_{p}$), reject ($C_{r}$)
+%\item [Flow:] feed ($Q_{f}$), permeate ($Q_{p}$), reject($Q_{r}$)
+%\item [Temperature:] feed ($T_{f}$), permeate ($T_{p}$), reject ($T_{r}$)
+%\end{labeling}
 
 
 \subsection{Fouling}
-Fouling occurs when contaminants accumulate on the surface of the membrane. The fouling contributes to a pressure drop that will decrease the performance of the membrane and cause less permeate flow. Fouling will happen eventually to some extent given the fine pore size of the membrane. A high reject flow and proper pretreatment will extend the operational time between cleaning procedures of the membrane\cite{Puretech}. 
+Fouling occurs when contaminants accumulate on the surface of the membrane on feed to reject side. The fouling contributes to a pressure drop that will decrease the performance of the membrane and cause less permeate(fresh water) flow. Fouling will happen eventually to some extent given the fine pore size of the membrane. A high reject flow and proper pretreatment will extend the operational time between cleaning procedures of the membrane\cite{Puretech}. 
 
 \section{Mathematical modeling of reverse osmosis} 
 \label{soldiff}
-There are different models to describe the flow of solutes and solvents in the reverse osmosis process. The mass balance equations are central in modeling the process. Figure \ref{fig:ReverseOsmosis} shows the main process. \\
-
+There are different models to describe the flow of solutes and solvents in the reverse osmosis process. The mass balance equations are central in modeling the process. Figure \ref{fig:ReverseOsmosis} shows the main process. The mass balance equations is applied to feed, permeate and reject side, as in figure \ref{fig:ROsystem}. \\
+\\
 A hydraulic pressure is applied to to the feed stream of concentration, $C_{f}$ and results in a flow rate $Q_{f}$. Some of the solvent, pure water, passes through the RO-membrane  characterized by solvent permeability, solute permeability and surface area. The product water (purified water), is called permeate and has the concentration $C_p$ and flow $Q_p$. The concentration, called reject has the concentration $C_r$ with flow $Q_r$. The study objective of this basic RO-modeling is to calculate output concentrations and flow rates in terms of input and operation conditions. Parameters used to evaluate the performance of the RO-membrane is rejection ratio:
 \begin{equation}
 \label{eq:rejection}
@@ -170,32 +181,32 @@ Control theory deals with the behaviour of dynamical systems. The inputs and out
 \textbf{Steady-state error:} the difference between the steady-state output and the desired output.\\
 \textbf{Transfer function:} Gives the system output for each possible input.\\
 
-\subsection{Linear Quadratic Gaussian control (LQG)}
-Linear Quadratic Gaussian is considered being a combination of a Kalman filter, linear quadratic estimator (LQE) with a linear quadratic regulator (LQR). The method is called LQG since the regulator is linear, works with quadratic criterias and the noise is normally distributed, Gaussian. LQG control applies to both linear time-invariant systems as well as linear time-varying systems. The controller is a dynamic system and often has the same state dimensions as the system it is controlling. The optimum problem is separable in two independent parts: to calculate the optimum estimated states, the kalman filter, and to calculate the optimum feedback from the estimated states. Below describes briefly how a LQG controller is designed for a continuous system. The system can be displayed as:
+%\subsection{Linear Quadratic Gaussian control (LQG)}
+%Linear Quadratic Gaussian is considered being a combination of a Kalman filter, linear quadratic estimator (LQE) with a linear quadratic regulator (LQR). The method is called LQG since the regulator is linear, works with quadratic criterias and the noise is normally distributed, Gaussian. LQG control applies to both linear time-invariant systems as well as linear time-varying systems. The controller is a dynamic system and often has the same state dimensions as the system it is controlling. The optimum problem is separable in two independent parts: to calculate the optimum estimated states, the kalman filter, and to calculate the optimum feedback from the estimated states. Below describes briefly how a LQG controller is designed for a continuous system. The system can be displayed as:
 
-\begin{equation}
-\label{eq:LQG1}
-\begin{array}{lcl}
-\dot x(t) = A(t)x(t) + B(t)u(t) + v(t) \\ y(t) = C(t)x(t) + w(t)
-\end{array}
-\end{equation}
-where x(t) represents the vector of state variables in the system, u(t) the vector of control inputs and y(t) the vector of measured outputs available for feedback. The v(t) is white Gaussian system noise and the w(t) is white Gaussian measurement noise, both affecting the system. If searching for the 
-\begin{equation}
-\label{eq:LQG2}
-u(t) = - F_{y}(p)y(t)
-\end{equation}
-that minimize
-\begin{equation}
-\label{eq:LQG3} 
-V= \| z \| ^{2}_{Q_{1}} + \| u \| ^{2}_{Q_{2}}
-\end{equation} 
-for a positive definit matrice $ Q_{2} $ and a positive semi definit matrice $ Q_{1} $. The regulator is assumed causal. The optimum linear controller is:
-\begin{equation}
-\label{eq:LQG4}
-\begin{array}{lcl}
-u(t) =  -L \hat{x}(t) \\  \hat{\dot x} = A\hat{x} + Bu(t) + K(y(t)-C\hat{x}(t)) 
-\end{array}
-\end{equation}
+%\begin{equation}
+%\label{eq:LQG1}
+%\begin{array}{lcl}
+%\dot x(t) = A(t)x(t) + B(t)u(t) + v(t) \\ y(t) = C(t)x(t) + w(t)
+%\end{array}
+%\end{equation}
+%where x(t) represents the vector of state variables in the system, u(t) the vector of control inputs and y(t) the vector of measured outputs available for feedback. The v(t) is white Gaussian system noise and the w(t) is white Gaussian measurement noise, both affecting the system. If searching for the 
+%\begin{equation}
+%\label{eq:LQG2}
+%u(t) = - F_{y}(p)y(t)
+%\end{equation}
+%that minimize
+%\begin{equation}
+%\label{eq:LQG3} 
+%V= \| z \| ^{2}_{Q_{1}} + \| u \| ^{2}_{Q_{2}}
+%\end{equation} 
+%for a positive definit matrice $ Q_{2} $ and a positive semi definit matrice $ Q_{1} $. The regulator is assumed causal. The optimum linear controller is:
+%\begin{equation}
+%\label{eq:LQG4}
+%\begin{array}{lcl}
+%u(t) =  -L \hat{x}(t) \\  \hat{\dot x} = A\hat{x} + Bu(t) + K(y(t)-C\hat{x}(t)) 
+%\end{array}
+%\end{equation}
 
 
 
