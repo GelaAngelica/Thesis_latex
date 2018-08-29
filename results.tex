@@ -1,5 +1,6 @@
 % !TEX root = /Users/Gela/Desktop/Thesis_latex/thesis.tex
 \section{Modeling}
+\label{sec:modres}
 A physical model of the membrane were made and the given results can be seen below. In figure \ref{fig:simscape} the flowchart is given. The RO-membrane is simulated with three nodes; feed, product and reject, and an extra input temp. The temp node gives freedom to simulate the behaviour of the membrane in different temperature ranges. The model consists the pump, pipes, valves and tank. The water in the tank can be set to contain any salt koncentration to be able to simulate different conductivity values. The speed of the pumps can be changed to change the flow and pressure characteristic over the membrane in the model.\\
 \\
 \begin{figure}[h]
@@ -103,7 +104,7 @@ By changing the flow path in the test setup both the one pump system and two pum
 One pump system, figure \ref{fig:FlowCInves1}, The one pump system was designed to use both a tank and the recirculation loop as a water source and to create pressure by generating a large flow over the membrane and recirculation restrictor. \\
 
 
-Two pump system, figure \ref{fig:Sys2}, In the two pump system the water path was modified so that the feed pump only used a tank as a source and pressureized the entire recirculation loop. The recirculation pump was used to recirculate the already\\ pressureized water within the recirculation loop.\\
+Two pump system, figure \ref{fig:Sys2}, In the two pump system the water path was modified so that the feed pump only used a tank as a source and pressureized the entire recirculation loop. The recirculation pump was used to recirculate the already\\ pressurized water within the recirculation loop.\\
 
 
 An overview of the systems can be seen below.\\
@@ -124,6 +125,23 @@ An overview of the systems can be seen below.\\
 \end{figure}
 
 \newpage
+
+\section{Mapping}
+The mapping of the pumps RPM and flowrate can be seen in \ref{fig:RPM} and \ref{fig:Flowrate}.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{RPM.png}
+    \caption{RPM of the Pumps at different control signals/duty cycles}
+    \label{fig:RPM}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Flow.png}
+    \caption{Flow rate at different control signals/duty cycles}
+    \label{fig:Flowrate}
+\end{figure}
 
 \section{Implementation Test Rig}
 
@@ -405,7 +423,7 @@ The circulation pump and a flow meter was added to the system and the flow path 
 
 
 \newpage
-\subsubsection{increased circulation}
+\subsubsection{Increased circulation}
 
 The Initial idea for optimizing the membrane was to use the circulation pump to create a turbulent flow close to the membrane surface. Therefore, a test was set up to test this idea.
 During the test, the feed pump and drain valve was set to a fixed value and the circulation pump was increased from 5\% to 35\%. Figure \ref{fig:RecIncrease} show the permeate conductivity, circulation flow and feed pressure and 7 steady state points from the test.
@@ -466,48 +484,6 @@ the purpose was to find a permeate flow setpoint that would ensure good quality 
 
 The goal of the test was to find the lowest pressure needed at a given feed conductivity and temperature to achieve a permeate conductivity of 30 uS/cm while maintaining a recovery of at most 20\%. The test was conducted by first adjusting the temperature in the heating bath to 20 deg C and then add salt so that the conductivity of the water in the bath was roughly 275 uS/cm. Afterwards, the feed and circulation pump were adjusted to obtain a  permeate conductivity of 30 uS/cm and 20\% recovery. Once the system had stabilised important parameters were noted. Once the parameters had been obtained, the conductivity was slowely increased and the pumps were modified to once again produce peremate water with a conductivity of 30 uS/cm. This procedure was repeated until the conductivity reached 3000 uS/cm. The same procedure was repeated using 30 C and 40 C inlet water.
 
-
-
-
-
-
-
-
- 
- 
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-\section{Mapping}
-The mapping of the pumps RPM and flowrate can be seen in \ref{fig:RPM} and \ref{fig:Flowrate}.
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{RPM.png}
-    \caption{RPM of the Pumps at different control signals/duty cycles}
-    \label{fig:RPM}
-\end{figure}
-
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.7\textwidth]{Flow.png}
-    \caption{Flow rate at different control signals/duty cycles}
-    \label{fig:Flowrate}
-\end{figure}
 
 
 \section{Design of control algorithms}

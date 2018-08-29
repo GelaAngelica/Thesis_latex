@@ -1,11 +1,11 @@
 % !TEX root = /Users/Gela/Desktop/Thesis_latex/thesis.tex
 
 \section{Semi-permeable membrane}
-\label{membrane}
+\label{sec:membrane}
 A membrane is defined as a barrier between two homogeneous phases. The process is a continuous steady-state operation consisting three streams: feed, permeate and reject. Main concern in the process boundary is the semipermeable barrier that selectively allows the passage of some components but not others. \cite{Singh}
 
 \section{Osmosis} 
-\label{osmosis}
+\label{sec:osmosis}
 The osmosis process occurs when two solutions of different chemical concentration are separated by a semi-permeable membrane. The two different solutions will try to reach equilibrium. The solution with less concentration will have a natural tendency to migrate through the membrane over to the side with higher concentration.  
 Osmosis is a naturally occurring phenomenon and one of the most important processes in nature. The pressure that occurs is called the osmotic pressure. The phenomenon can be seen in Figure \ref{fig:osmosis}. The fresh water on right side inte figure wants to contract through the semi-permeable membrane in order to reach a equilibrium with the salt water on the left side. This creates a stream of water from right side of the membrane to the left side. The osmotic pressure created by the different salute concentration in the fresh and salt water creates the flow. A greater difference in concentration creates a higher osmotic pressure than lower concentration difference.
 
@@ -51,7 +51,7 @@ The contaminants build up att the surface area and it is of great importance to 
 Fouling occurs when contaminants accumulate on the surface of the membrane on feed to reject side. The fouling contributes to a pressure drop that will decrease the performance of the membrane and cause less permeate(fresh water) flow. Fouling will happen eventually to some extent given the fine pore size of the membrane. A high reject flow and proper pretreatment will extend the operational time between cleaning procedures of the membrane\cite{Puretech}. 
 
 \section{Mathematical modeling of reverse osmosis} 
-\label{soldiff}
+\label{sec:soldiff}
 There are different models to describe the flow of solutes and solvents in the reverse osmosis process. The mass balance equations are central in modeling the process. Figure \ref{fig:ReverseOsmosis} shows the main process. The mass balance equations is applied to feed, permeate and reject side, as in figure \ref{fig:ROsystem}. \\
 \\
 A hydraulic pressure is applied to to the feed stream of concentration, $C_{f}$ and results in a flow rate $Q_{f}$. Some of the solvent, pure water, passes through the RO-membrane  characterized by solvent permeability, solute permeability and surface area. The product water (purified water), is called permeate and has the concentration $C_p$ and flow $Q_p$. The concentration, called reject has the concentration $C_r$ with flow $Q_r$. The study objective of this basic RO-modeling is to calculate output concentrations and flow rates in terms of input and operation conditions. Parameters used to evaluate the performance of the RO-membrane is rejection ratio:
@@ -116,8 +116,10 @@ In order to model the osmotic pressure the van't Hoff principle can be used. It 
 where b is a proportionality. In van't Hoff's equation b=RT, where R is the gas constant and T is the absolute temperature om the membrane system. 
 
 \subsection{Equations from DOW}
+\label{sec:doweq}
 %\newcommand{\mathleft}{\@fleqntrue\@mathmargin0pt}
 \mathleft
+
 \begin{equation}
 \label{eq:pQ}
 Q_{p}=A_{i}\pi_{i} S_{E}(TCF)(FF)(P_{fi}-\frac{\Delta P_{fcj}}{2}-P_{pi}-\pi+\pi_{p})
