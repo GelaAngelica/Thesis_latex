@@ -1,7 +1,11 @@
 % !TEX root = /Users/Gela/Desktop/Thesis_latex/thesis.tex
 \section{Modeling}
 \label{sec:modres}
-A physical model of the membrane were made and the given results can be seen below. In figure \ref{fig:simscape} the flowchart is given. The RO-membrane is simulated with three nodes; feed, product and reject, and an extra input temp. The temp node gives freedom to simulate the behaviour of the membrane in different temperature ranges. The model consists the pump, pipes, valves and tank. The water in the tank can be set to contain any salt koncentration to be able to simulate different conductivity values. The speed of the pumps can be changed to change the flow and pressure characteristic over the membrane in the model.\\
+A physical model of the membrane were made and the given results can be seen below. In figure \ref{fig:simscape} the flowchart is given. The RO-membrane is simulated with three nodes; feed, product and reject, and an extra input temp. The temp node gives freedom to simulate the behaviour of the membrane in different temperature ranges. \\
+\\
+The model consists of the pump, pipes, valves and tank. The water in the tank can be set to contain any salt koncentration to be able to simulate different conductivity values. The speed of the pumps can be changed to change the flow and pressure characteristic over the membrane in the model. \\
+\\
+All plots in this section shows expected behaviour due to the theory about membrane behaviour when temperature rising. Flow and conductivity on permeate/product side is increasing which is desirable to control in the system, and to be kept at limited values in order to have the Water Device to handle these differences in working conditions. The results of the simulations is considered being significant due to theory of the membrane. More details of the parameters in the model can be seen in subsections below.\\
 \\
 \begin{figure}[h]
 \label{fig:simscape}
@@ -9,92 +13,100 @@ A physical model of the membrane were made and the given results can be seen bel
 \includegraphics[width=\textwidth]{simscape_fc1.PNG}
 \caption{Model made in Matlab tool Simscape}
 \end{figure}
+\newpage
 
 
 \subsection{Temperature}
-In figure \ref{fig:temp} the simulated temperature, 278-316 K is shown. All plots \ref{fig:msaltf} - \ref{fig:conden} shows the behaviour over a simulated time of 2000 s and a temperature range of 278-316 K. Pump speed is kept constant. The temperature correction factor, TCF, in figure \ref{fig:tcf} is the temperature dependent parameter implemented in the simulated model to receive the differences of the behaviour of the membrane. At 298 K TCF is equal to 1. Below and above it is adjusted to compensate for the differences of the membrane behaviour. \\
-\\
+In figure \ref{fig:temp} the simulated temperature, 278-316 K is shown. All plots \ref{fig:msaltf} - \ref{fig:conden} shows the behaviour over a simulated time of 2000 s and a temperature range of 278-316 K. Pump speed is kept constant. The temperature correction factor, $TCF$, in figure \ref{fig:tcf} is the temperature dependent parameter implemented in the simulated model to receive the differences of the behaviour of the membrane. At 298 K $TCF$ is equal to 1. Below and above it is adjusted to compensate for the differences of the membrane behaviour. 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.5\linewidth]{temp.PNG}
-  \caption{Temperature}
+  \includegraphics[width=0.7\linewidth]{temp.PNG}
+  \caption{Temperature range in simulations, from 278-316 K}
   \label{fig:temp}
 \end{figure}
+
 \begin{figure}[h]
 \centering
     \centering
-    \includegraphics[width=0.5\textwidth]{tcf.PNG}
-    \caption{Temperature correction factor}
+    \includegraphics[width=0.7\textwidth]{tcf.PNG}
+    \caption{Temperature correction factor, $TCF$, when temperature is simulated from 278-316 K}
     \label{fig:tcf}
 \end{figure}
+\newpage
 
-\subsection{Salt koncentration}
-
+\subsection{Salt concentration}
 In figure \ref{fig:msaltf} the salt koncentration in kg/s on feed side of the membrane is shown. The concentration increases over the simulated time and change in temperature. \\
-In figure \ref{fig:msaltp} the salt koncentration on product side is shown. Due to the mass balance equation in XXXX the sign is negative, and the koncentration increases with temperature.\\
+In figure \ref{fig:msaltp} the salt koncentration on product side is shown. Due to the mass balance equation in \ref{sec:soldiff} the sign is negative, and the koncentration increases with temperature.\\
 In figure \ref{fig:msaltr} the salt koncentration on reject side is shown. It increases a little with temperature (negative sign due to the mass balance equations).\\
 The product salt koncentration increases with from a value of  0.8 - 0.96 kg/s. The product water koncentration increases from (-) 0.2 - 1.8 kg/s. The reject salt koncentration increases from (-) 0.8 - 0.96 kg/s.\\
 \\
+The salt concentration characteristics is in line with the expected values of the system for the simulations and is considered to be realistic for the model. 
 \begin{figure}[h]
 \centering
-    \includegraphics[width=0.5\textwidth]{msalt_feed.PNG}
-    \caption{Salt concentration feedwater}
+    \includegraphics[width=0.7\textwidth]{msalt_feed.PNG}
+    \caption{Salt concentration feed water, when temperature is simulated from 278-316 K}
     \label{fig:msaltf}
 \end{figure}
+
 \begin{figure}[h]
 \centering
-  \includegraphics[width=0.5\linewidth]{msalt_prod.PNG}
-  \caption{Salt concentration productwater}
+  \includegraphics[width=0.7\linewidth]{msalt_prod.PNG}
+  \caption{Salt concentration product water, when temperature is simulated from 278-316 K}
   \label{fig:msaltp}
 \end{figure}
+
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.5\linewidth]{msalt_rej.PNG}
-  \caption{Salt concentration reject water}
+  \includegraphics[width=0.7\linewidth]{msalt_rej.PNG}
+  \caption{Salt concentration reject water, when temperature is simulated from 278-316 K}
   \label{fig:msaltr}
 \end{figure}
-Figure \ref{fig:qf} - \ref{fig:qrej} shows the flow in the three nodes; feed, product and reject. The mass balance equation in XXXX gives negative sign on reject and product side. The feed water flow increases negligible from 8.441-8.444 l/min. Product water flow increases from (-) 0.62-1.42 l/min. Reject water flow decreases from (-) 7.82-7.2 l/min. \\
-\\
+\newpage
+\newpage
 
 \subsection{Flow}
+Figure \ref{fig:qf} - \ref{fig:qrej} shows the flow in the three nodes; feed, product and reject. The mass balance equation in \ref{sec:soldiff} gives negative sign on reject and product side. The feed water flow increases negligible from 8.441-8.444 l/min. Product/permeate water flow increases from (-) 0.62-1.42 l/min. Reject water flow decreases from (-) 7.82-7.2 l/min. \\
+\\
+The plots show expected behaviour of the flow in the system. The membrane pore size is increasing with temperature and the permeate flow is increasing with temperature rising.
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.5\linewidth]{q_feed.PNG}
-  \caption{Flow feed side}
+  \includegraphics[width=0.7\linewidth]{q_feed.PNG}
+  \caption{Flow feed side, when temperature is simulated from 278-316 K}
   \label{fig:qf}
 \end{figure}
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.5\linewidth]{q_prod.PNG}
-  \caption{Flow product side}
+  \includegraphics[width=0.7\linewidth]{q_prod.PNG}
+  \caption{Flow product side, when temperature is simulated from 278-316 K}
   \label{fig:qp}
 \end{figure}
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.5\linewidth]{q_rej.PNG}
-  \caption{Flow reject side}
+  \includegraphics[width=0.7\linewidth]{q_rej.PNG}
+  \caption{Flow reject side, when temperature is simulated from 278-316 K}
   \label{fig:qrej}
 \end{figure}
+\newpage
 
 \subsection{Pressure}
-Figure \ref{fig:deltap} shows pressure difference from feed side to product side. The pressure decreases from (-) 11.5-7.7 bar when temperature changes from 278-316 K. \\
+Figure \ref{fig:deltap} shows pressure difference from feed side to product side. The pressure decreases from (-) 11.5-7.7 bar when temperature changes from 278-316 K which is expected when temperature is rising. This is due to the temperature dependency of the membrane. When temperature is rising, the membrane pore size are increasing and let more water flow through the membrane which contributes with the lower pressure. \\
 \\
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.5\linewidth]{deltap.PNG}
-  \caption{Pressure drop feed side to product side}
+  \includegraphics[width=0.7\linewidth]{deltap.PNG}
+  \caption{Pressure drop feed side to product side, when temperature is simulated from 278-316 K}
   \label{fig:deltap}
 \end{figure}
+\newpage
 
 \subsection{Conductivity}
-Figure \ref{fig:conden} displays the conductivity in feed, product and reject side. The conductivity in all nodes increases when temperature increases.\\
+Figure \ref{fig:conden} displays the conductivity in feed, product and reject side. The conductivity in all nodes increases during the simulation. \\
 \\
 \begin{figure}[h]
   \label{fig:conden}
   \includegraphics[width=1.1\linewidth]{cond.PNG}
-  \caption{Conductivity in feed, reject and product side}
+  \caption{Conductivity in feed, reject and product side, when temperature is simulated from 278-316 K}
 \end{figure}
-
 \newpage
 
 

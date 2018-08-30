@@ -7,7 +7,7 @@ Dimensions on valves and pipes are implemented as the dimensions in the water de
 
 \section{Flowchart investigation}
 \label{Flowchart}
-Today, a system containing one pump is used. The pump is implemented at feed side of the membrane. The pump creates a pressure to overcome the osmotic pressure end create a flow from feed to permeate side. The system can be seen in \ref{fig:System11}. \\
+Today, a system containing one pump is used. The pump is implemented at feed side of the membrane. The pump creates a pressure to overcome the osmotic pressure end create a flow from feed to permeate side. The system can be seen in \ref{fig:System11}. The pump is used at two different set points on speed depending of the water quality(conductivity). There are no control implemented to adjust the speed(besides these two set points) of the pump in order to create different pressure and flow characteristics over the membrane to increase performance due to these different conditions. The valve in the recirculation path is adjusted when installing the water device at the clients and is not adjustable after that, other than by a service technician.\\
 \\
 \begin{figure}[h]
     \centering
@@ -15,24 +15,26 @@ Today, a system containing one pump is used. The pump is implemented at feed sid
     \caption{One pump system}
     \label{fig:System11}
 \end{figure}
-To obtain a system to investigate the membrane behaviour some different flowchart are considered. The current pump will be replaced by two pumps. Following requirements will be desirable when obtaining a updated model of the flowchart:
-\begin{itemize}
-\renewcommand\labelitemi{ }
+This limits the possibility for the water device to adapt itself to different working conditions and changes in inlet water quality and also if the membrane surface is fouling. This is an admired feature to implement to the Water Device if to use at markets with seasonal variations that can change the quality and temperature on the inlet water during water production. If the membrane performance could be improved at all conditions end especially when the conditions is variated over time the freedom of controlling the pumps and valve is desirable to optimise the performance of the membrane. \\
+\\
+To be able to investigate the performance of the feasibility to replace the one pump solution with to pumps in order to control the flow and pressure over the membrane two different ideas were considered. Desirable outputs for increasing the membrane performance is:\\
+\\
+\begin{enumerate}
 \item Pressure drop over the membrane is high
 \item Flow through membrane is high
-\end{itemize}
-
-\textbf{The model shall contribute with the following:}
-\begin{itemize}
-\renewcommand\labelitemi{ }
-\item Permeate conductivity (minimised)
-\item Fouling on the membrane (minimised)
-\item Temperature dependencies 
-\item Waste water going through drain (minimised)
-\end{itemize}
+\end{enumerate}
+The expected results of an optimisation is that: the permeate conductivity is minimised, fouling on the membrane surface is minimised, the temperature dependencies is taken care of, waste water is minimised and the energy efficiency of the system is increased. In this thesis the investigations are limited to:\\
+\\
+\begin{enumerate}
+\item Permeate conductivity is kept under 30 \SI{}{\micro\siemens}
+\item The temperature dependencies is handled with control
+\item Waste water is minimised
+\item Energy efficiency is improved compared to current one pump solution
+\end{enumerate}
+Mainly two ideas of systems containing two pumps considered to give the system this extra degree of freedom and is presented below:
 
 \subsection{System 1}
-Mainly two different systems containing two pumps were considered. The first system with one with pump on feed side and one pump on permeate side, as seen in Figure \ref{fig:FlowCInves1}. This setup contributes with the ability to create a net pressure over the membrane with a low, or even a under pressure on permeate side, whilst the feed pump creates a "high" pressure on feed side. Benefits with this implementation is the low energy consumption due to the ability to create negative pressure on permeate side. A high net driving pressure(pressure difference from feed to permeate side) can be achieved with rather low pressur on feed side. The withdrawal might be the implementation of the pump on permeate side. The water is used to feed dialysis machines and has high requirements on its purity. This sets high requirements on the pump, to not soil the purified water. 
+ The first system with one with pump on feed side and one pump on permeate side, as seen in Figure \ref{fig:FlowCInves1}. This setup contributes with the ability to create a net pressure over the membrane with a low, or even a under pressure on permeate side, whilst the feed pump creates a "high" pressure on feed side. Benefits with this implementation is the low energy consumption due to the ability to create negative pressure on permeate side. A high net driving pressure(pressure difference from feed to permeate side) can be achieved with rather low pressur on feed side. The withdrawal might be the implementation of the pump on permeate side. The water is used to feed dialysis machines and has high requirements on its purity. This sets high requirements on the pump, to not soil the purified water. 
 
 \begin{figure}[h]
     \centering
@@ -50,8 +52,6 @@ The second system considered with one pump on feed side and one pump on reject s
     \caption{System 2}
     \label{fig:Sys2}
 \end{figure}
-\newpage
-
 System 1 and System 2 contributes with the ability to control pressure and flow characteristics over the membrane. The big withdrawal with the implementation of a pump on permeate side is considered a high risk implementation and might put patients to high risks. System 1 is therefore precluded.
 
 \section{Mapping}
@@ -65,7 +65,6 @@ In order to run all tests a physical rig was built. A first version to meet the 
 \\
 In order to log all signals and to run the system the Real-Time Target Machine described in Appendix A is connected with all significant signals. A GUI designed in Simulink to control the rig is connected to the rig. All control and feedback signals to and from the rig is handled in a built Simulink workspace where it is able to log and export all data to be able to analyse the system behaviour. All signals are filtered and displayed in real-time on a screen. \\
 \\
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{MeasCurrSys}
