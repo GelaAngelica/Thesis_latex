@@ -11,7 +11,7 @@ All plots in this section shows expected behaviour due to the theory about membr
 \label{fig:simscape}
 \centering
 \includegraphics[width=\textwidth]{simscape_fc1.PNG}
-\caption{Model made in Matlab tool Simscape}
+\caption{Model made in Matlab tool Simscape }
 \end{figure}
 \newpage
 
@@ -112,26 +112,26 @@ Figure \ref{fig:conden} displays the conductivity in feed, product and reject si
 
 \section{Flowchart investigation}
 By changing the flow path in the test setup both the one pump system and two pump system could be investigated and their performance could be compared. Both Systems were considered fulfilling most of the requirements, section \ref{framing}, for an updated version. \\
-
-One pump system, figure \ref{fig:FlowCInves1}, The one pump system was designed to use both a tank and the recirculation loop as a water source and to create pressure by generating a large flow over the membrane and recirculation restrictor. \\
-
-
-Two pump system, figure \ref{fig:Sys2}, In the two pump system the water path was modified so that the feed pump only used a tank as a source and pressureized the entire recirculation loop. The recirculation pump was used to recirculate the already\\ pressurized water within the recirculation loop.\\
-
-
-An overview of the systems can be seen below.\\
+\\
+One pump system, seen in figure \ref{fig:FlowCInves1}. The one pump system was designed to use both a tank and the recirculation loop as a water source and to create pressure by generating a large flow over the membrane and recirculation restrictor with the pump implemented. The pump creates the flow, and together with the needle valve in the recirculation path the pressure over the membrane.  \\
+\\
+Two pump system, figure \ref{fig:Sys2}. In the two pump system the water path was modified so that the feed pump only used a tank as a source and pressurised the entire recirculation loop. The recirculation pump was installed instead of the needle valve used in the recirculation path. The pump is used to pressurise water within the recirculation loop, control the flow rate in the recirculation loop. \\
+\\
+Two ideas of the two pump system were considered and the system with one pump in recirculation path was chosen. The big withdrawal with the implementation of a pump on permeate side, discussed in \ref{sec:Flowchart} is considered a high risk implementation and might put patients to high risks. System 1 was therefore precluded, and System 2 with one pump on feed side and one in recirculation loop were chosen.\\
+\\
+An overview of the systems compared in this report can be seen below.\\
 \begin{figure}[h]
 \centering
 \begin{minipage}{.5\textwidth}
     \centering
     \includegraphics[width=0.8\textwidth]{Sys1}
-    \caption{One pump system}
+    \caption{One pump system, as the current setup used in the Water Device today}
     \label{fig:System1}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \includegraphics[width=.8\linewidth]{Sys2}
-  \caption{Two pump system}
+  \caption{Two pump system, with one pump on feed side and one pump in recirculation loop}
   \label{fig:System2}
 \end{minipage}
 \end{figure}
@@ -139,15 +139,14 @@ An overview of the systems can be seen below.\\
 \newpage
 
 \section{Mapping}
-The mapping of the pumps RPM and flowrate can be seen in \ref{fig:RPM} and \ref{fig:Flowrate}.
+The mapping of the pumps RPM and flow rate can be seen in \ref{fig:RPM} and \ref{fig:Flowrate}.
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{RPM.png}
     \caption{RPM of the Pumps at different control signals/duty cycles}
     \label{fig:RPM}
 \end{figure}
-
-
+The RPM was measured by receiving input from hall sensors in the pump. The flow rate was measured by investigations of different RPM of the pump, different pressure values of the outlet and scaling of the amount of water delivered by the pumps. Plots, and functions of the flow rate due to the RPM of the pumps were implemented in the control workspace in Simulink.  
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{Flow.png}
@@ -156,61 +155,48 @@ The mapping of the pumps RPM and flowrate can be seen in \ref{fig:RPM} and \ref{
 \end{figure}
 
 \section{Implementation Test Rig}
-
-
 \subsection{Connections}
 In Figure (\ref{fig:PressConn}-\ref{fig:PumpConn}) all connections in the test rig is displayed. The whole rig can be seen in \ref{fig:Rig1} and \ref{fig:Rig2}
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{Rig1}
-    \caption{The rig built at Baxter Lund AB, with RO-membrane, pumps, pipes, flowmeter, measuremet sensors and valves}
+    \caption{The rig built at Baxter Lund AB, with RO-membrane, pumps, pipes, flowmeter, measurement sensors and valves}
     \label{fig:Rig1}
 \end{figure}
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.5\textwidth]{Rig2}
-    \caption{The full setup built at Baxter Lund AB, with simulink implementation, GUI, display and water bath}
+    \caption{The full setup built at Baxter Lund AB, with Simulink implementation, GUI, display and water bath}
     \label{fig:Rig2}
 \end{figure}
-
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{PressConn}
     \caption{Connections Pressure sensors}
     \label{fig:PressConn}
 \end{figure}
-
-\newpage
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{C3Conn}
     \caption{Connections measurement blocks, C3}
     \label{fig:C3Conn}
 \end{figure}
-
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\textwidth]{ValveConn}
     \caption{Connections Drain Valve}
     \label{fig:ValveConn}
 \end{figure}
-
-\newpage
-
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{PumpConn}
-    \caption{Connections pumps}
+    \caption{Connections Pumps}
     \label{fig:PumpConn}
 \end{figure}
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Display}
-    \caption{The Display with all key values, read from sensors in the rig}
+    \caption{The Display with all key values, read from sensors in the rig, and calculated}
     \label{fig:display}
 \end{figure}
 \begin{figure}[H]
@@ -226,9 +212,16 @@ In Figure (\ref{fig:PressConn}-\ref{fig:PumpConn}) all connections in the test r
 
 \section{Investigation on membrane behaviour}
 
-In order to compare the two systems and understand how the membrane performed in different working conditions both systems needed to be tested. The tests were conducted by controlling the temperature, pumps and the conductivity in the recirculation loop and log how the different conditions affected the system and the membrane. 
-
-The tests were conducted by changing the temperature, recirculation conductivity and pump speed and meassure how the system behaved once it had reached steady state. The tests were divided into three test sequences. One test sequence was performed with room temperatured water (19 C), one with water heated to 30 C and in the last test sequence the water was heated to 40 C. Every test sequence included data from 8 steady state points with different settings on feed conductivity and pump speed. The test sequences are displayed in the table below. 
+In order to compare the two systems and understand how the membrane performed in different working conditions both systems needed to be tested. The tests were conducted by controlling the temperature, pumps and the conductivity in the recirculation loop and log how the different conditions affected the system and the membrane. \\
+\\
+The tests were conducted by changing the temperature, recirculation conductivity and pump speed and measure how the system behaved once it had reached steady state. The tests were divided into three test sequences. One test sequence was performed with room temperatured water (19 C), one with water heated to 30 C and in the last test sequence the water was heated to 40 C. Every test sequence included data from 8 steady state points with different settings on feed conductivity and pump speed. The test sequences are displayed in the table below. Each case represents one steady state point were data of the membrane behaviour was collected. Data collected:
+\begin{enumerate}
+\item Pressure(bar): feed, reject and permeate
+\item Flow(ml/min): feed, reject, permeate and drain
+\item Conductivity(\SI{}{\micro\siemens}): inlet, feed, reject and permeate
+\item Temperature ($^\circ$C): feed, reject and permeate
+\end{enumerate}
+From this, key values as recovery, salt rejection and water efficiency was calculated.
 
 \begin{table}[h]
 \centering
@@ -264,7 +257,7 @@ The tests were conducted by changing the temperature, recirculation conductivity
  3.8 & 40$^\circ$C &3000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
 \hline
 \end{tabular}
-\caption{Testcases}
+\caption{Testcases for the investigations of the membrane behaviour. Each case represents one steady state in the experiments.}
     \label{tab:test cases} 
 \end{table}
 
@@ -272,8 +265,8 @@ The tests were conducted by changing the temperature, recirculation conductivity
 \newpage
 \subsection{Current system, Test sequence 1, part 1}
 
-The water in the tank was heated while the test was running. Because of this, the test was split up in two parts, first the motor was set to 60\% and steady state 1.1, 1.2, 1.3, 1.5 and 1.7 were investigated. In the part 2, the motor was set to 80 \% and steady state 1.4, 1.6 and 1.8 were investigated. 
-
+The water in the tank was heated while the test was running. Because of this, the test was split up in two parts, first the motor was set to 60\% and steady state 1.1, 1.2, 1.3, 1.5 and 1.7 were investigated. In the part 2, the motor was set to 80 \% and steady state 1.4, 1.6 and 1.8 were investigated. \\
+\\
 \begin{figure}[h]
     \centering
     \includegraphics[width=1.1\textwidth]{overview20_60}
@@ -289,13 +282,13 @@ The water in the tank was heated while the test was running. Because of this, th
     \centering
     \includegraphics[width=1.1\textwidth]{overview20_80}
     \caption{Test 1, Current system, 18 degrees celsius. Steady states 1.4, 1.6 and 1.8}
-    \label{fig:PressConn}
+    \label{fig:overw2080}
 \end{figure}
 
 \newpage
 
-By post-proccesing the data from test one in Matlab it was possible to visually show how the system parameters were affected by the changed pump speed and feed conductivity. 
-
+By post-proccesing the data from test one in Matlab it was possible to visually show how the system parameters were affected by the changed pump speed and feed conductivity. \\
+\\
 
 insert table, results on how the different graphs changed!!!
 
@@ -303,20 +296,20 @@ insert table, results on how the different graphs changed!!!
     \centering
     \includegraphics[width=1.1\textwidth]{Key20}
     \caption{Caption missing}
-    \label{fig:PressConn}
+    \label{fig:K20}
 \end{figure}
 
 \newpage
 
 \subsection{Current system, Test sequence 2}
 
-The second test was carried out by setting the heater bath to 30 degrees celsius and and adjusting the conductivity and pump speed according to the test plan. Since the water was much warmer than the air in the room, the heating caused by the pump was not as prominent and allowed all steady states to be examined in one continous test.
+The second test was carried out by setting the heater bath to 30 degrees celsius and and adjusting the conductivity and pump speed according to the test plan. Since the water was much warmer than the air in the room, the heating caused by the pump was not as prominent and allowed all steady states to be examined in one continuous test.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{overview30}
     \caption{Test 2, Current system, 30 degrees celsius. Steady states 1.1, 1.2, 1.3, 1.4 1.5, 1.6, 1.7 and 1.8}
-    \label{fig:PressConn}
+    \label{fig:overw30}
 \end{figure}
 
 \newpage
@@ -328,7 +321,7 @@ The data from the test was post processed in Matlab in exactly the same way as t
     \centering
     \includegraphics[width=1.1\textwidth]{Key30}
     \caption{Caption missing}
-    \label{fig:PressConn}
+    \label{fig:K30}
 \end{figure}
 
 \newpage
@@ -341,7 +334,7 @@ Finally the heating bath was set to 40 C and the test sequence was performed jus
     \centering
     \includegraphics[width=1.1\textwidth]{overview40}
     \caption{Caption missing}
-    \label{fig:PressConn}
+    \label{fig:overw40}
 \end{figure}
 
 \newpage
@@ -352,12 +345,12 @@ Post processing in matlab generated the following data from the steady states.
     \centering
     \includegraphics[width=1.1\textwidth]{Key40}
     \caption{Caption missing}
-    \label{fig:PressConn}
+    \label{fig:K40}
 \end{figure}
 
 \newpage
 
-In order to understand how the system current performed in different working conditions all plots from the post processing in Matlab was put togheter. 
+In order to understand how the system current performed in different working conditions all plots from the post processing in Matlab was put togeheter. 
 
 \subsection{Net driving pressure}
 
@@ -366,7 +359,7 @@ Net driving pressure was decreased when the temperature was increased. Higher fe
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{NDP}
-    \caption{Net driving pressure}
+    \caption{Net Driving Pressure, NDP (Pressure difference from feed to permeate side of the membrane)}
     \label{fig:NDP}
 \end{figure}
 
@@ -377,8 +370,8 @@ According to theory, Net driving pressure has a direct effect on permeate flow. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{permFlowCurrent}
-    \caption{Caption missing}
-    \label{fig:PressConn}
+    \caption{Permeate Flow (ml/min)}
+    \label{fig:PermFC}
 \end{figure}
 
 \subsection{Recovery}
@@ -388,30 +381,30 @@ Warmer water enabled more feed water to pass through the membrane and therefore 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Recovery}
-    \caption{Caption missing}
-    \label{fig:PressConn}
+    \caption{Recovery rate (\%)}
+    \label{fig:rec}
 \end{figure}
 
 \subsection{Salt rejection}
 
-By looking at plot 5.13 the deterimental effects of both increased temperature and feed conductivity can be seen. The negative effect of increased feed conductivity was much more prominent at 40 C than 30C which means that the performance of the membrane decreased exponentially with higher temperature. Increased feed pump pressure resultet in better salt rejection and the positive effect of increased pump pressure was larger when the system was hot. Temperature was the parameter that decreased salt rejetion the most and by comparing how the system performed when the pump and feed conductivity was set to 60\% and 3000uS/cm at 19C and 40C it can be seen that the salt rejection decreased from 98.5\% to 95.5 \%. From the experiment it can also be concluded that the system perform much better at low temperature and feed conductivity that at high temperature and feed conductivity. 
+By looking at plot XXXX the deterimental effects of both increased temperature and feed conductivity can be seen. The negative effect of increased feed conductivity was much more prominent at 40 C than 30C which means that the performance of the membrane decreased exponentially with higher temperature. Increased feed pump pressure resulted in better salt rejection and the positive effect of increased pump pressure was larger when the system was hot. Temperature was the parameter that decreased salt rejection the most and by comparing how the system performed when the pump and feed conductivity was set to 60\% and 3000uS/cm at 19C and 40C it can be seen that the salt rejection decreased from 98.5\% to 95.5 \%. From the experiment it can also be concluded that the system perform much better at low temperature and feed conductivity that at high temperature and feed conductivity. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{SaltRejection}
-    \caption{Saltrejection}
+    \caption{Salt Rejection (\%)}
     \label{fig:SalrRejectionResult}
 \end{figure}
  
 \subsection{Permeate conductivity}
 
-Permeate conductivity was directly proportional to salt rejection at a certain termperature and feed conductivity. The black line in plot 5.14 show the critical permeate conductivity that the system should be able to maintain and from the plot it is possible to se how high the conductivity can be in the recirculation loop without exceeding this limit. The operational area for the different temperature and pump pressure can be seen in plot TBD below.
+Permeate conductivity was directly proportional to salt rejection at a certain temperature and feed conductivity. The black line in plot XXXX show the critical permeate conductivity that the system should be able to maintain and from the plot it is possible to se how high the conductivity can be in the recirculation loop without exceeding this limit. The operational area for the different temperature and pump pressure can be seen in plot TBDXXXX below.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{PermCond}
-    \caption{Conductivity}
-    \label{fig:PressConn}
+    \caption{Permeate conductivity (\SI{}{\micro\siemens})}
+    \label{fig:Permeatecond}
 \end{figure}
 
 !!INSERT TABLE!!
@@ -423,8 +416,8 @@ Water efficiency increased when the temperature increased due to more permeate w
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Efficiency}
-    \caption{Efficiency}
-    \label{fig:PressConn}
+    \caption{Water Efficiency}
+    \label{fig:Weff}
 \end{figure}
 
 \newpage
@@ -437,32 +430,32 @@ The circulation pump and a flow meter was added to the system and the flow path 
 \newpage
 \subsubsection{Increased circulation}
 
-The Initial idea for optimizing the membrane was to use the circulation pump to create a turbulent flow close to the membrane surface. Therefore, a test was set up to test this idea.
-During the test, the feed pump and drain valve was set to a fixed value and the circulation pump was increased from 5\% to 35\%. Figure \ref{fig:RecIncrease} show the permeate conductivity, circulation flow and feed pressure and 7 steady state points from the test.
-
+The Initial idea for optimising the membrane was to use the circulation pump to create a turbulent flow close to the membrane surface. Therefore, a test was set up to test this idea.
+During the test, the feed pump and drain valve was set to a fixed value and the circulation pump was increased from 5\% to 35\%. Figure \ref{fig:RecIncrease} show the permeate conductivity, circulation flow and feed pressure and 7 steady state points from the test.\\
+\\
 The circulation flow was increased from 1500 ml/min to 5000 ml/min and the increased circulation flow caused the pressure to increase from 5.5 to 7 bar. The permeate conductivity remained unchanged. 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{RecIncrease40}
     \caption{Caption missing}
-    \label{fig:RecIncrease}
+    \label{fig:RecIncrease40}
 \end{figure}  
-
-More information about how the system performed during the test was calculated and can be seen in figure \ref{RecIncreaseKey}. The Recovery decreased from 22\% to 14\%  but salt rejection and permeate conductivity did only increase slightly. 
+More information about how the system performed during the test was calculated and can be seen in figure \ref{RecIncreaseKey}. The Recovery decreased from 22\% to 14\%  but salt rejection and permeate conductivity did only increase slightly. \\
+\\
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{RecIncrease40Key}
     \caption{Caption missing}
-    \label{fig:RecIncreaseKey}
+    \label{fig:RecIncreaseKey40K}
 \end{figure} 
 \par\bigskip 
 \noindent
-The test concluded that the initial theory that increased circulation flow would lead to better system performance was false. Increasing the circulation has no measureable positive effect on the system. 
-
+The test concluded that the initial theory that increased circulation flow would lead to better system performance was false. Increasing the circulation has no measurable positive effect on the system. \\
+\\
 \newpage
-\subsubsection{increased circulation}
-The next test was set up to investigate the effect of an increased feed pressure. During the test all parameters were kept constant except the rpm of the feed pump. An overview of the test can be seen in figure \ref{fig:FeedPumpIncrease40} and the key parameters calculated after the test can be seen in figure \ref{fig:FeedPumpIncrease40Key} 
-
+\subsubsection{Increased Circulation}
+The next test was set up to investigate the effect of an increased feed pressure. During the test all parameters were kept constant except the rpm of the feed pump. An overview of the test can be seen in figure \ref{fig:FeedPumpIncrease40} and the key parameters calculated after the test can be seen in figure \ref{fig:FeedPumpIncrease40Key}.\\
+\\
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{FeedPumpIncrease40}
@@ -477,7 +470,7 @@ The next test was set up to investigate the effect of an increased feed pressure
     \label{fig:FeedPumpIncrease40Key}
 \end{figure}
 
-From figure \ref{fig:FeedPumpIncrease40} it can be seen that the circulation flow remained constant and that the feed side pressure was increased from 1.5 to 8 bars. The permeate quality increased from 100 uS/cm to 30 uS/cm. As a result, it could be concluded that it was possbile to increase the performance of the membrane by increasing feed side pressure without the increased circulation flow. It should be noted that  the membrane recovery increased from 28\% to 36\% during the test and this is far above the maximum limit specified by the manufacturer. Therefore, it should also be concluded that only controlling the feed pump without controlling membrane recovery could damage the membrane. 
+From figure \ref{fig:FeedPumpIncrease40} it can be seen that the circulation flow remained constant and that the feed side pressure was increased from 1.5 to 8 bars. The permeate quality increased from 100 uS/cm to 30 uS/cm. As a result, it could be concluded that it was possible to increase the performance of the membrane by increasing feed side pressure without the increased circulation flow. It should be noted that the membrane recovery increased from 28\% to 36\% during the test and this is far above the maximum limit specified by the manufacturer(20\%). Therefore, it should also be concluded that only controlling the feed pump without controlling membrane recovery could damage the membrane. 
 
 SAVING ENERGY COSTS WATER / VICE VERSA!
 
@@ -486,16 +479,15 @@ SAVING ENERGY COSTS WATER / VICE VERSA!
 \newpage
 \subsection{Optimization algorithm}
 
-Previous tests concluded that it was ineffective to increase salt rejection by increasing the circulation flow, that it was possible to increase feed side pressure to increase salt rejection and that water temperature was the parameter that had the largest deterimental effect on salt rejection. Increased feed water conductivity also decreased the performance of the system, but not as much as increased temperature and the negative effect of high conductivity was more prominant at higher temperatures. Increased feed side pressure has a larger possitive effect on salt rejection at high temperature.
-Since test showed that increased temperature decreased net driving pressure (See figure \ref{fig:NDP}) and that decreased feed pressure reduced salt rejection (see figure \ref{fig:SalrRejectionResult} it could be concluded that using a fixed value setpoint at either feed side pressure or permeate flow would not work. Instead a setpoint could be calculated for a given temperature and pressure or permeate flow could be used as a setpoint.
-By using permeate flow instead of feed side pressure as a setpoint, factors such as membrane fouling, scaling and individual differences in the membrane could be compensated by the controller.
+Previous tests concluded that it was ineffective to increase salt rejection by increasing the circulation flow, that it was possible to increase feed side pressure to increase salt rejection and that water temperature was the parameter that had the largest deterimental effect on salt rejection. Increased feed water conductivity also decreased the performance of the system, but not as much as increased temperature and the negative effect of high conductivity was more prominent at higher temperatures. Increased feed side pressure has a larger positive effect on salt rejection at high temperature.
+Since test showed that increased temperature decreased net driving pressure (See figure \ref{fig:NDP}) and that decreased feed pressure reduced salt rejection (see figure \ref{fig:SaltRejectionResult} it could be concluded that using a fixed value set point at either feed side pressure or permeate flow would not work. Instead a set point could be calculated for a given temperature and pressure or permeate flow could be used as a set point.
+By using permeate flow instead of feed side pressure as a set point, factors such as membrane fouling, scaling and individual differences in the membrane could be compensated by the controller.
 
 \subsection{Finding an optimal plane}
 
-the purpose was to find a permeate flow setpoint that would ensure good quality peremeate at all temperatures without wasting more water and energy than needed. Since it was concluded in previous tests that membrane recovery did not improve saltrejection it was determined that this parameter should be set to 20\%. 
-
+The purpose was to find a permeate flow set point that would ensure good quality permeate at all temperatures without wasting more water and energy than needed. Since it was concluded in previous tests that membrane recovery did not improve salt rejection it was determined that this parameter should be set to approximately 20\%, and rather below 20\% than above for membrane safety. \\
+\\
 The goal of the test was to find the lowest pressure needed at a given feed conductivity and temperature to achieve a permeate conductivity of 30 uS/cm while maintaining a recovery of at most 20\%. The test was conducted by first adjusting the temperature in the heating bath to 20 deg C and then add salt so that the conductivity of the water in the bath was roughly 275 uS/cm. Afterwards, the feed and circulation pump were adjusted to obtain a  permeate conductivity of 30 uS/cm and 20\% recovery. Once the system had stabilised important parameters were noted. Once the parameters had been obtained, the conductivity was slowely increased and the pumps were modified to once again produce peremate water with a conductivity of 30 uS/cm. This procedure was repeated until the conductivity reached 3000 uS/cm. The same procedure was repeated using 30 C and 40 C inlet water.
-
 
 
 \section{Design of control algorithms}
@@ -506,14 +498,14 @@ In picture \ref{fig:PreTestReg3}, the results from test with all parameters exce
 \begin{figure}[h]
     \centering
     \includegraphics[width=1.65\textwidth, angle = 270]{PreTestReg1.png}
-    \caption{Tests with recycle pump as changing parameter}
+    \caption{Tests with Recycle pump as changing parameter}
     \label{fig:PreTestReg1}
 \end{figure}
 
 \begin{figure}[h]
     \centering 
     \includegraphics[width=1.65\textwidth, angle=270]{PreTestReg3.png}
-    \caption{Tests with feed pump as changing parameter}
+    \caption{Tests with Feed pump as changing parameter}
     \label{fig:PreTestReg3}
 \end{figure}
 
