@@ -489,6 +489,32 @@ The purpose was to find a permeate flow set point that would ensure good quality
 \\
 The goal of the test was to find the lowest pressure needed at a given feed conductivity and temperature to achieve a permeate conductivity of 30 uS/cm while maintaining a recovery of at most 20\%. The test was conducted by first adjusting the temperature in the heating bath to 20 deg C and then add salt so that the conductivity of the water in the bath was roughly 275 uS/cm. Afterwards, the feed and circulation pump were adjusted to obtain a  permeate conductivity of 30 uS/cm and 20\% recovery. Once the system had stabilised important parameters were noted. Once the parameters had been obtained, the conductivity was slowely increased and the pumps were modified to once again produce peremate water with a conductivity of 30 uS/cm. This procedure was repeated until the conductivity reached 3000 uS/cm. The same procedure was repeated using 30 C and 40 C inlet water.
 
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{Excel_plane}
+    \caption{Raw data from tests at 20, 30 and 40 C. The blue cells contains information about system performance when it was possible to maintain a permeate quality of \~30 uS/cm (25 - 31 uS/cm).  All relevant pressures, flows, conductivities and other key parameters has been added}
+    \label{fig:Excel_plane}
+\end{figure}
+
+By plotting when it was possible to maintain \~30uS/cm as a function of temperature and feed conductivity it was possible to estimate the working range of the membrane. Figure \ref{FinalResult_1} is a 2D representation of the data contained in \ref{fig:Excel_plane}. The blue dots are the measurement points were \~30 uS/cm could be maintained. As can be seen in the plot, increasing temperature limits the ability to maintain good permeate quality. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{FinalResult_1}
+    \caption{}
+    \label{fig:finalResult_1}
+\end{figure}
+
+
+
+
+
+
+
+
+
 
 \section{Design of control algorithms}
 In order to design control for driving the system some investigations on System 2, the two pump solution were done. In picture \ref{fig:PreTestReg1}, the results from test with all parameters except the speed of the recycle pump were kept constant, can be seen. \\
