@@ -494,24 +494,53 @@ The goal of the test was to find the lowest pressure needed at a given feed cond
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{Excel_plane}
-    \caption{Raw data from tests at 20, 30 and 40 C. The blue cells contains information about system performance when it was possible to maintain a permeate quality of \~30 uS/cm (25 - 31 uS/cm).  All relevant pressures, flows, conductivities and other key parameters has been added}
+    \caption{Raw data from tests at 20, 30 and 40 C. The blue cells contains information about system performance when it was possible to maintain a permeate quality of $\sim$30 uS/cm (25 - 31 uS/cm).  All relevant pressures, flows, conductivities and other key parameters has been added}
     \label{fig:Excel_plane}
 \end{figure}
 
-By plotting when it was possible to maintain \~30uS/cm as a function of temperature and feed conductivity it was possible to estimate the working range of the membrane. Figure \ref{FinalResult_1} is a 2D representation of the data contained in \ref{fig:Excel_plane}. The blue dots are the measurement points were \~30 uS/cm could be maintained. As can be seen in the plot, increasing temperature limits the ability to maintain good permeate quality. 
+By plotting when it was possible to maintain $\sim$30uS/cm as a function of temperature and feed conductivity it was possible to estimate the working range of the membrane. Figure \ref{FinalResult_1} is a 2D representation of the data contained in \ref{fig:Excel_plane}. The blue dots are the measurement points were  $\sim$30 uS/cm could be maintained. As can be seen in the plot, increasing temperature limits the ability to maintain good permeate quality. The two most important findings were that at 40 C it was possible to maintain  $\sim$ 30 uS/cm permeate if the feed conductivity was below  $\sim$1292 uS/cm and when the temperature was decreased to 20 C the feed conductivity could be increased to 2101 uS/cm and still produce  $\sim$30uS/cm permeate.   
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{FinalResult_1}
     \caption{}
-    \label{fig:finalResult_1}
+    \label{fig:FinalResult_1}
 \end{figure}
 
+Since the idea behind the algorithm was to find an optimal permeate flow for feed conductivities between 275-3000 uS/cm and temperatures between 20 and 40 C a z axis containing the permeate flow was added to plot \ref{fig:FinalResult_1}. The blue dots represents the points where good permeate quality could be achieved. By looking at  \ref{Excel_plane} it is possible to determine what permeate flow corresponds to the individual points in figure  \ref{FinalResult_2} and what permeate flow, pressures, flows and other variables was at a certain point.  
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{FinalResult_2}
+    \caption{}
+    \label{fig:FinalResult_2}
+\end{figure}
+
+The points where good permeate conductivity could be attained (blue points) were used as a basis for a second order interpolation. This created the plane that can be seen in figure \ref{fig:FinalResult_3}. The plane is an estimation on what permeate flow is needed at a given temperature and conductivity to create a permeate quality of  $\sim$ 30 uS/cm.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{FinalResult_3}
+    \caption{}
+    \label{fig:FinalResult_3}
+\end{figure}
+
+The equation for the plane in figure \ref{fig:FinalResult_3} is:
+
+$FlowSetPoint =  2349-153.9*temp -1.128*cond+2.225*temp^2+0.05315*temp*cond+0.0002567*cond^2$
+
+Note: that the equation is only valid within 20 - 40 C and feed conductivity 1000 - 2121 TBDTBD
+
+Add code. 
+
+A temperture based function could be derived from the plane by examining the highest allowed conductivity at 40 C and then calculate how much permeate flow would be needed to optimize the system performance given that feedconductivity from 20 to 40 deg C. 
 
 
-
-
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{FinalResult_4}
+    \caption{}
+    \label{fig:FinalResult_4}
+\end{figure}
 
 
 
