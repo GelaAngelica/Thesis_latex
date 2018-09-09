@@ -1,4 +1,23 @@
 % !TEX root = /Users/Gela/Desktop/Thesis_latex/thesis.tex
+\section{Overview Method}
+The method of this master thesis has an iterative flowchart since decisions on next step where made during the time for the thesis. Some tasks were performed in parallell with each other.\\
+\\
+First, studies of theory and on previous work on the field where made in order to investigate requirements. After that flowchart investigations and test planning were made in parallell. Thereafter modelling in Simscape and building of the test rig were done before the first test serie, on current system were performed.\\
+\\
+Analysis of data were made and the rig for test serie 2 on the next system were built in parallell with modelling in Simscape for the second system. \\
+\\
+After both test series were done comparison of membrane behaviour and improvements were done. In \ref{fig:metod} an overview of the method can be seen to get a better overview.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Metod}
+    \caption{Overview over method}
+    \label{fig:metod}
+\end{figure}\newpage
+
+
+
+
 \section{Modeling}
 Simscape software tool described in section Appendix A is used to do a physical model in order to achieve the characteristics of the membrane. The isolated system with pump, pipes, valves and water supply(tank) is implemented. Mass balance equations from section \ref{sec:soldiff} is used together with equations from \ref{sec:doweq}. The Temperature correction factor, $TCF$ is implemented with equation \ref{eq:TCF} to simulate the temperature dependency of the membrane. The osmotic pressure, $P_{osm}$ is implemented in the model by equation \ref{eq:feedOsmP}. The polariztion factor, $P_{f}$ that describes the polarization along the membrane surface is implemented with equation \ref{eq:polfac}. 
 \\
