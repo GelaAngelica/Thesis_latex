@@ -20,7 +20,7 @@ Osmosis is a naturally occurring phenomenon and one of the most important proces
 \label{RO}
 The reverse osmosis(RO) process is the reverse process of the osmosis. The idea is putting a pressure on the high concentration side in order to overcome the osmotic pressure, created by the difference in contaminant concentration. When pressure is applied to a semipermeable membrane, the water molecules are forced through the semipermeable membrane and the contaminants are not allowed true. The amount of pressure required depends on the salt concentration of the water. In order to gain reverse osmosis the pressure applied must be greater than the osmosis pressure. The membrane employs cross filtration rather than standard filtration. With cross filtration, the solution passes through the filter with two outlets. One solution passes true the membrane and is called permeate and is the filtered, pure, solution. The other solution can be drained or fed back into the filtering system, and is called reject. This can be seen in figure \ref{fig:ROsystem}. \\
 \\
-The contaminants build up att the surface area and it is of great importance to try to sweep them away and hold the surface clean. If the contaminants builds up the performance of the membrane will decrease, and cleaning with chemicals or heat water might be necessary\cite{Puretech}. The phenomenon of reverse osmosis can be seen in \ref{fig:ReverseOsmosis}. The water on left side is pressured through the membrane to the right side since the applied pressure is higher than the osmotic pressure. The result is a pure water with only small amount of contaminants in the fresh water stream. 
+The contaminants build up att the surface area and it is of great importance to try to sweep them away and hold the surface clean. If the contaminants builds up the performance of the membrane will decrease, and cleaning with chemicals or heat water might be necessary \cite{Puretech}. The phenomenon of reverse osmosis can be seen in \ref{fig:ReverseOsmosis}. The water on left side is pressured through the membrane to the right side since the applied pressure is higher than the osmotic pressure. The result is a pure water with only small amount of contaminants in the fresh water stream. 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{ReverseOsmosis}
@@ -48,13 +48,13 @@ The contaminants build up att the surface area and it is of great importance to 
 
 
 \subsection{Fouling}
-Fouling occurs when contaminants accumulate on the surface of the membrane on feed to reject side. The fouling contributes to a pressure drop that will decrease the performance of the membrane and cause less permeate(fresh water) flow. Fouling will happen eventually to some extent given the fine pore size of the membrane. A high reject flow and proper pretreatment will extend the operational time between cleaning procedures of the membrane\cite{Puretech}. 
+Fouling occurs when contaminants accumulate on the surface of the membrane on feed to reject side. The fouling contributes to a pressure drop that will decrease the performance of the membrane and cause less permeate(fresh water) flow. Fouling will happen eventually to some extent given the fine pore size of the membrane. A high reject flow and proper pretreatment will extend the operational time between cleaning procedures of the membrane \cite{Puretech}. 
 
 \section{Mathematical modeling of reverse osmosis} 
 \label{sec:soldiff}
 There are different models to describe the flow of solutes and solvents in the reverse osmosis process. The mass balance equations are central in modeling the process. Figure \ref{fig:ReverseOsmosis} shows the main process. The mass balance equations is applied to feed, permeate and reject side, as in figure \ref{fig:ROsystem}. \\
 \\
-A hydraulic pressure is applied to to the feed stream of concentration, $C_{f}$ and results in a flow rate $Q_{f}$. Some of the solvent, pure water, passes through the RO-membrane  characterized by solvent permeability, solute permeability and surface area. The product water (purified water), is called permeate and has the concentration $C_p$ and flow $Q_p$. The concentration, called reject has the concentration $C_r$ with flow $Q_r$. The study objective of this basic RO-modeling is to calculate output concentrations and flow rates in terms of input and operation conditions. Parameters used to evaluate the performance of the RO-membrane is rejection ratio:
+A hydraulic pressure is applied to to the feed stream of concentration, $C_{f}$ and results in a flow rate $Q_{f}$. Some of the solvent, pure water, passes through the RO-membrane characterized by solvent permeability, solute permeability and surface area. The product water (purified water), is called permeate and has the concentration $C_p$ and flow $Q_p$. The concentration, called reject has the concentration $C_r$ with flow $Q_r$. The study objective of this basic RO-modeling is to calculate output concentrations and flow rates in terms of input and operation conditions. Parameters used to evaluate the performance of the RO-membrane is rejection ratio:
 \begin{equation}
 \label{eq:rejection}
 R=1-\frac{C_{p}}{C_{f}}
@@ -223,7 +223,7 @@ To achieve good performance of the controller the requirements of the system nee
 \\
 \\
 \paragraph{Proportional component (P)} 
-The proportional component (P) depends on the difference between the set point and the process variable. The difference between them is referred as the Error. The proportional gain determines the ratio of output response to the error signal. Increasing the proportional gain increases the speed of the control system response. If the gain is set to high an oscillation system behavior is expected and the system will become unstable if the proportional gain is set too high. 
+The proportional component (P) depends on the difference between the set point and the process variable. The difference between them is referred as the Error. The proportional gain determines the ratio of output response to the error signal. Increasing the proportional gain increases the speed of the control system response. If the gain is set to high an oscillation system behaviour is expected and the system will become unstable if the proportional gain is set too high. 
 \\
 \\
 \paragraph{Integral component (I)}
@@ -240,7 +240,7 @@ Windup occurs when the steady-state error never reaches zero and the integrating
 \paragraph{Conditional Integration}
 Conditional Integration is an anti-windup method that stops the integration process when the output has reached a saturation limit. The method ensures that while the controller is experiencing saturation there is no further increase in the value of the output. When or if the the error reduces below certain level, making the output come out of saturation level, the integrator start again. \cite{clamping}
 \paragraph{Back-calculating}
-Back-calculating is a method that uses a PID controller on parallell form with a back-calculation factor calculated from a model of the actuator model. The back-calculating method uses one parameter to calculate if the output signal has saturate and limits the integrating part until saturation is no longer experienced.\cite{clamping}\\
+Back-calculating is a method that uses a PID controller on parallell form with a back-calculation factor calculated from a model of the actuator model. The back-calculating method uses one parameter to calculate if the output signal has saturate and limits the integrating part until saturation is no longer experienced. \cite{clamping}. \\
 \\
 \subsection{Tuning}
 The process of setting the optimal gains for the P,I and D component is called tuning. The components shall be designed in order to get an ideal response from the system. There are many concepts on how to tune a PID-controller. Some is presented below.\\
@@ -269,7 +269,7 @@ where $ T_{cl} $ is the time constant of the closed loop, T is the time constant
 The lambda method can be used with cancellation of system pole for stable processes and without cancellation of system pole for stable or unstable processes. The lambda method requires only one tuning parameter, $ T_{cl} $ that is the desired closed loop constant. The choice of $ T_{cl} $ is a key decision in order to get a well performed system. $ T_{cl} $ can be choosed to any value, but in practice, an arbitrary choice can lead to poor performance or even instability, since the simple process models are only valid in certain frequency regions. Therefore the closed loop constant shall be related to the process dynamics, e.g. time constant(T) and time delay(L). To obtain a fast response with good rejection of disturbances it is desirable ta have a small value of $ T_{cl} $. A large value of $ T_{cl} $  gives a system that is more insensitive to parameter variations. \\
 \\
 If there is limited knowledge about the system dynamics it would be appropriate to use a relatively high value of $ T_{cl}  =T\lambda $ , where $\lambda$ is the adjustable parameter. If the system is considered having a little deadtime, a relatively small $ T_{cl} $ is appropriate. The $ T_{cl} $ can be determined by $ L\lambda $ in integrating processes. 
-\ref{lambda}
+\cite{lambda}
 
 
 

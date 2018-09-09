@@ -18,7 +18,8 @@
 
 
 
-
+%\bibliographystyle{unsrt}
+%\bibliography{mybib}
 \addbibresource{mybib.bib} 
 
 \makeatletter
@@ -51,8 +52,6 @@
 \chapter{Theory}
 \include{theory}
 
-%\chapter{Equipment}
-%\include{equipment}
 
 \chapter{Method/Implementation}
 \include{method}
@@ -69,7 +68,19 @@
 \chapter{Future Prospects}
 \include{prospects}
 
-\printbibliography 
+%\printbibliography 
+\medskip
+
+\begin{thebibliography}{9}
+\bibitem{Dow} 
+The Dow Chemical Company.
+\textit{Dow Water and Process solutions - Levels of Separation of IX, RO, NF, UF}
+The Dow Chemical Company, 2018.
+ 
+\end{thebibliography}
+
+
+
 \clearpage
 \appendix
 \chapter{Equipment} 
