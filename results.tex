@@ -572,13 +572,30 @@ Energy consumtion and water efficiency is coupled in a manner such that it is im
     \label{fig:FinalResult_4}
 \end{figure}
 
-To summarize, the proposed algorithm for optimizing the membrane is to use the temperature of the inlet water to determine an optimal permeate flow rate. By using the feed pump as the actuator one control loop controls the permeate flow to achieve the setpoint determined by the actuator. The control loop controlling the circulation pump to achieve a recovery of 20\%. The last control loop controls the drain valve so that the permeate quality is 30uS/cm. Thus, the system will be optimized and operate on the green line in figure \ref{fig:FinalResult_4}. The proposed algorithm to calculate the optimal permeate flow based on system temperature can be seen below (temperatuer = t)
+To summarize, the proposed algorithm for optimizing the membrane is to use the temperature of the inlet water to determine an optimal permeate flow rate. By using the feed pump as the actuator one control loop controls the permeate flow to achieve the setpoint determined by the actuator. The control loop controlling the circulation pump to achieve a recovery of 20\%. The last control loop controls the drain valve so that the permeate quality is 30uS/cm. Thus, the system will be optimized and operate on the green line in figure \ref{fig:FinalResult_4}. The proposed algorithm to calculate the optimal permeate flow based on system temperature can be seen below (temperatuer = t). Note that the function is only valid within 20 to 40 C and that the allowed permeate flow should be within 500 to 1450 ml/min. 
 
 \begin{equation}
 permeate flow =  2.2254*t^2-85.209*t+1320.6
 \end{equation}
 
+\newpage
+
 \subsection{Energy consumption}
+
+The current was measured on both motors during the tests with 20 C inlet water in the optimal plane test case (table \ref{fig:Excel_plane}). The test showed that power consumption of the two pump system ranged from 12 to 194.4 watts depending on the feed conductivity which was far less than what was required when only one pump. Typically, the one pump system used TBD watts when running at 60\% and TBD watts when running at 80\%. The measured power consumption of the two pump system can be seen in figure \ref{fig:EnergySys2}. For example, the two pump system would require \% less energy than the one pump system when used in Lund (communal water, temperature 20 C, conductivity 170 uS/cm). Note that the feed pump generate a pressure of 10 bar when running at 25\%, the one pump system generate TBD bars when running at 80\%. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{EnergySys2}
+    \caption{}
+    \label{fig:EnergySys2}
+\end{figure}
+
+
+
+
+
+
 
 
 
