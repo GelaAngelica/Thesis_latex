@@ -547,11 +547,22 @@ The points where good permeate conductivity could be attained (blue points) were
     \label{fig:FinalResult_3}
 \end{figure}
 
-Matlab code for generating the optimal plane with added restrictions on permeate flow has been added below: Note that temperatures higher than 40 C and lower than 20 C hasn't been investigated and therefore restrictions on temperature has also been added into the code. 
+The equation for the plane can be seen below.
+
+(temperature = t, conductivity = c)
+
+\begin{multline}
+ permeate flow =  2349-153.9*t-1.128*c+...\\
+2.225*t^2+0.05315*t*c+0.0002567*c^2
+\end{multline}
+
+\newpage
 
 
 
-Energy consumtion and water efficiency is coupled in a manner such that it is imposible to minimize both at the same time. However, by selecting a curve on the aforementioned plane it is possible to find a algorithm that minimize energy consumtion without wasting more water than necessary. When the system is running at 40 C the maximum allowed conductivity that generates a permeate conductivity of  $\sim$ 30 uS/cm is limited to 1292 uS/cm. The proposed optimal function that can be seeb in figure XXX was selected because it would allow the system to function at the maximum allowed conductivity at 40 C but when the system temperature decrease the system would save energy by reducing the permeate flow. For instance, if the system temperatuer was 40 C the function would set a permeate flow setpoint of 1440 ml/min. If the temperature was reduced to 30 C the algorithm would set the permeate flow setpoint to  767 ml/min and thereby saving energy. If the temperature was furhter reduced to 20 C the algorithm would set the permate flow setpoint to 506 ml min. 
+
+
+Energy consumtion and water efficiency is coupled in a manner such that it is imposible to minimize both at the same time. However, by selecting a curve on the aforementioned plane it is possible to find a algorithm that minimize energy consumtion without wasting more water than necessary. When the system is running at 40 C the maximum allowed conductivity that generates a permeate conductivity of  $\sim$ 30 uS/cm is limited to 1292 uS/cm. The proposed optimal function that can be seeb in figure \ref{fig:FinalResult_4} was selected because it would allow the system to function at the maximum allowed conductivity at 40 C but when the system temperature decrease the system would save energy by reducing the permeate flow. For instance, if the system temperatuer was 40 C the function would set a permeate flow setpoint of 1440 ml/min. If the temperature was reduced to 30 C the algorithm would set the permeate flow setpoint to  767 ml/min and thereby saving energy. If the temperature was furhter reduced to 20 C the algorithm would set the permate flow setpoint to 506 ml min. 
 
 
 \begin{figure}[H]
@@ -561,9 +572,15 @@ Energy consumtion and water efficiency is coupled in a manner such that it is im
     \label{fig:FinalResult_4}
 \end{figure}
 
-To summarize, the proposed algorithm for optimizing the membrane is to use the temperature of the inlet water to determine an optimal permeate flow rate. By using the feed pump as the actuator one control loop controls the permeate flow to achieve the setpoint determined by the actuator. The control loop controlling the circulation pump to achieve a recovery of 20\%. The last control loop controls the drain valve so that the permeate quality is 30uS/cm. Thus, the system will be optimized and operate on the green line in figure \ref{fig:FinalResult_4}. The proposed code for the algorithm can be seen below. 
+To summarize, the proposed algorithm for optimizing the membrane is to use the temperature of the inlet water to determine an optimal permeate flow rate. By using the feed pump as the actuator one control loop controls the permeate flow to achieve the setpoint determined by the actuator. The control loop controlling the circulation pump to achieve a recovery of 20\%. The last control loop controls the drain valve so that the permeate quality is 30uS/cm. Thus, the system will be optimized and operate on the green line in figure \ref{fig:FinalResult_4}. The proposed algorithm to calculate the optimal permeate flow based on system temperature can be seen below (temperatuer = t)
 
-INSERT MATLAB CODE
+\begin{equation}
+permeate flow =  2.2254*t^2-85.209*t+1320.6
+\end{equation}
+
+\subsection{Energy consumption}
+
+
 
 
 
