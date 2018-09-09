@@ -436,7 +436,7 @@ Water efficiency increased when the temperature increased due to more permeate w
 
 \subsection{System 2}
 
-The circulation pump and a flow meter was added to the system and the flow path was modified according to figure \ref{fig:System2_1}. The rig was also reprogrammed to be able to measure all flows in the flow path in real time. This could be done because now both the feed flow, circulation flow and permeate flow could be measured and from this data, the inlet and drain flow could be calculated. 
+The circulation pump, a motorized drain valve and a flow meter on the permeate side was added to the system and the flow path was modified according to figure \ref{fig:System2_1}. The rig was also reprogrammed to be able to measure all flows in the flow path in real time. This could be done because now both the feed flow, circulation flow and permeate flow could be measured and from this data, the inlet and drain flow could be calculated.  
 
 \begin{figure}[H]
   \centering
@@ -498,14 +498,14 @@ Another important conclusion is that increasing feed pressure results in a highe
 \subsection{Optimization algorithm}
 
 Previous tests concluded that it was ineffective to increase salt rejection by increasing the circulation flow, that it was possible to increase feed side pressure to increase salt rejection and that water temperature was the parameter that had the largest deterimental effect on salt rejection. Increased feed water conductivity also decreased the performance of the system, but not as much as increased temperature and the negative effect of high conductivity was more prominent at higher temperatures. Increased feed side pressure has a larger positive effect on salt rejection at high temperature.
-Since test showed that increased temperature decreased net driving pressure (See figure \ref{fig:NDP}) and that decreased feed pressure reduced salt rejection (see figure \ref{fig:SaltRejectionResult}) it could be concluded that using a fixed value set point at either feed side pressure or permeate flow would not work. Instead a set point could be calculated for a given temperature and pressure or permeate flow could be used as a setpoint.
+Since test showed that increased temperature decreased net driving pressure (See figure \ref{fig:NDP}) and that decreased feed pressure reduced salt rejection (see figure \ref{fig:SaltRejectionResult}) it could be concluded that using a fixed value setpoint at either feed side pressure or permeate flow would not work. Instead a set point could be calculated for a given temperature and pressure or permeate flow could be used as a setpoint.
 By using permeate flow instead of feed side pressure as a set point, factors such as membrane fouling, scaling and individual differences in the membrane could be compensated by the controller. Therefor, permeate flow was selected to be the setpoint for the feed pump controller. 
 
 \subsection{Finding an optimal plane}
 
-The purpose of the next test was to find a permeate flow set point that would ensure good quality permeate at all temperatures without wasting more water and energy than needed. Since it was concluded in previous tests that membrane recovery did not improve salt rejection it was determined that this parameter should be set to approximately 20\%. \\
+The purpose of the next test was to find a permeate flow set point that would ensure good quality permeate at all temperatures without wasting more water and energy than needed. Since it was concluded in previous tests that membrane recovery did not improve salt rejection it was determined that this parameter should be set to approximately 20\% by controlling the circulation pump. \\
 \\
-The goal of the test was to find the lowest permeate flow needed at a given feed conductivity and temperature to achieve a permeate conductivity of  $\sim$ 30 uS/cm (25 to 31 uS/cm) while maintaining a recovery of at most 20\%. The test was conducted by first adjusting the temperature in the heating bath to 20 deg C and then add salt so that the conductivity of the water in the bath was roughly 275 uS/cm. Afterwards, the feed and circulation pump were adjusted to obtain a  permeate conductivity of  $\sim$ 30 uS/cm and 20\% recovery. Once the system had stabilised important parameters were noted. Once the parameters had been obtained, the conductivity was slowely increased and the pumps were modified to once again produce peremate water with a conductivity of 30 uS/cm. This procedure was repeated until the conductivity reached 3000 uS/cm. The same procedure was repeated using 30 C and 40 C inlet water. The raw data from the test was noted in table \ref{fig:Excel_plane}. Note that for low feed conductivities the feed pump could be set to the lowest value (3\%) and the system would still generate a permeate conductivity of less than 30uS/cm. If the feed conductivity was high, depending on temperature, it proved to be impossible to generate 30uS/cm permeate. The measurements that allowed  $\sim$ 30uS/cm permeate to be generated has been colored blue.
+The goal of the test was to find the lowest permeate flow needed at a given feed conductivity and temperature to achieve a permeate conductivity of  $\sim$ 30 uS/cm (25 to 31 uS/cm) while maintaining a recovery of at most 20\%. The test was conducted by first adjusting the temperature in the heating bath to 20 deg C and then add salt so that the conductivity of the water in the bath was roughly 275 uS/cm. Afterwards, the feed and circulation pump were adjusted to obtain a  permeate conductivity of  $\sim$ 30 uS/cm and 20\% recovery. Once the system had stabilised important parameters were noted. Once the measurements had been obtained, the conductivity was slowely increased and the pumps were modified to once again produce peremate water with a conductivity of 30 uS/cm. The feed conductivity was increased in small steps and the same procedure was repeated until the conductivity reached 3000 uS/cm. The same procedure was repeated using 30 C and 40 C inlet water. The raw data from the test was noted in table \ref{fig:Excel_plane}. Note that for low feed conductivities the feed pump could be set to the lowest value (3\%) and the system would still generate a permeate conductivity of less than 30uS/cm. If the feed conductivity was high, depending on temperature, it proved to be impossible to generate 30uS/cm permeate. The measurements that allowed  $\sim$ 30uS/cm permeate to be generated has been colored blue.
 
 \begin{figure}[H]
     \centering
@@ -527,7 +527,7 @@ By plotting when it was possible to maintain $\sim$30uS/cm as a function of temp
 
 \newpage
 
-Since the idea behind the algorithm was to find an optimal permeate flow for feed conductivities between 275-3000 uS/cm and temperatures between 20 and 40 C a Z axis containing the minimum required  permeate to achieve $\sim$ 30uS/cm permeate flow was added to plot \ref{fig:FinalResult_1}. The blue dots represents the points where good permeate quality could be achieved. By looking at  \ref{fig:Excel_plane} it is possible to determine what permeate flow corresponds to the individual points in figure  \ref{fig:FinalResult_2}.
+Since the idea behind the algorithm was to find an optimal permeate flow for feed conductivities between 275-3000 uS/cm and temperatures between 20 and 40 C a Z axis containing the minimum required to achieve $\sim$ 30uS/cm permeate flow was added to plot \ref{fig:FinalResult_1}. The blue dots represents the points where good permeate quality could be achieved. By looking at  \ref{fig:Excel_plane} it is possible to determine what permeate flow corresponds to the individual points in figure  \ref{fig:FinalResult_2}.
 
 \begin{figure}[H]
     \centering
@@ -538,7 +538,8 @@ Since the idea behind the algorithm was to find an optimal permeate flow for fee
 
 \newpage
 
-The points where good permeate conductivity could be attained (blue points) were used as a basis for a second order interpolation. This created the plane that can be seen in figure \ref{FinalResult_3} . The plane is an estimation of what permeate flow is needed at a given temperature and conductivity to create a permeate quality of  $\sim$ 30 uS/cm. 
+The points where good permeate conductivity could be attained (blue points) were used as a basis for a second order interpolation to obtain a plane. This plane can be seen in figure \ref{fig:FinalResult_3} . The plane is an estimation of what permeate flow is needed at a given temperature and conductivity to create a permeate quality of  $\sim$ 30 uS/cm. 
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{FinalResult_3}
@@ -546,15 +547,9 @@ The points where good permeate conductivity could be attained (blue points) were
     \label{fig:FinalResult_3}
 \end{figure}
 
-The equation for the plane in figure  is:
-
-$FlowSetPoint =  2349-153.9*temp -1.128*cond+2.225*temp^2+0.05315*temp*cond+0.0002567*cond^2$
-
-Note: that the equation is only valid within 20 - 40 C and feed conductivity 1000 - 2121 TBDTBD
-
 Matlab code for generating the optimal plane with added restrictions on permeate flow has been added below: Note that temperatures higher than 40 C and lower than 20 C hasn't been investigated and therefore restrictions on temperature has also been added into the code. 
 
-INSERT MATLAB CODE
+
 
 Energy consumtion and water efficiency is coupled in a manner such that it is imposible to minimize both at the same time. However, by selecting a curve on the aforementioned plane it is possible to find a algorithm that minimize energy consumtion without wasting more water than necessary. When the system is running at 40 C the maximum allowed conductivity that generates a permeate conductivity of  $\sim$ 30 uS/cm is limited to 1292 uS/cm. The proposed optimal function that can be seeb in figure XXX was selected because it would allow the system to function at the maximum allowed conductivity at 40 C but when the system temperature decrease the system would save energy by reducing the permeate flow. For instance, if the system temperatuer was 40 C the function would set a permeate flow setpoint of 1440 ml/min. If the temperature was reduced to 30 C the algorithm would set the permeate flow setpoint to  767 ml/min and thereby saving energy. If the temperature was furhter reduced to 20 C the algorithm would set the permate flow setpoint to 506 ml min. 
 
