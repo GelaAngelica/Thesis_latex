@@ -238,7 +238,7 @@ The derivative component (D) causes the output to decrease if the process variab
 Windup occurs when the steady-state error never reaches zero and the integrating component increases and saturates the control signal. Below, two different ways of implementing anti-windup, conditional integration and Back-calculating, to avoid wind-up is presented.\\
 \\
 \paragraph{Conditional Integration}
-Conditional Integration is an anti-windup method that stops the integration process when the output has reached a saturation limit. The method ensures that while the controller is experiencing saturation there is no further increase in the value of the output. When or if the the error reduces below certain level, making the output come out of saturation level, the integrator start again. \cite{clamping}
+Conditional Integration is an anti-windup method that stops the integration process when the output has reached a saturation limit. The method ensures that while the controller is experiencing saturation there is no further increase in the value of the output. When or if the the error reduces below certain level, making the output come out of saturation level, the integrator start again \cite{clamping}.
 \paragraph{Back-calculating}
 Back-calculating is a method that uses a PID controller on parallell form with a back-calculation factor calculated from a model of the actuator model. The back-calculating method uses one parameter to calculate if the output signal has saturate and limits the integrating part until saturation is no longer experienced. \cite{clamping}. \\
 \\
