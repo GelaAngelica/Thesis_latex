@@ -1,12 +1,14 @@
 % !TEX root = /Users/Gela/Desktop/Thesis_latex/thesis.tex
 \section{Overview Method}
-The method of this master thesis has an iterative flowchart since decisions on next step where made during the time for the thesis. Some tasks were performed in parallell with each other.\\
+The working method during the thesis have been based on model based design in which a model and a physical system have been built in parallell.\\ 
 \\
-First, studies of theory and on previous work on the field where made in order to investigate requirements. After that flowchart investigations and test planning were made in parallell. Thereafter modelling in Simscape and building of the test rig were done before the first test serie, on current system were performed.\\
+First, studies of theory and on previous work in the field were made in order to investigate requirements. After that, a flowchart investigation and test planning were made in parallell. Thereafter, modelling in Simscape and the construction of the first test rig, a rig using only one  pump,  was done. Afterwards, the one pump system was tested and the data from all the sensors were gathered.\\
 \\
-Analysis of data were made and the rig for test serie 2 on the next system were built in parallell with modelling in Simscape for the second system. \\
+Analysis of the data was made and the rig was modified with two pumps to simulate the proposed two pump system. This was done in parallell with the modelling of the two pump system. \\
 \\
-After both test series were done comparison of membrane behaviour and improvements were done. In \ref{fig:metod} an overview of the method can be seen to get a better overview.
+After the tests on both systems were completed, an extensive comparison of the two systems were made. In figure \ref{fig:metod} an overview of the work fow can be seen to get a better overview.
+
+The data gathered from the tests could then be used to design an optimal control algorithm. 
 
 \begin{figure}[h]
     \centering
@@ -19,14 +21,14 @@ After both test series were done comparison of membrane behaviour and improvemen
 
 
 \section{Modeling}
-Simscape software tool described in section Appendix A is used to do a physical model in order to achieve the characteristics of the membrane. The isolated system with pump, pipes, valves and water supply(tank) is implemented. Mass balance equations from section \ref{sec:soldiff} is used together with equations from \ref{sec:doweq}. The Temperature correction factor, $TCF$ is implemented with equation \ref{eq:TCF} to simulate the temperature dependency of the membrane. The osmotic pressure, $P_{osm}$ is implemented in the model by equation \ref{eq:feedOsmP}. The polariztion factor, $P_{f}$ that describes the polarization along the membrane surface is implemented with equation \ref{eq:polfac}. 
+Simscape software tool described in section Appendix A is used to do a physical model in order to achieve the characteristics of the membrane. The isolated system with pump, pipes, valves and water supply (tank) is implemented. Mass balance equations from section \ref{sec:soldiff} are used together with equations from \ref{sec:doweq}. The temperature correction factor, $TCF$ is implemented with equation \ref{eq:TCF} to simulate the temperature dependency of the membrane. The osmotic pressure, $P_{osm}$ is implemented in the model by equation \ref{eq:feedOsmP}. The polariztion factor, $P_{f}$ that describes the polarization along the membrane surface is implemented with equation \ref{eq:polfac}. 
 \\
 \\
 Dimensions on valves and pipes are implemented as the dimensions in the water device. Water quality, and temperature can be adjusted to simulate different conductivity and temperatures, to represent real values. The pump speed can be adjusted in the model to represent an actual value. Plots of characteristics of pressure, flow, salt concentration, temperature are received from the simulations, and can be seen in section \ref{sec:modres}
 
 \section{Flowchart investigation}
 \label{Flowchart}
-Today, a system containing one pump is used. The pump is implemented at feed side of the membrane. The pump creates a pressure to overcome the osmotic pressure end create a flow from feed to permeate side. The system can be seen in \ref{fig:System11}. The pump is used at two different set points on speed depending of the water quality(conductivity). There are no control implemented to adjust the speed(besides these two set points) of the pump in order to create different pressure and flow characteristics over the membrane to increase performance due to these different conditions. The valve in the recirculation path is adjusted when installing the water device at the clients and is not adjustable after that, other than by a service technician.\\
+Today, a system containing one pump is used by Baxter. The pump is positioned at the feed side of the membrane. The pump creates a pressure to overcome the osmotic pressure and creates a flow from feed to permeate side. The system can be seen in figure \ref{fig:System11}. The pump is used at two different set points on speed depending of the water quality (conductivity). There are no control implemented to adjust the speed (besides these two set points) of the pump in order to create different pressure and flow characteristics over the membrane to increase performance due to these different conditions. The valve in the recirculation path is adjusted when installing the water device at the clients and is not adjustable after that, other than by a service technician.\\
 \\
 \begin{figure}[h]
     \centering
@@ -34,26 +36,27 @@ Today, a system containing one pump is used. The pump is implemented at feed sid
     \caption{One pump system}
     \label{fig:System11}
 \end{figure}
-This limits the possibility for the water device to adapt itself to different working conditions and changes in inlet water quality and also if the membrane surface is fouling. This is an admired feature to implement to the Water Device if to use at markets with seasonal variations that can change the quality and temperature on the inlet water during water production. If the membrane performance could be improved at all conditions end especially when the conditions is variated over time the freedom of controlling the pumps and valve is desirable to optimise the performance of the membrane. \\
+
+This limits the possibility for the water device to adapt itself to different working conditions and changes in inlet water quality and also if the membrane surface is fouling. Overcoming these issues would enable the water device to adapt to seasonal variations and changing temperature and tap water quality. If the membrane performance could be improved in all conditions and especially when the conditions vary over time the freedom of controlling the pumps and valve is desirable to optimize the performance of the membrane. \\
 \\
-To be able to investigate the performance of the feasibility to replace the one pump solution with to pumps in order to control the flow and pressure over the membrane two different ideas were considered. Desirable outputs for increasing the membrane performance is:\\
+To be able to investigate the performance and the feasibility of replacing the one pump system with a two pump system in order to control the flow and pressure over the membrane two different ideas were considered. Desirable outputs for increasing the membrane performance are:\\
 \\
 \begin{enumerate}
 \item Pressure drop over the membrane is high
 \item Flow through membrane is high
 \end{enumerate}
-The expected results of an optimisation is that: the permeate conductivity is minimised, fouling on the membrane surface is minimised, the temperature dependencies is taken care of, waste water is minimised and the energy efficiency of the system is increased. In this thesis the investigations are limited to:\\
+The expected results of an optimization is that: the permeate conductivity is minimized, fouling on the membrane surface is minimized, the temperature dependencies is taken care of, waste water is minimized and the energy efficiency of the system is increased. In this thesis the investigations are limited to:\\
 \\
 \begin{enumerate}
 \item Permeate conductivity is kept under 30 \SI{}{\micro\siemens}
-\item The temperature dependencies is handled with control
-\item Waste water is minimised
+\item The temperature dependencies are handled with control algorithm
+\item Waste water is minimized
 \item Energy efficiency is improved compared to current one pump solution
 \end{enumerate}
-Mainly two ideas of systems containing two pumps considered to give the system this extra degree of freedom and is presented below:
+Different system setups were considered to implement the second pump. The two most promising ideas are presented below.
 
 \subsection{System 1}
- The first system with one with pump on feed side and one pump on permeate side, as seen in Figure \ref{fig:FlowCInves1}. This setup contributes with the ability to create a net pressure over the membrane with a low, or even a under pressure on permeate side, whilst the feed pump creates a "high" pressure on feed side. Benefits with this implementation is the low energy consumption due to the ability to create negative pressure on permeate side. A high net driving pressure(pressure difference from feed to permeate side) can be achieved with rather low pressur on feed side. The withdrawal might be the implementation of the pump on permeate side. The water is used to feed dialysis machines and has high requirements on its purity. This sets high requirements on the pump, to not soil the purified water. 
+The first system has one pump on feed side and one pump on permeate side, as seen in figure \ref{fig:FlowCInves1}. This setup contributes with the ability to create a greater net pressure over the membrane with a low, or even a negative gauge pressure on permeate side, while the feed pump creates a high pressure on feed side. Benefits with this implementation is the low energy consumption due to the ability to create negative pressure on the permeate side. A high net driving pressure (pressure difference from feed to permeate side) can be achieved with rather low pressure on the feed side. The withdrawal might be the implementation of the pump on permeate side. The water is used to feed dialysis machines and has high requirements on its purity. This sets high requirements on the pump, to not soil the purified water. 
 
 \begin{figure}[h]
     \centering
@@ -63,7 +66,7 @@ Mainly two ideas of systems containing two pumps considered to give the system t
 \end{figure}
 
 \subsection{System 2}
-The second system considered with one pump on feed side and one pump on reject side, in recirculation path, seen in Figure \ref{fig:Sys2}. The feed pump is used to create a high pressure on feed side and the pump in the recirculation path is used to control the flow in recirculation path. This contributes to control the recovery rate. Due to theory the membrane behaviour is dependent on feed and flow characteristics over the membrane, salt concentration and temperature. with this two pump solution the flow and pressure can be controlled independently and the membrane behaviour can be improved. The quality of the permeate water is ensured. \\
+The second system considered has one pump on feed side and one pump on reject side, in recirculation path, as seen in figure \ref{fig:Sys2}. The feed pump is used to create a high pressure on feed side and the pump in the recirculation path is used to control the flow in the recirculation path. This contributes to control the recovery rate. According to theory the membrane behaviour is dependent on feed and flow characteristics over the membrane, salt concentration and temperature. With this two pump solution the flow and pressure can be controlled independently and the membrane behaviour can be improved. \\
 \\
 \begin{figure}[h]
     \centering
@@ -71,18 +74,18 @@ The second system considered with one pump on feed side and one pump on reject s
     \caption{System 2}
     \label{fig:Sys2}
 \end{figure}
-System 1 and System 2 contributes with the ability to control pressure and flow characteristics over the membrane. The big withdrawal with the implementation of a pump on permeate side is considered a high risk implementation and might put patients to high risks. System 1 is therefore precluded.
+Both system 1 and system 2 enables the ability to control pressure and recirculation flow independently.However, one big disadvantage with system 1 is that one of the pumps is positioned on the  permeate side and this could potentially contaminate the permeate. System 1 was therefore precluded.
 
 \section{Mapping}
-In order to investigate the performance of the membrane pressure, flow, conductivity and temperature is  measured and logged. In the systems there are critical values of high pressure on feed side and reject side which makes it difficult to find measurement equipment that can handle both the high pressure and relatively low flows with no loss of pressure and required accuracy. \\
+In order to investigate the performance of the membrane pressure, flow, conductivity and temperature are measured and logged. The test rig should be able to operate at 15 bar and this made it difficult to find sensors that were able to function at such high pressure. The solution was to build our own sensor blocks and to use the feedback from the hall sensors in the pumps to measure the flow. \\
 \\
-Due to lack of instruments that could measure the flow under the high pressure some mapping of the flow from the pumps were done. The flow stream through the pumps were measured at different RPM and with different pressure resistance on the outlet. The flow is depending on the RPM with negligible difference depending on the applied outlet pressure from the pump. The mapped flow has an accuracy of $\pm$10\%.
+Due to lack of instruments that could measure the flow under the high pressure some mapping of the flow from the pumps was made. The flow stream through the pumps were measured at different RPMs and with different pressure resistance on the outlet. The flow is depending on the RPM with negligible difference depending on the applied outlet pressure from the pump. The mapped flow has an accuracy of $\pm$10\%. The results from the mapping can be seen in the results chapter. 
 
 \section{Implementation Test Rig}
 \subsection{Current System}
-In order to run all tests a physical rig was built. A first version to meet the specifications of the system used in the current water device were built according to Figure \ref{fig:MeasCurrSys}, with all the measurement sensors implemented. The rig contained, at the first stage: 1 pump with power supply, 1 RO-membrane, 3 needle valve, 1 drain valve, 1 water bath, three measurement sensors, pipes and couplings. The water bath is used to simulate different inlet water temperatures. The needle valves is used to adjust the pressure in the system to correspond with the real pressure characteristic in the water device. \\
+In order to run all tests a physical rig was built. A first version was built to simulate the system used today, see figure \ref{fig:MeasCurrSys}, with all the measurement sensors implemented. The first version of the rig contained one pump with power supply, one RO-membrane, three needle valves, one drain valve, one heating bath, three measurement sensors, pipes and couplings. The heating bath is used to simulate different inlet water temperatures. The needle valves are used to adjust the pressure in the system to correspond with the real pressure characteristic in the water device. \\
 \\
-In order to log all signals and to run the system the Real-Time Target Machine described in Appendix A is connected with all significant signals. A GUI designed in Simulink to control the rig is connected to the rig. All control and feedback signals to and from the rig is handled in a built Simulink workspace where it is able to log and export all data to be able to analyse the system behaviour. All signals are filtered and displayed in real-time on a screen. \\
+In order to log all signals and to run the system on the Real-Time Target Machine described in Appendix A is connected with all significant signals. A GUI designed in Simulink to control the rig is also connected to the rig. All control and feedback signals to and from the rig is handled in Simulink. After a test all measurements could be downloaded to a computer for analysis. Selected signals and calculations could also be displayed on a separate screen in real-time. \\
 \\
 \begin{figure}[h]
     \centering
@@ -91,10 +94,10 @@ In order to log all signals and to run the system the Real-Time Target Machine d
     \label{fig:MeasCurrSys}
 \end{figure}
 
-\subsection{System 2  "Comparing system"}
-The second system, System 2, were built by modifying the first rig, according to Figure \ref{fig:MeasSys2}. The second rig build contains: 2 pumps with power supply, 1 RO-membrane, 3 needle valve, 1 drain valve, 1 water bath, 1 flow meter, 3 measurement sensors, pipes and couplings. The water bath is used to simulate different inlet water temperatures. The needle valves is used to adjust the pressure in the system to correspond with the real pressure characteristic in the water device. The flow meter is used to measure the permeate flow from the membrane. \\
+\subsection{System 2}
+The second system, System 2, was built by modifying the first rig, according to figure \ref{fig:MeasSys2}. The second rig contains: two pumps with power supply, one RO-membrane, three needle valves, one drain valve, one heating bath, one flow meter, three measurement sensors, pipes and couplings. The heating bath is used to simulate different inlet water temperatures. The needle valves are used to adjust the pressure in the system to correspond with the real pressure characteristic in the water device. The flow meter is used to measure the permeate flow from the membrane. \\
 \\
-The Simulink workspace, and the GUI was modified to be able to log all signal from the rig. All signals is displayed in real time as in the previous rig edition. Data is sampled and logged to be able to analyse the behaviour in the two pump system.  \\
+The Simulink workspace, and the GUI was modified to be able to log all signals from the rig. All signals are displayed in real time as in the previous rig edition. Data is sampled and logged to be able to analyse the behaviour in the two pump system.  \\
 \\
 Different interfaces, as $i^{2}c$, Analog I/O, Digital inputs, PWM were used to implement the communication between the Real-Time Target Machine and measurement instruments. Circuits were built to transform voltage supply to required level for each component. All implementation of the communication and power supply can be seen in Figure \ref{fig:PressConn} - \ref{fig:PumpConn}. 
 
@@ -106,53 +109,57 @@ Different interfaces, as $i^{2}c$, Analog I/O, Digital inputs, PWM were used to 
 \end{figure}
 
 \section{Test setup for membrane behaviour}
-In order to compare results of the current system, furthermore called "Current System" and the updated system, System 2, some test will be done on the current setup. Reasonable values are investigated in order to meet requirements of the Water device. Corresponding points will be tested on the comparing system to evaluate any improvements on the membrane performance. The critical operational areas for the membrane is considered high temperatures (over 30 $^\circ$C) and high conductivity (over 2000 \SI{}{\micro\siemens}). The tests are performed in a range from 280-3000 \SI{}{\micro\siemens} and from 18-40 $^\circ$C. \\
+In order to compare the results from the current one pump system with the proposed two pump system, system 2, similar tests will be carried out on both systems. Measurements of interest are investigated in order to understand the how different working conditions affect the membrane. The same working conditions will be tested on both the current one pump system and on the two pump system. The critical operational areas for the membrane are considered to be high temperatures (over 30 $^\circ$C) and high conductivity (over 2000 \SI{}{\micro\siemens})/cm. The tests are performed in a range from 280-3000 \SI{}{\micro\siemens} and from 20-40 $^\circ$C. \\
 \\
-Points to be investigated can be seen in Table \ref{tab:testcases}. Same tests is performed on Current system and System 2 in order to analyse the difference in performance and membrane behaviour.\\
-\begin{table}[h]
+The working conditions that are to be investigated can be seen in Table \ref{tab:testcases}. The motor effect column is only valid for the one pump system. 
+
+
+\begin{table}[H]
+\centering
 \begin{tabular}{|p{1.4cm}||p{2cm}|p{3.2cm}|p{1.8cm}|}
  \hline
- \textbf{Steady state }&Temperature&Feed Conductivity&Motor effect \\
+ \textbf{Steady state }&Temperature  ($^{\circ}$C)&Feed Conductivity (\SI{}{\micro\siemens}/cm)&Motor effect (\%) \\
  \hline
- 1.1 & 18 $^\circ$C   & 280 \SI{}{\micro\siemens} & 60 \% \\
- 1.2   &  18 $^\circ$C   & 500 \SI{}{\micro\siemens} & 60 \% \\
- 1.3 &  18 $^\circ$C  &1000 \SI{}{\micro\siemens} & 60 \% \\
- 1.4 &  18 $^\circ$C  &1000 \SI{}{\micro\siemens} & \textbf{80 \%} \\
- 1.5 &18 $^\circ$C &2000 \SI{}{\micro\siemens}& 60 \%\\
- 1.6 &18 $^\circ$C  &2000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
- 1.7   &18 $^\circ$C & 3000 \SI{}{\micro\siemens}&60 \% \\
- 1.8   &18 $^\circ$C&3000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
+ 1.1 & 20 & 280  & 60 \\
+ 1.2 & 20 & 500  & 60 \\
+ 1.3 & 20 & 1000 & 60  \\
+ 1.4 & 20 & 1000 & \textbf{80} \\
+ 1.5 & 20 & 2000 & 60 \\
+ 1.6 & 20 & 2000 & \textbf{80}\\
+ 1.7 & 20 & 3000 & 60 \\
+ 1.8 & 20 & 3000 & \textbf{80}\\
  \hline
- 2.1 & 30 $^\circ$C & 280 \SI{}{\micro\siemens}&60 \%\\
- 2.2 & 30 $^\circ$C &500 \SI{}{\micro\siemens}& 60 \%\\
- 2.3 & 30 $^\circ$C&1000 \SI{}{\micro\siemens}& 60 \%\\
- 2.4 & 30 $^\circ$C&1000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
- 2.5 & 30 $^\circ$C&2000 \SI{}{\micro\siemens}& 60 \%\\
- 2.6 & 30 $^\circ$C&2000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
- 2.7 & 30 $^\circ$C& 3000 \SI{}{\micro\siemens}&60 \%\\
- 2.8 & 30 $^\circ$C& 3000 \SI{}{\micro\siemens}&\textbf{80 \%}\\
+ 2.1 & 30 & 280 & 60 \\
+ 2.2 & 30 & 500 & 60 \\
+ 2.3 & 30 & 1000 & 60 \\
+ 2.4 & 30 & 1000 & \textbf{80}\\
+ 2.5 & 30 & 2000 & 60 \\
+ 2.6 & 30 & 2000 & \textbf{80}\\
+ 2.7 & 30 & 3000 & 60 \\
+ 2.8 & 30 & 3000 & \textbf{80}\\
  \hline 
- 3.1 & 40 $^\circ$C& 280 \SI{}{\micro\siemens}& 60 \%\\
- 3.2 & 40 $^\circ$C &500 \SI{}{\micro\siemens}& 60 \%\\
- 3.3 & 40 $^\circ$C  & 1000 \SI{}{\micro\siemens}& 60 \%\\
- 3.4 & 40 $^\circ$C  & 1000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
- 3.5 & 40 $^\circ$C&2000 \SI{}{\micro\siemens}& 60 \%\\
- 3.6 & 40 $^\circ$C &2000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
- 3.7 & 40$^\circ$C &3000 \SI{}{\micro\siemens}& 60 \%\\
- 3.8 & 40$^\circ$C &3000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
+ 3.1 & 40 & 280 & 60 \\
+ 3.2 & 40 & 500 & 60 \\
+ 3.3 & 40 & 1000 & 60 \\
+ 3.4 & 40 & 1000 & \textbf{80}\\
+ 3.5 & 40 & 2000 & 60 \\
+ 3.6 & 40 & 2000 & \textbf{80}\\
+ 3.7 & 40 & 3000 & 60 \\
+ 3.8 & 40 & 3000 & \textbf{80}\\
 \hline
 \end{tabular}
-\caption{Testcases}
+\caption{Testcases for the investigations of the membrane behaviour. Each case represents one steady state in the experiments.}
     \label{tab:testcases} 
 \end{table}
 
 
-\newpage
+
+%\newpage
 
 
-\section{Design of control algorithms}
+%\section{Design of control algorithms}
 
-Investigating tests on System 2, Figure \ref{fig:Sys2}, were executed prior the design of the control algorithms to receive required reference signals to the pumps and drain valve. During the tests one parameter at a time changed while the others were kept constant. In test 1, seen in Figure \ref{fig:PreTestReg1} the pump in recycle path were the changing parameter and in Test 2, seen in Figure \ref{fig:PreTestReg3} the pressurising pump on inlet side were the changing parameter. 
+%Exploratory tests on the two pump system, Figure \ref{fig:Sys2}, were executed prior the design of the control algorithms to understand how the altered flow path  pumps and drain valve. During %the tests one parameter at a time changed while the others were kept constant. In test 1, seen in Figure \ref{fig:PreTestReg1} the pump in recycle path were the changing parameter and in Test %2, seen in Figure \ref{fig:PreTestReg3} the pressurising pump on inlet side were the changing parameter. 
 
 
 

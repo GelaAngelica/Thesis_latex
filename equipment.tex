@@ -7,14 +7,12 @@ The membrane used is a reverse osomosis membrane manufactured by the DOW chemica
 The pumps used in the system are magnet drive rotary vane pump TSSS401 from Fluid-o-Tech. They are designed to deliver a smooth flow reliably and optimized to reduce noise and power consumption. They are made for a maximum static pressure of 20 bar and has a speed limit of 1725 rpm. The nominal flow rate is 400 l/h. 
 
 \section{Drain valve}
-A proportional valve were implemented on drain side to be able to control the drain flow out from the membrane. It is a motorized angle seat control valve with high capacity. It has an integrated positioner and control the amount of flow going through the valve.
+A proportional valve was implemented on drain side to be able to control the drain flow out from the membrane. It is a motorized angle seat control valve with high capacity. It has an integrated positioner and control the amount of flow going through the valve.
 
 \section{Simscape/Simulink} 
 \label{Simscape}
 
 Simscape is a graphical programming tool within the Matlab simulink environment designed to model and simulate physical systems. A model of the RO-membrane and the flow path is designed using simscape and the simulated system could then be controlled using a control algorithm running in Simulink, a Matlab software too. The RO-membrane model encorporate separete mathematical models of the most important system dependencies, such as temperature , flow, pressure and conductivity.  
-
-The system control is implemented in Simulink. 
 
 
 \section{Speedgoat Real-Time Target Machine}
@@ -30,7 +28,7 @@ Speedgoat is a realtime target machine used for development. It is an FPGA I/O m
 
 \section{Measurement instruments} 
 \label{measure}
-Different instruments used to measure pressure, flow, temperature and conductivity in the physical rig.
+Different instruments were used to measure pressure, flow, temperature and conductivity in the physical rig.
 
 \subsection{Conductivity sensor block}
 \label{senscond}
@@ -38,11 +36,11 @@ A conductivity sensor block built by Gambro Lundia AB, called C3 is used to meas
 
 \subsection{Temperature sensor}
 \label{senstemp}
-The C3 cell described in section \ref{senscond} contains sensors for temperature measurements and are used fro the temperature measurements in the system.
+The C3 cell described in section \ref{senscond} contains sensors for temperature measurements and are used to measure the temperature in the system.
 
 \subsection{Pressure sensor}
 \label{senspress}
-Pressure sensors where implemented in the C3 block, described in section \ref{senscond}, and calibrated in order to achieve the pressure at feed, recirculation and permeate side of the membrane. The pressure sensors range is between 0-20 bar.
+Pressure sensors were implemented in the C3 block, described in section \ref{senscond}, and calibrated in order to achieve the pressure at feed, recirculation and permeate side of the membrane. The pressure sensors range is between 0-20 bar.
 
 
 \subsection{Flow meter}

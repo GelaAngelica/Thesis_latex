@@ -1,11 +1,11 @@
 % !TEX root = /Users/Gela/Desktop/Thesis_latex/thesis.tex
 \section{Modeling}
 \label{sec:modres}
-A physical model of the membrane were made and the given results can be seen below. In figure \ref{fig:simscape} the flowchart is given. The RO-membrane is simulated with three nodes; feed, product and reject, and an extra input temp. The temp node gives freedom to simulate the behaviour of the membrane in different temperature ranges. \\
+A physical model of the membrane was made and the given results can be seen below. In figure \ref{fig:simscape} the flowchart is given. The RO-membrane is simulated with three nodes; feed, product and reject, and an extra input for specifying the temperature. The temperature node gives freedom to simulate the behaviour of the membrane at different temperatures. \\
 \\
 The model consists of the pump, pipes, valves and tank. The water in the tank can be set to contain any salt koncentration to be able to simulate different conductivity values. The speed of the pumps can be changed to change the flow and pressure characteristic over the membrane in the model. \\
 \\
-All plots in this section shows expected behaviour due to the theory about membrane behaviour when temperature rising. Flow and conductivity on permeate/product side is increasing which is desirable to control in the system, and to be kept at limited values in order to have the Water Device to handle these differences in working conditions. The results of the simulations is considered being significant due to theory of the membrane. More details of the parameters in the model can be seen in subsections below.\\
+All plots in this section show expected behaviour due to the theory about membrane behaviour when the temperature is rising. Flow and conductivity on permeate/product side are increasing which is desirable to control in the system, and to be kept at limited values in order to have the water device to handle these differences in working conditions. The results of the simulations are considered being significant due to theory of the membrane. More details of the parameters in the model can be  seen in subsections below.\\
 \\
 \begin{figure}[h]
 \label{fig:simscape}
@@ -17,7 +17,7 @@ All plots in this section shows expected behaviour due to the theory about membr
 
 
 \subsection{Temperature}
-In figure \ref{fig:temp} the simulated temperature, 278-316 K is shown. All plots \ref{fig:msaltf} - \ref{fig:conden} shows the behaviour over a simulated time of 2000 s and a temperature range of 278-316 K. Pump speed is kept constant. The temperature correction factor, $TCF$, in figure \ref{fig:tcf} is the temperature dependent parameter implemented in the simulated model to receive the differences of the behaviour of the membrane. At 298 K $TCF$ is equal to 1. Below and above it is adjusted to compensate for the differences of the membrane behaviour. 
+In figure \ref{fig:temp} the simulated temperature, 278-316 K is shown. Plots \ref{fig:tcf} -\ref{fig:conden} shows the behaviour over a simulated time of 2000 s and a temperature range of 278-316 K. Pump speed is kept constant. The temperature correction factor, $TCF$, in figure \ref{fig:tcf} is the temperature dependant parameter implemented in the simulated model to receive the differences of the behaviour of the membrane. At 298 K $TCF$ is equal to 1. Below and above it is adjusted to compensate for the differences of the membrane behaviour. 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.7\linewidth]{temp.PNG}
@@ -212,7 +212,7 @@ In Figure (\ref{fig:PressConn}-\ref{fig:PumpConn}) all connections in the test r
 \newpage
 
 
-\section{Investigation on membrane behaviour}
+\section{Investigation of membrane behaviour}
 
 In order to compare the two systems and understand how the membrane performed in different working conditions both systems needed to be tested. The tests were conducted by controlling the temperature, pumps and the conductivity in the recirculation loop and log how the different conditions affected the system and the membrane. The current one pump system was tested first.
 \begin{figure}[H]
@@ -222,14 +222,14 @@ In order to compare the two systems and understand how the membrane performed in
     \label{fig:System1}
 \end{figure}
 
-The tests were conducted by changing the temperature, recirculation conductivity and pump speed and measure how the system behaved once it had reached steady state. The tests were divided into three test sequences. One test sequence was performed with room temperatured water (19 C), one with water heated to 30 C and in the last test sequence the water was heated to 40 C. Every test sequence included data from 8 steady state points with different settings on feed conductivity and pump speed. The test sequences are displayed in the table below. Each case represents one steady state point were data of the membrane behaviour was collected. 
+The tests were conducted by changing the temperature, recirculation conductivity and pump speed and measure how the system behaved once it had reached steady state. The tests were divided into three test sequences. One test sequence was performed with room temperatured water (20  $^{\circ}$C), one with water heated to 30  $^{\circ}$C and in the last test sequence the water was heated to 40  $^{\circ}$C. Every test sequence included data from 8 steady state points with different settings on feed conductivity and pump speed. The test sequences are displayed in the table below. Each case represents one steady state point were data of the membrane behaviour was collected. 
 
 Data collected:
 
 \begin{itemize}
 \item Pressure(bar): feed, reject and permeate
 \item Flow(ml/min): feed, reject, permeate and drain
-\item Conductivity(\SI{}{\micro\siemens}): inlet, feed, reject and permeate
+\item Conductivity(\SI{}{\micro\siemens}/cm): inlet, feed, reject and permeate
 \item Temperature ($^\circ$C): feed, reject and permeate
 \end{itemize}
 
@@ -241,34 +241,34 @@ From this, key values the following system parameters were calculated: net drivi
 \centering
 \begin{tabular}{|p{1.4cm}||p{2cm}|p{3.2cm}|p{1.8cm}|}
  \hline
- \textbf{Steady state }&Temperature&Feed Conductivity&Motor effect \\
+ \textbf{Steady state }&Temperature  ($^{\circ}$C)&Feed Conductivity (\SI{}{\micro\siemens}/cm)&Motor effect (\%) \\
  \hline
- 1.1 & 18 $^\circ$C   & 280 \SI{}{\micro\siemens} & 60 \% \\
- 1.2   &  18 $^\circ$C   & 500 \SI{}{\micro\siemens} & 60 \% \\
- 1.3 &  18 $^\circ$C  &1000 \SI{}{\micro\siemens} & 60 \% \\
- 1.4 &  18 $^\circ$C  &1000 \SI{}{\micro\siemens} & \textbf{80 \%} \\
- 1.5 &18 $^\circ$C &2000 \SI{}{\micro\siemens}& 60 \%\\
- 1.6 &18 $^\circ$C  &2000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
- 1.7   &18 $^\circ$C & 3000 \SI{}{\micro\siemens}&60 \% \\
- 1.8   &18 $^\circ$C&3000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
+ 1.1 & 20 & 280  & 60 \\
+ 1.2 & 20 & 500  & 60 \\
+ 1.3 & 20 & 1000 & 60  \\
+ 1.4 & 20 & 1000 & \textbf{80} \\
+ 1.5 & 20 & 2000 & 60 \\
+ 1.6 & 20 & 2000 & \textbf{80}\\
+ 1.7 & 20 & 3000 & 60 \\
+ 1.8 & 20 & 3000 & \textbf{80}\\
  \hline
- 2.1 & 30 $^\circ$C & 280 \SI{}{\micro\siemens}&60 \%\\
- 2.2 & 30 $^\circ$C &500 \SI{}{\micro\siemens}& 60 \%\\
- 2.3 & 30 $^\circ$C&1000 \SI{}{\micro\siemens}& 60 \%\\
- 2.4 & 30 $^\circ$C&1000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
- 2.5 & 30 $^\circ$C&2000 \SI{}{\micro\siemens}& 60 \%\\
- 2.6 & 30 $^\circ$C&2000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
- 2.7 & 30 $^\circ$C& 3000 \SI{}{\micro\siemens}&60 \%\\
- 2.8 & 30 $^\circ$C& 3000 \SI{}{\micro\siemens}&\textbf{80 \%}\\
+ 2.1 & 30 & 280 & 60 \\
+ 2.2 & 30 & 500 & 60 \\
+ 2.3 & 30 & 1000 & 60 \\
+ 2.4 & 30 & 1000 & \textbf{80}\\
+ 2.5 & 30 & 2000 & 60 \\
+ 2.6 & 30 & 2000 & \textbf{80}\\
+ 2.7 & 30 & 3000 & 60 \\
+ 2.8 & 30 & 3000 & \textbf{80}\\
  \hline 
- 3.1 & 40 $^\circ$C& 280 \SI{}{\micro\siemens}& 60 \%\\
- 3.2 & 40 $^\circ$C &500 \SI{}{\micro\siemens}& 60 \%\\
- 3.3 & 40 $^\circ$C  & 1000 \SI{}{\micro\siemens}& 60 \%\\
- 3.4 & 40 $^\circ$C  & 1000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
- 3.5 & 40 $^\circ$C&2000 \SI{}{\micro\siemens}& 60 \%\\
- 3.6 & 40 $^\circ$C &2000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
- 3.7 & 40$^\circ$C &3000 \SI{}{\micro\siemens}& 60 \%\\
- 3.8 & 40$^\circ$C &3000 \SI{}{\micro\siemens}& \textbf{80 \%}\\
+ 3.1 & 40 & 280 & 60 \\
+ 3.2 & 40 & 500 & 60 \\
+ 3.3 & 40 & 1000 & 60 \\
+ 3.4 & 40 & 1000 & \textbf{80}\\
+ 3.5 & 40 & 2000 & 60 \\
+ 3.6 & 40 & 2000 & \textbf{80}\\
+ 3.7 & 40 & 3000 & 60 \\
+ 3.8 & 40 & 3000 & \textbf{80}\\
 \hline
 \end{tabular}
 \caption{Testcases for the investigations of the membrane behaviour. Each case represents one steady state in the experiments.}
@@ -280,12 +280,12 @@ From this, key values the following system parameters were calculated: net drivi
 
 \subsection{Current system, Test sequence 1, part 1}
 
-The water in the tank was heated while the test was running. Because of this, the test was split up in two parts, first the motor was set to 60\% and steady state 1.1, 1.2, 1.3, 1.5 and 1.7 were investigated. In the part 2, the motor was set to 80 \% and steady state 1.4, 1.6 and 1.8 were investigated. Figure \ref{fig:SteadyStates20C_1} and  \ref{fig:SteadyStates20C_2} show an overview of the tests conducted at 20 C. The parts of the curves that has been marked with black are the steady states points. To be able to get good measurements an average was calculated from these marked values. Note that the three subplots within figure  \ref{fig:SteadyStates20C_1} and  \ref{fig:SteadyStates20C_2} share the same timeline so that the marked areas in all three plots are different measurements collected simulataneously.
+The water tank was heated by the ambient temperature in the room while the test was running. Because of this, the test was split up in two parts, first the motor was set to 60\% and steady state 1.1, 1.2, 1.3, 1.5 and 1.7 were investigated. In the part 2, the motor was set to 80 \% and steady state 1.4, 1.6 and 1.8 were investigated. Figure \ref{fig:SteadyStates20C_1} and  \ref{fig:SteadyStates20C_2} show an overview of the tests at 20 $^{\circ}$C. The parts of the curves that have been marked with black are the steady state points. To be able to get good measurements an average was calculated from these marked values. Note that the three subplots within figure  \ref{fig:SteadyStates20C_1} and  \ref{fig:SteadyStates20C_2} share the same timeline so that the marked areas in all three plots are different measurements collected simulataneously.
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=1\textwidth]{overview20_60}
-    \caption{Test 1, Current system, 18 degrees celsius. Steady states 1.1, 1.2, 1.3, 1.5 and 1.7 }
+    \caption{Test 1, Current system, 20 $^{\circ}$C. Steady states 1.1, 1.2, 1.3, 1.5 and 1.7 }
     \label{fig:SteadyStates20C_1}
 \end{figure}
 
@@ -296,7 +296,7 @@ The water in the tank was heated while the test was running. Because of this, th
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{overview20_80}
-    \caption{Test 1, Current system, 18 degrees celsius. Steady states 1.4, 1.6 and 1.8}
+    \caption{Test 1, Current system, 20 $^{\circ}$C. Steady states 1.4, 1.6 and 1.8}
     \label{fig:SteadyStates20C_2}
 \end{figure}
 
@@ -316,12 +316,12 @@ By post-proccesing the data collected at the different steady states in test seq
 
 \subsection{Current system, Test sequence 2}
 
-The second test was carried out by setting the heater bath to 30 degrees celsius and and adjusting the conductivity and pump speed according to the test plan. Since the water was much warmer than the air in the room, the heating caused by the pump was not as prominent and allowed all steady states to be examined in one continuous test. 
+The second test was carried out by setting the heater bath to 30 $^{\circ}$C and and adjusting the conductivity and pump speed according to the test plan. Since the water was much warmer than the air in the room, the heating caused by the pump was not as prominent and allowed all steady states to be examined in one continuous test. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{overview30}
-    \caption{Test 2, Current system, 30 degrees celsius. Steady states 2.1, 2.2, 2.3, 2.4 2.5, 2.6, 2.7 and 2.8}
+    \caption{Test 2, Current system, 30 $^{\circ}$C. Steady states 2.1, 2.2, 2.3, 2.4 2.5, 2.6, 2.7 and 2.8}
     \label{fig:overw30}
 \end{figure}
 
@@ -341,12 +341,12 @@ The data from the test was post processed in Matlab in exactly the same way as t
 
 \subsection{Current system, Test sequence 3}
 
-Finally the heating bath was set to 40 C and the test sequence was performed just like test sequence 2. 
+Finally the heating bath was set to 40 $^{\circ}$C and the test sequence was performed just like test sequence 2. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{overview40}
-    \caption{Test 3, Current system, 30 degrees celsius. Steady states 3.1, 3.2, 3.3, 3.4 3.5, 3.6, 3.7 and 3.8}
+    \caption{Test 3, Current system, 30 $^{\circ}$C. Steady states 3.1, 3.2, 3.3, 3.4 3.5, 3.6, 3.7 and 3.8}
     \label{fig:overw40}
 \end{figure}
 
@@ -363,7 +363,7 @@ Post processing in matlab generated the following data from the steady states.
 
 \newpage
 
-In order to understand how the current system performed in different working conditions all plots from the post processing in Matlab was put togeheter. By doing this, it was possible to visuallize the effect of temperature on the system parameters. The following plots explain in more detail how the system parameters changed when the system temperature, feed conductivity and feed pressure incresed.  
+In order to understand how the current system performed in different working conditions all plots from the post processing in Matlab were put togeheter. By doing this, it was possible to visuallize the effect of temperature on the system parameters. The following plots explain in more detail how the system parameters changed when the system temperature, feed conductivity and feed pressure incresed.  
 
 \subsection{Net driving pressure}
 
@@ -378,7 +378,7 @@ Net driving pressure was decreased when the temperature was increased. Higher fe
 
 \subsection{Permeate flow}
 
-According to theory, net driving pressure has a direct effect on permeate flow. When the feed pump was increased more water was pushed through the membrane. Increased water temperatures caused a higher permeate flow. For instance, the permeate flow increased by around 50\% when the temperature was increased from 20 C to 40 C and the pump was running at 60\%. Due to the increased osmotic pressure, permeate flow decreased when the feed conductivity increased
+According to theory, net driving pressure has a direct effect on permeate flow. When the feed pump was increased more water was pushed through the membrane. Increased water temperatures caused a higher permeate flow. For instance, the permeate flow increased by around 50\% when the temperature was increased from 20 $^{\circ}$C to 40 $^{\circ}$C and the pump was running at 60\%. Due to the increased osmotic pressure, permeate flow decreased when the feed conductivity increased
 
 \begin{figure}[H]
     \centering
@@ -400,7 +400,7 @@ Warmer water enabled more feed water to pass through the membrane and therefore 
 
 \subsection{Salt rejection}
 
-By looking at figure \ref{fig:SaltRejectionResult} and \ref{fig:Permeatecond} the deterimental effects of both increased temperature and feed conductivity can be seen. The negative effect of increased feed conductivity was much more prominent at 40 C than 30C, which means that the performance of the membrane decreased with higher temperature. Increased feed pump pressure resulted in better salt rejection and the positive effect of increased pump pressure was larger when the system was hotter. Temperature was the parameter that decreased salt rejection the most and by comparing how the system performed when the pump and feed conductivity was set to 60\% and 3000uS/cm at 19C and 40C it can be seen that the salt rejection decreased from 98.5\% to 95.5 \%. From the experiment it can also be concluded that the system perform much better at low temperature and low feed conductivity that at high temperature and high feed conductivity. 
+By looking at figure \ref{fig:SaltRejectionResult} and \ref{fig:Permeatecond} the deterimental effects of both increased temperature and feed conductivity can be seen. The negative effect of increased feed conductivity was much more prominent at 40 $^{\circ}$C than 30 $^{\circ}$C, which means that the performance of the membrane decreased with higher temperature. Increased feed pump pressure resulted in better salt rejection and the positive effect of increased pump pressure was larger when the system was hotter. Temperature was the parameter that decreased salt rejection the most and by comparing how the system performed when the pump and feed conductivity was set to 60\% and 3000 \SI{}{\micro\siemens}/cm at 19 $^{\circ}$C and 40 $^{\circ}$C it can be seen that the salt rejection decreased from 98.5\% to 95.5 \%. From the experiment it can also be concluded that the system perform much better at low temperature and low feed conductivity than at high temperature and high feed conductivity. 
 
 \begin{figure}[H]
     \centering
@@ -450,7 +450,7 @@ The circulation pump, a motorized drain valve and a flow meter on the permeate s
 \subsubsection{Increased circulation}
 
 The Initial idea for optimising the membrane was to use the circulation pump to create a turbulent flow close to the membrane surface. Therefore, a test was set up to test this idea.
-During the test, the feed pump and drain valve was set to a fixed value and the circulation pump was increased from 5\% to 35\%. Figure \ref{fig:RecIncrease40} show the permeate conductivity, circulation flow and feed pressure and 7 steady state points from the test.\\
+During the test, the feed pump and drain valve was set to a fixed value and the circulation pump was increased from 5\% to 35\%. Figure \ref{fig:RecIncrease40} shows the permeate conductivity, circulation flow and feed pressure and 7 steady state points from the test.\\
 \\
 The circulation flow was increased from 1500 ml/min to 5000 ml/min and the increased circulation flow caused the pressure to increase from 5.5 to 7 bar. The permeate conductivity remained unchanged. 
 \begin{figure}[H]
@@ -459,7 +459,7 @@ The circulation flow was increased from 1500 ml/min to 5000 ml/min and the incre
     \caption{Overview of test, The circulation flow was increased with the circulation pump without changing the feed pump.}
     \label{fig:RecIncrease40}
 \end{figure}  
-More information about how the system performed during the test was calculated and can be seen in figure \ref{fig:RecIncreaseKey40}. The Recovery decreased from 22\% to 14\%  but salt rejection and permeate conductivity did only slightly increase. \\
+More information about how the system performed during the test was calculated and can be seen in figure \ref{fig:RecIncreaseKey40}. The Recovery decreased from 22\% to 14\%  but salt rejection and permeate conductivity did only increase slightly. \\
 \\
 \begin{figure}[H]
     \centering
@@ -489,7 +489,7 @@ The next test was set up to investigate the effect of an increased feed pressure
     \label{fig:FeedPumpIncrease40Key}
 \end{figure}
 
-From figure \ref{fig:FeedPumpIncrease40} it can be seen that the circulation flow remained constant and that the feed side pressure was increased from 1.5 to 8 bars. The permeate quality increased from 100 uS/cm to 30 uS/cm. As a result, it could be concluded that it was possible to increase the performance of the membrane by increasing feed side pressure without the increased circulation flow. It should be noted that the membrane recovery increased from 28\% to 36\% during the test and this is far above the maximum limit specified by the manufacturer (20\%). Therefore, it should also be concluded that only controlling the feed pump without controlling membrane recovery could damage the membrane. 
+From figure \ref{fig:FeedPumpIncrease40} it can be seen that the circulation flow remained constant and that the feed side pressure was increased from 1.5 to 8 bars. The permeate quality increased from 100 \SI{}{\micro\siemens}/cm to 30 \SI{}{\micro\siemens}/cm. As a result, it could be concluded that it was possible to increase the performance of the membrane by increasing feed side pressure without the increased circulation flow. It should be noted that the membrane recovery increased from 28\% to 36\% during the test and this is far above the maximum limit specified by the manufacturer (20\%). Therefore, it should also be concluded that only controlling the feed pump without controlling membrane recovery could damage the membrane. 
 
 Another important conclusion is that increasing feed pressure results in a higher salt rejection and thus more water can be recirculated instead of being rejected through the drain valve. This means that saving water will cost more energy. On the other hand if energy consumption were to be minimized salt rejection would decrease and then more water must be rejected. As a result, increased water efficiency will increase energy consumption and vice versa.  
 
@@ -498,52 +498,52 @@ Another important conclusion is that increasing feed pressure results in a highe
 \subsection{Optimization algorithm}
 
 Previous tests concluded that it was ineffective to increase salt rejection by increasing the circulation flow, that it was possible to increase feed side pressure to increase salt rejection and that water temperature was the parameter that had the largest deterimental effect on salt rejection. Increased feed water conductivity also decreased the performance of the system, but not as much as increased temperature and the negative effect of high conductivity was more prominent at higher temperatures. Increased feed side pressure has a larger positive effect on salt rejection at high temperature.
-Since test showed that increased temperature decreased net driving pressure (See figure \ref{fig:NDP}) and that decreased feed pressure reduced salt rejection (see figure \ref{fig:SaltRejectionResult}) it could be concluded that using a fixed value setpoint at either feed side pressure or permeate flow would not work. Instead a set point could be calculated for a given temperature and pressure or permeate flow could be used as a setpoint.
-By using permeate flow instead of feed side pressure as a set point, factors such as membrane fouling, scaling and individual differences in the membrane could be compensated by the controller. Therefor, permeate flow was selected to be the setpoint for the feed pump controller. 
+Since test showed that increased temperature decreased net driving pressure (See figure \ref{fig:NDP}) and that decreased feed pressure reduced salt rejection (see figure \ref{fig:SaltRejectionResult}) it could be concluded that using a fixed setpoint value at either feed side pressure or permeate flow would not work. Instead a set point could be calculated for a given temperature and pressure or permeate flow could be used as a setpoint.
+By using permeate flow instead of feed side pressure as a set point, factors such as membrane fouling, scaling and individual differences in the membrane could be compensated by the controller. Therefore, permeate flow was selected to be the setpoint for the feed pump controller. 
 
 \subsection{Finding an optimal plane}
 
 The purpose of the next test was to find a permeate flow set point that would ensure good quality permeate at all temperatures without wasting more water and energy than needed. Since it was concluded in previous tests that membrane recovery did not improve salt rejection it was determined that this parameter should be set to approximately 20\% by controlling the circulation pump. \\
 \\
-The goal of the test was to find the lowest permeate flow needed at a given feed conductivity and temperature to achieve a permeate conductivity of  $\sim$ 30 uS/cm (25 to 31 uS/cm) while maintaining a recovery of at most 20\%. The test was conducted by first adjusting the temperature in the heating bath to 20 deg C and then add salt so that the conductivity of the water in the bath was roughly 275 uS/cm. Afterwards, the feed and circulation pump were adjusted to obtain a  permeate conductivity of  $\sim$ 30 uS/cm and 20\% recovery. Once the system had stabilised important parameters were noted. Once the measurements had been obtained, the conductivity was slowely increased and the pumps were modified to once again produce peremate water with a conductivity of 30 uS/cm. The feed conductivity was increased in small steps and the same procedure was repeated until the conductivity reached 3000 uS/cm. The same procedure was repeated using 30 C and 40 C inlet water. The raw data from the test was noted in table \ref{fig:Excel_plane}. Note that for low feed conductivities the feed pump could be set to the lowest value (3\%) and the system would still generate a permeate conductivity of less than 30uS/cm. If the feed conductivity was high, depending on temperature, it proved to be impossible to generate 30uS/cm permeate. The measurements that allowed  $\sim$ 30uS/cm permeate to be generated has been colored blue.
+The goal of the test was to find the lowest permeate flow needed at a given feed conductivity and temperature to achieve a permeate conductivity of  $\sim$ 30 \SI{}{\micro\siemens}/cm (25 to 31 \SI{}{\micro\siemens}/cm) while maintaining a recovery of at most 20\%. The test was conducted by first adjusting the temperature in the heating bath to 20 $^{\circ}$C and then add salt so that the conductivity of the water in the bath was roughly 275 \SI{}{\micro\siemens}/cm. Afterwards, the feed and circulation pump were adjusted to obtain a  permeate conductivity of  $\sim$ 30 \SI{}{\micro\siemens}/cm and 20\% recovery. Once the system had stabilised important parameters were noted. Once the measurements had been obtained, the conductivity was slowely increased and the pumps were modified to once again produce peremate water with a conductivity of 30 \SI{}{\micro\siemens}/cm. The feed conductivity was increased in small steps and the same procedure was repeated until the conductivity reached 3000 \SI{}{\micro\siemens}/cm. The same procedure was repeated using 30 $^{\circ}$C and 40 $^{\circ}$C inlet water. The raw data from the test was noted in table \ref{fig:Excel_plane}. Note that for low feed conductivities the feed pump could be set to the lowest value (3\%) and the system would still generate a permeate conductivity of less than \SI{}{\micro\siemens}/cm. If the feed conductivity was high, depending on temperature, it proved to be impossible to generate 30 \SI{}{\micro\siemens}/cm permeate. The measurements that allowed  $\sim$ 30 \SI{}{\micro\siemens}/cm permeate to be generated has been colored blue.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{Excel_plane}
-    \caption{Raw data from tests at 20, 30 and 40 C. The blue cells contains information about system performance when it was possible to maintain a permeate quality of $\sim$30 uS/cm (25 - 31 uS/cm).  All relevant pressures, flows, conductivities and other key parameters has been added}
+    \caption{Raw data from tests at 20, 30 and 40  $^{\circ}$C. The blue cells contains information about system performance when it was possible to maintain a permeate quality of $\sim$30 uS/cm (25 - 31  \SI{}{\micro\siemens}/cm).  All relevant pressures, flows, conductivities and other key parameters has been added}
     \label{fig:Excel_plane}
 \end{figure}
 
 \newpage
 
-By plotting when it was possible to maintain $\sim$30uS/cm as a function of temperature and feed conductivity it was possible to estimate the working range of the membrane. Figure \ref{fig:FinalResult_1} is a 2D representation of the data contained in \ref{fig:Excel_plane}. The blue dots are the measurement points were  $\sim$30 uS/cm could be maintained. As can be seen in the plot, increasing temperature limits the ability to maintain good permeate quality. The two most important findings were that at 40 C it was possible to maintain  $\sim$ 30 uS/cm permeate if the feed conductivity was below  $\sim$1292 uS/cm and when the temperature was decreased to 20 C the feed conductivity could be increased to 2101 uS/cm and still produce  $\sim$30uS/cm permeate.   
+By plotting when it was possible to maintain $\sim$30 \SI{}{\micro\siemens}/cm as a function of temperature and feed conductivity it was possible to estimate the working range of the membrane. Figure \ref{fig:FinalResult_1} is a 2D representation of the data contained in \ref{fig:Excel_plane}. The blue dots are the measurement points were $\sim$30 \SI{}{\micro\siemens}/cm could be maintained. As can be seen in the plot, increasing temperature limits the ability to maintain good permeate quality. The two most important findings were that at 40 $^{\circ}$C it was possible to maintain  $\sim$30 \SI{}{\micro\siemens}/cm permeate if the feed conductivity was below 1292 \SI{}{\micro\siemens}/cm and when the temperature was decreased to 20 $^{\circ}$C the feed conductivity could be increased to 2101 \SI{}{\micro\siemens}/cm and still produce  $\sim$30 \SI{}{\micro\siemens}/cm permeate.   
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{FinalResult_1}
-    \caption{The opertional area of the membrane, blue dots represents when it was possible to generate a permeate conductivity of $\sim$ 30uS/cm.}
+    \caption{The opertional area of the membrane, blue dots represents when it was possible to generate a permeate conductivity of $\sim$30 \SI{}{\micro\siemens}/cm.}
     \label{fig:FinalResult_1}
 \end{figure}
 
 \newpage
 
-Since the idea behind the algorithm was to find an optimal permeate flow for feed conductivities between 275-3000 uS/cm and temperatures between 20 and 40 C a Z axis containing the minimum required to achieve $\sim$ 30uS/cm permeate flow was added to plot \ref{fig:FinalResult_1}. The blue dots represents the points where good permeate quality could be achieved. By looking at  \ref{fig:Excel_plane} it is possible to determine what permeate flow corresponds to the individual points in figure  \ref{fig:FinalResult_2}.
+Since the idea behind the algorithm was to find an optimal permeate flow for feed conductivities between 275-3000 \SI{}{\micro\siemens}/cm and temperatures between 20 and 40  $^{\circ}$C a Z axis containing the minimum required to achieve $\sim$ 30 \SI{}{\micro\siemens}/cm permeate flow was added to plot \ref{fig:FinalResult_1}. The blue dots represent the points where good permeate quality could be achieved. By looking at  \ref{fig:Excel_plane} it is possible to determine what permeate flow corresponds to the individual points in figure \ref{fig:FinalResult_2}.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{FinalResult_2}
-    \caption{3D representation of when it was possible to generate $\sim$ 30uS/cm permeate as a function of temperature, feed conductivity and permeate flow.}
+    \caption{3D representation of when it was possible to generate $\sim$ 30 \SI{}{\micro\siemens}/cm permeate as a function of temperature, feed conductivity and permeate flow.}
     \label{fig:FinalResult_2}
 \end{figure}
 
 \newpage
 
-The points where good permeate conductivity could be attained (blue points) were used as a basis for a second order interpolation to obtain a plane. This plane can be seen in figure \ref{fig:FinalResult_3} . The plane is an estimation of what permeate flow is needed at a given temperature and conductivity to create a permeate quality of  $\sim$ 30 uS/cm. 
+The points where good permeate conductivity could be attained (blue points) were used as a basis for a second order interpolation to obtain a plane. This plane can be seen in figure \ref{fig:FinalResult_3}. The plane is an estimation of what permeate flow is needed at a given temperature and conductivity to create a permeate quality of  $\sim$ 30 \SI{}{\micro\siemens}/cm. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{FinalResult_3}
-    \caption{Plane created from an interpolation of the measurements in figure \ref{fig:FinalResult_2}. The plane represents what permeate flow is needed at a given feed conductivity and temperature to generate  $\sim$ 30 uS/cm permeate}
+    \caption{Plane created from an interpolation of the measurements in figure \ref{fig:FinalResult_2}. The plane represents what permeate flow is needed at a given feed conductivity and temperature to generate  $\sim$ 30 \SI{}{\micro\siemens}/cm permeate}
     \label{fig:FinalResult_3}
 \end{figure}
 
@@ -562,7 +562,7 @@ The equation for the plane can be seen below.
 
 
 
-Energy consumption and water efficiency is coupled in a manner such that it is imposible to minimize both at the same time. However, by selecting a curve on the aforementioned plane it is possible to find a algorithm that minimize energy consumption without wasting more water than necessary. When the system is running at 40 C the maximum allowed conductivity that generates a permeate conductivity of  $\sim$ 30 uS/cm is limited to 1292 uS/cm. The proposed optimal function that can be seeb in figure \ref{fig:FinalResult_4} was selected because it would allow the system to function at the maximum allowed conductivity at 40 C but when the system temperature decrease the system would save energy by reducing the permeate flow. For instance, if the system temperatuer was 40 C the function would set a permeate flow setpoint of 1440 ml/min. If the temperature was reduced to 30 C the algorithm would set the permeate flow setpoint to  767 ml/min and thereby saving energy. If the temperature was furhter reduced to 20 C the algorithm would set the permate flow setpoint to 506 ml min. 
+Energy consumption and water efficiency is coupled in a manner such that it is imposible to minimize both at the same time. However, by selecting a curve on the aforementioned plane it is possible to find an algorithm that minimizes energy consumption without wasting more water than necessary. When the system is running at 40 $^{\circ}$C the maximum allowed conductivity that generates a permeate conductivity of  $\sim$ 30 \SI{}{\micro\siemens}/cm is limited to 1292 \SI{}{\micro\siemens}/cm. The proposed optimal function that can be seen in figure \ref{fig:FinalResult_4} was selected because it would allow the system to function at the maximum allowed conductivity at 40 $^{\circ}$C but when the system temperature decrease the system would save energy by reducing the permeate flow. For instance, if the system temperature was 40 $^{\circ}$C the function would set a permeate flow setpoint of 1440 ml/min. If the temperature was reduced to 30 $^{\circ}$C the algorithm would set the permeate flow setpoint to 767 ml/min and thereby saving energy. If the temperature was furhter reduced to 20 $^{\circ}$C the algorithm would set the permate flow setpoint to 506 ml/min. 
 
 
 \begin{figure}[H]
@@ -572,7 +572,7 @@ Energy consumption and water efficiency is coupled in a manner such that it is i
     \label{fig:FinalResult_4}
 \end{figure}
 
-To summarize, the proposed algorithm for optimizing the membrane is to use the temperature of the inlet water to determine an optimal permeate flow rate. By using the feed pump as the actuator one control loop controls the permeate flow to achieve the setpoint determined by the actuator. The control loop controlling the circulation pump to achieve a recovery of 20\%. The last control loop controls the drain valve so that the permeate quality is 30uS/cm. Thus, the system will be optimized and operate on the green line in figure \ref{fig:FinalResult_4}. The proposed algorithm to calculate the optimal permeate flow based on system temperature can be seen below (temperatuer = t). Note that the function is only valid within 20 to 40 C and that the allowed permeate flow should be within 500 to 1450 ml/min. 
+To summarize, the proposed algorithm for optimizing the membrane is to use the temperature of the inlet water to determine an optimal permeate flow rate. By using the feed pump as the actuator one control loop controls the permeate flow to achieve the setpoint determined by the actuator. The control loop controlling the circulation pump to achieve a recovery of 20\%. The last control loop controls the drain valve so that the permeate quality is 30 \SI{}{\micro\siemens}/cm. Thus, the system will be optimized and operate on the green line in figure \ref{fig:FinalResult_4}. The proposed algorithm to calculate the optimal permeate flow based on system temperature can be seen below (temperatuer = t). Note that the function is only valid within 20 to 40 C and that the allowed permeate flow should be within 500 to 1450 ml/min. 
 
 \begin{equation}
 permeate flow =  2.2254*t^2-85.209*t+1320.6
@@ -582,12 +582,16 @@ permeate flow =  2.2254*t^2-85.209*t+1320.6
 
 \subsection{Energy consumption}
 
-The current was measured on both motors during the tests with 20 C inlet water in the optimal plane test case (table \ref{fig:Excel_plane}). The test showed that power consumption of the two pump system ranged from 12 to 194.4 watts depending on the feed conductivity which was far less than what was required when only one pump. Typically, the one pump system used TBD watts when running at 60\% and TBD watts when running at 80\%. The measured power consumption of the two pump system can be seen in figure \ref{fig:EnergySys2}. For example, the two pump system would require \% less energy than the one pump system when used in Lund (communal water, temperature 20 C, conductivity 170 uS/cm). Note that the feed pump generate a pressure of 10 bar when running at 25\%, the one pump system generate TBD bars when running at 80\%. 
+The current was measured on both motors during the tests with 20 $^{\circ}$C inlet water in the optimal plane test case (table \ref{fig:Excel_plane}). The test showed that power consumption of the two pump system ranged from 12 to 194.4 Watt depending on the feed conductivity and temperature which was less than what was required when only one pump was used. Typically, the one pump system used 86 Watt when running at 60\% and 228 Watt when running at 80\%. The measured power consumption of the two pump system can be seen in figure \ref{fig:EnergySys2}. \\
+\\
+For example, the two pump system would require somewhere between 12 and 36 Watt and the current one pump system would require 86 Watt when used in Lund (communal water, temperature 20 $^{\circ}$C, conductivity 170 uS/cm).  Since the current system does not ensure a permeate quality of 30 \SI{}{\micro\siemens}/cm it is difficult to compare the two systems. The two pump system will use more power when needed to ensure good permeate quality but the one pump system will use the same power, regardless of the permeate quality. \\
+\\
+Note that the feed pump generate a pressure of 10 bar when running at 25\% in the two pump system and in the one pump system the feed pump generate 7.5 bars when running at 80\%. Because of this, the two pump system can remove more of the salts than in the one pump system but it will use more energy. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{EnergySys2}
-    \caption{}
+    \caption{Measurements on system performance at 20 $^{\circ}$C}
     \label{fig:EnergySys2}
 \end{figure}
 

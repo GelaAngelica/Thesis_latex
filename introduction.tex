@@ -2,21 +2,19 @@
 
 \section{Background}
 
-The Water Technologies department at Baxter develops water systems for use in mixing fluid for dialysis treatments. The water quality is important in order not to harm the patients when using the final product. The water systems used for water purification are using the reverse osmosis (RO) method as the first stage in the purification process. It remove impurities, as salt and inorganic molecules from the water\cite{Dow}.\\
+The Water Technologies department at Baxter develops water systems for use in mixing fluid for dialysis treatments. The water quality is important in order not to harm the patients when using the final product. The water systems used for water purification are using the reverse osmosis (RO) method as the first stage in the purification process. It removes impurities, as salt and inorganic molecules from the water\cite{Dow}.\\
 \\
-In a RO-system the feed water is pressurized by a pump and forced through the RO-membrane to overcome the osmotic pressure. The RO-membrane is a semi-permeable membrane and let water passes freely true the membrane creating a purified product stream. This product water is used by the dialysis machine in order to give the patients a safe treatment. If the water is not pure enough the patient is exposed to a high risk and it is of great importance that the purification plant, e.g the water device delivers good quality on the water at all times.\\
+In a RO-system the feed water is pressurized by a pump and forced through the RO-membrane to overcome the osmotic pressure. The RO-membrane is a semi-permeable membrane that lets water pass freely through the membrane creating a purified product stream. This product water is used by the dialysis machine in order to give the patients a safe treatment. If the water is not pure enough the patient is exposed to high risk and it is of great importance that the purification plant, e.g the water device delivers good quality water at all times.\\
 \\
-The water device has a current system containing one pump, which has two purposes, creating a pressure to overcome the osmotic pressure and creating a flow on the reject side of the RO-membrane to prevent aggregation of impurities on the membrane surface. Both flow rate and pressure has a significant impact on the membrane behaviour in order to deliver pure water.\\
+The current water device system is implemented with one pump, which has two purposes, creating a pressure to overcome the osmotic pressure and creating a flow on the reject side of the RO-membrane to prevent aggregation of impurities on the membrane surface. Both flow rate and pressure have a significant impact on the performance of the membrane.\\
 
 
 \section{Motivation}
 By using two pumps instead of one in the RO-system it will be possible to control the pressure on the membrane and the flow on the reject side independently and thus it might be possible to optimise the performance of the RO-system, focusing on reducing impurities, energy consumption and water consumption. \\
 \\
-Currently there is a simulink model of the RO-membrane from an earlier masters thesis. However, this model does not include the temperature dependencies of the membrane and therefor these dependancies should be investigated and added to the model. 
+Currently there is a simulink model of the RO-membrane from an earlier masters thesis. However, this model does not include the temperature dependencies of the membrane and therefor these dependencies should be investigated and added to the model. 
 \section{Goal}
-The purpose of this masters thesis is to evaluate the feasibility of replacing the main RO-pump with two pumps, one for controlling the flow through the membrane and one for controlling the pressure. The positioning of the pumps, membrane and other component should be investigated and tested. \\
-\\
-The temperature dependencies of the RO-membrane should be added into the current Simscape model.
+The purpose of this masters thesis is to evaluate the feasibility of replacing the main RO-pump with two pumps, one for controlling the flow through the membrane and one for controlling the pressure. The positioning of the pumps, membrane and other components should be investigated and tested. \\
 \\
 To achieve good performance it will be necessary to design a realistic model of the system, once the model has been designed and tested a control algorithm is to be developed and implemented on a physical test setup. This algorithm, should be able to control the flow and pressure over the RO-membrane to maximise the performance of the membrane while minimising waste water and energy consumption. \\
 
@@ -33,7 +31,7 @@ To achieve good performance it will be necessary to design a realistic model of 
 
 \section{Method}
 
-In order to investigate the performance of the current system and to compare it with the new model following steps will be evaluated:
+In order to investigate the performance of the current system and to compare it with the new model the following steps will be evaluated:
 
 \begin{itemize}
 \renewcommand\labelitemi{-}
@@ -43,7 +41,6 @@ In order to investigate the performance of the current system and to compare it 
     \item Design of control algorithms.
     \item Implementation in a test rig to verify the performance of the system.
     \item Run tests to determine the performance.
-    \item Improve if possible.
 \end{itemize}
 
 
