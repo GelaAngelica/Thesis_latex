@@ -3,9 +3,9 @@
 \label{sec:modres}
 A physical model of the membrane was made and the given results can be seen below. In figure \ref{fig:simscape} the flowchart is given. The RO-membrane is simulated with three nodes; feed, product and reject, and an extra input for specifying the temperature. The temperature node gives freedom to simulate the behaviour of the membrane at different temperatures. \\
 \\
-The model consists of the pump, pipes, valves and tank. The water in the tank can be set to contain any salt koncentration to be able to simulate different conductivity values. The speed of the pumps can be changed to change the flow and pressure characteristic over the membrane in the model. \\
+The model consists of the pump, pipes, valves and a tank. The water in the tank can be set to contain any salt concentration to be able to simulate different conductivity values. The speed of the pumps can be changed to change the flow and pressure characteristic over the membrane in the model. \\
 \\
-All plots in this section show expected behaviour due to the theory about membrane behaviour when the temperature is rising. Flow and conductivity on permeate/product side are increasing which is desirable to control in the system, and to be kept at limited values in order to have the water device to handle these differences in working conditions. The results of the simulations are considered being significant due to theory of the membrane. More details of the parameters in the model can be  seen in subsections below.\\
+All plots in this section show expected behaviour according to the theory about membrane behaviour when the temperature is rising. Flow and conductivity on permeate/product side are increasing which is desirable to control in the system, and to be kept at limited values in order to have the water device to handle these differences in working conditions. The results of the simulations are considered to be realistic accrding to the theory of the membrane. More details of the parameters in the model can be  seen in subsections below.\\
 \\
 \begin{figure}[h]
 \label{fig:simscape}
@@ -17,10 +17,10 @@ All plots in this section show expected behaviour due to the theory about membra
 
 
 \subsection{Temperature}
-In figure \ref{fig:temp} the simulated temperature, 278-316 K is shown. Plots \ref{fig:tcf} -\ref{fig:conden} shows the behaviour over a simulated time of 2000 s and a temperature range of 278-316 K. Pump speed is kept constant. The temperature correction factor, $TCF$, in figure \ref{fig:tcf} is the temperature dependant parameter implemented in the simulated model to receive the differences of the behaviour of the membrane. At 298 K $TCF$ is equal to 1. Below and above it is adjusted to compensate for the differences of the membrane behaviour. 
+In figure \ref{fig:temp} the simulated temperature, 278-316 K is shown. Plots \ref{fig:tcf} - 6.11 show the behaviour over a simulated time of 2000 s and a temperature range of 278-316 K. Pump speed is kept constant. The temperature correction factor, $TCF$, in figure \ref{fig:tcf} is the temperature dependant parameter implemented in the simulated model to receive the differences of the behaviour of the membrane. At 298 K $TCF$ is equal to 1. Below and above it is adjusted to compensate for the differences of the membrane behaviour. 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.7\linewidth]{temp.PNG}
+  \includegraphics[width=0.6\linewidth]{temp.PNG}
   \caption{Temperature range in simulations, from 278-316 K}
   \label{fig:temp}
 \end{figure}
@@ -28,70 +28,68 @@ In figure \ref{fig:temp} the simulated temperature, 278-316 K is shown. Plots \r
 \begin{figure}[h]
 \centering
     \centering
-    \includegraphics[width=0.7\textwidth]{tcf.PNG}
+    \includegraphics[width=0.6\textwidth]{tcf.PNG}
     \caption{Temperature correction factor, $TCF$, when temperature is simulated from 278-316 K}
     \label{fig:tcf}
 \end{figure}
 \newpage
 
 \subsection{Salt concentration}
-In figure \ref{fig:msaltf} the salt koncentration in kg/s on feed side of the membrane is shown. The concentration increases over the simulated time and change in temperature. \\
-In figure \ref{fig:msaltp} the salt koncentration on product side is shown. Due to the mass balance equation in \ref{sec:soldiff} the sign is negative, and the koncentration increases with temperature.\\
-In figure \ref{fig:msaltr} the salt koncentration on reject side is shown. It increases a little with temperature (negative sign due to the mass balance equations).\\
-The product salt koncentration increases with from a value of  0.8 - 0.96 kg/s. The product water koncentration increases from (-) 0.2 - 1.8 kg/s. The reject salt koncentration increases from (-) 0.8 - 0.96 kg/s.\\
+In figure \ref{fig:msaltf} the salt concentration in kg/s on the feed side of the membrane is shown. The salt concentration increases with increasing temperature. In figure \ref{fig:msaltp} the salt concentration in the product water is shown. Due to the mass balance equation in \ref{sec:soldiff} the sign is negative, and the concentration increases with temperature. Figure \ref{fig:msaltr} shows the salt concentration on the reject side. It increases a little with temperature (negative sign due to the mass balance equations).\\
+The salt concentration in the feed water increases from  0.8 kg/s to 0.96 kg/s. The product water concentration increases from (-) 0.2 to 1.8 kg/s. The reject salt concentration increases from (-) 0.8 to 0.96 kg/s.\\
 \\
 The salt concentration characteristics is in line with the expected values of the system for the simulations and is considered to be realistic for the model. 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
-    \includegraphics[width=0.7\textwidth]{msalt_feed.PNG}
-    \caption{Salt concentration feed water, when temperature is simulated from 278-316 K}
+    \includegraphics[width=0.6\textwidth]{msalt_feed.PNG}
+    \caption{Salt concentration in feed water, when temperature is simulated from 278-316 K}
     \label{fig:msaltf}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
 \centering
-  \includegraphics[width=0.7\linewidth]{msalt_prod.PNG}
-  \caption{Salt concentration product water, when temperature is simulated from 278-316 K}
+  \includegraphics[width=0.6\linewidth]{msalt_prod.PNG}
+  \caption{Salt concentration in product water, when temperature is simulated from 278-316 K}
   \label{fig:msaltp}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.7\linewidth]{msalt_rej.PNG}
-  \caption{Salt concentration reject water, when temperature is simulated from 278-316 K}
+  \includegraphics[width=0.6\linewidth]{msalt_rej.PNG}
+  \caption{Salt concentration in reject water, when temperature is simulated from 278-316 K}
   \label{fig:msaltr}
 \end{figure}
 \newpage
 \newpage
 
 \subsection{Flow}
-Figure \ref{fig:qf} - \ref{fig:qrej} shows the flow in the three nodes; feed, product and reject. The mass balance equation in \ref{sec:soldiff} gives negative sign on reject and product side. The feed water flow increases negligible from 8.441-8.444 l/min. Product/permeate water flow increases from (-) 0.62-1.42 l/min. Reject water flow decreases from (-) 7.82-7.2 l/min. \\
+Figure \ref{fig:qf} - \ref{fig:qrej} show the flow in the three nodes; feed, product and reject. The mass balance equation in \ref{sec:soldiff} gives negative sign on reject and product side. The feed water flow increases negligible from 8.441-8.444 l/min. Product/permeate water flow increases from (-) 0.62-1.42 l/min. Reject water flow decreases from (-) 7.82-7.2 l/min. \\
 \\
-The plots show expected behaviour of the flow in the system. The membrane pore size is increasing with temperature and the permeate flow is increasing with temperature rising.
-\begin{figure}[h]
+The plots show expected behaviour of the flow in the system. The membrane pore size is increasing with temperature and the permeate flow is increasing with rising temperature.
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.7\linewidth]{q_feed.PNG}
+  \includegraphics[width=0.6\linewidth]{q_feed.PNG}
   \caption{Flow feed side, when temperature is simulated from 278-316 K}
   \label{fig:qf}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.7\linewidth]{q_prod.PNG}
+  \includegraphics[width=0.6\linewidth]{q_prod.PNG}
   \caption{Flow product side, when temperature is simulated from 278-316 K}
   \label{fig:qp}
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.7\linewidth]{q_rej.PNG}
+  \includegraphics[width=0.6\linewidth]{q_rej.PNG}
   \caption{Flow reject side, when temperature is simulated from 278-316 K}
   \label{fig:qrej}
 \end{figure}
 \newpage
 
 \subsection{Pressure}
-Figure \ref{fig:deltap} shows pressure difference from feed side to product side. The pressure decreases from (-) 11.5-7.7 bar when temperature changes from 278-316 K which is expected when temperature is rising. This is due to the temperature dependency of the membrane. When temperature is rising, the membrane pore size are increasing and let more water flow through the membrane which contributes with the lower pressure. \\
+Figure \ref{fig:deltap} shows pressure difference from feed side to product side. The pressure decreases from (-) 11.5-7.7 bar when temperature changes from 278-316 K which is expected when temperature is rising. This is due to the temperature dependency of the membrane. When temperature is rising, the membrane pore size is increasing and let more water flow through the membrane which contributes with the lower pressure. \\
 \\
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.7\linewidth]{deltap.PNG}
   \caption{Pressure drop feed side to product side, when temperature is simulated from 278-316 K}
@@ -102,7 +100,7 @@ Figure \ref{fig:deltap} shows pressure difference from feed side to product side
 \subsection{Conductivity}
 Figure \ref{fig:conden} displays the conductivity in feed, product and reject side. The conductivity in all nodes increases during the simulation. \\
 \\
-\begin{figure}[h]
+\begin{figure}[H]
   \label{fig:conden}
   \includegraphics[width=1.1\linewidth]{cond.PNG}
   \caption{Conductivity in feed, reject and product side, when temperature is simulated from 278-316 K}
@@ -111,66 +109,83 @@ Figure \ref{fig:conden} displays the conductivity in feed, product and reject si
 
 
 \section{Flowchart investigation}
-By changing the flow path in the test setup both the one pump system and two pump system could be investigated and their performance could be compared. Both Systems were considered fulfilling most of the requirements, section \ref{framing}, for an updated version. \\
+By changing the flow path in the test setup both the one pump system and two pump system could be investigated and their performance could be compared. Both systems were considered fulfilling most of the requirements, section \ref{framing}, for an updated version. \\
 \\
-One pump system, seen in figure \ref{fig:FlowCInves1}. The one pump system was designed to use both a tank and the recirculation loop as a water source and to create pressure by generating a large flow over the membrane and recirculation restrictor with the pump implemented. The pump creates the flow, and together with the needle valve in the recirculation path the pressure over the membrane.  \\
+The one pump system, seen in figure \ref{fig:FlowCInves1}, was designed to use both a tank and the recirculation loop as a water source and to create pressure by generating a large flow over the membrane and recirculation restrictor with the pump implemented. The pump creates the flow, and together with the needle valve in the recirculation path the pressure over the membrane.  \\
 \\
-Two pump system, figure \ref{fig:Sys2}. In the two pump system the water path was modified so that the feed pump only used a tank as a source and pressurised the entire recirculation loop. The recirculation pump was installed instead of the needle valve used in the recirculation path. The pump is used to pressurise water within the recirculation loop, control the flow rate in the recirculation loop. \\
+In the two pump system, seen in figure \ref{fig:Sys2}, the water path was modified so that the feed pump only used a tank as a source and pressurised the entire recirculation loop. The recirculation pump was installed instead of the needle valve used in the recirculation path. The pump was used to create the necessary flow within the recirculation loop.\\
 \\
-Two ideas of the two pump system were considered and the system with one pump in recirculation path was chosen. The big withdrawal with the implementation of a pump on permeate side, discussed in \ref{sec:Flowchart} is considered a high risk implementation and might put patients to high risks. System 1 was therefore precluded, and System 2 with one pump on feed side and one in recirculation loop were chosen.\\
+Two ideas of the two pump system were considered and the system with one pump in recirculation path was chosen. The big disadvantage with the implementation of a pump on the permeate side was that it might contaminate the permeate stream. Therefore, System 1 was precluded and System 2 with one pump on the feed side and one in the recirculation loop was chosen.\\
 \\
 An overview of the systems compared in this report can be seen below.\\
 \begin{figure}[h]
 \centering
 \begin{minipage}{.5\textwidth}
     \centering
-    \includegraphics[width=0.8\textwidth]{Sys1}
-    \caption{One pump system, as the current setup used in the Water Device today}
+    \includegraphics[width=1\textwidth]{Sys1}
+    \caption{One pump system, as the current setup used in the water device today}
     \label{fig:System1}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=.8\linewidth]{Sys2}
-  \caption{Two pump system, with one pump on feed side and one pump in recirculation loop}
+  \includegraphics[width=1\linewidth]{Sys2}
+  \caption{Two pump system, with one pump on feed side and one pump in the recirculation loop}
   \label{fig:System2}
 \end{minipage}
 \end{figure}
 
 \newpage
 
-\section{Mapping}
+\section{Flow monitoring using the pumps}
 The mapping of the pumps RPM and flow rate can be seen in \ref{fig:RPM} and \ref{fig:Flowrate}.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{RPM.png}
+    \includegraphics[width=0.5\textwidth]{RPM.png}
     \caption{RPM of the Pumps at different control signals/duty cycles}
     \label{fig:RPM}
 \end{figure}
-The RPM was measured by receiving input from hall sensors in the pump. The flow rate was measured by investigations of different RPM of the pump, different pressure values of the outlet and scaling of the amount of water delivered by the pumps. Plots, and functions of the flow rate due to the RPM of the pumps were implemented in the control workspace in Simulink.  
+The RPM was measured by the hall sensor in the pump. The flow rate was calculated by investigating the flow at different RPMs and outlet pressures. From the gathered data it was possible to calculate the flow at any given RPM in real-time. This could then be used by the simulink program to measure the flow in the system at any given time.  
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.7\textwidth]{Flow.png}
+    \includegraphics[width=0.5\textwidth]{Flow.png}
     \caption{Flow rate at different control signals/duty cycles}
     \label{fig:Flowrate}
 \end{figure}
 
 \newpage
+\section{Building the test rig}
+A test rig was built to be able to investigate the performance of both the one pump system and the two pump system. Initially, the one pump system was implemented and once all the testing on that system had been completed the flow path was changed according to \ref{fig:Sys2}.\\
+\\
+The biggest challenge when building the rig was the high pressure on the feed side of the membrane. It was difficult to find components that would be able to function up to 15 bar and the solution was to modify sensors used in old prototype machines. A sensor block that was able to measure temperature, conductivity and pressure at high pressure was built and can be seen in figure \ref{fig:Rig1} (the rectangular blocks in the feed, reject and permeate stream). The hall sensors in the pumps were used to measure the flow in the pressurized parts of the system and a standard flow sensor was used to measure the permeate flow. A motorized valve was used as a drain valve, this valve can be seen in figure \ref{fig:Rig1} (bottom right)\\
+\\
+The full system setup can be seen in figure \ref{fig:Rig2}. The computer to the left displays the control GUI and the simulink program. The heating bath was located in front of the rig. The display to the right was connected to the real time target computer and display important system information in real time.\\
+\\
+Safety systems were implemented to immediately shut down the rig if the pressure reached above 12 bar. This system was very useful not to accidentally destroy the system. The back side of the rig was also covered in plastic sheets not to allow a water leakage to reach the power supplies.\\
+\\
 
-\section{Implementation Test Rig}
-\subsection{Connections}
-In Figure (\ref{fig:PressConn}-\ref{fig:PumpConn}) all connections in the test rig is displayed. The whole rig can be seen in \ref{fig:Rig1} and \ref{fig:Rig2}
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{Rig1}
-    \caption{The rig built at Baxter Lund AB, with RO-membrane, pumps, pipes, flowmeter, measurement sensors and valves}
+    \caption{The rig built at Baxter Lund AB, with RO-membrane, pumps, pipes, flowmeter, measurement sensors and valves.}
     \label{fig:Rig1}
 \end{figure}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{Rig2}
-    \caption{The full setup built at Baxter Lund AB, with Simulink implementation, GUI, display and water bath}
+    \caption{The full setup built at Baxter Lund AB, with Simulink implementation, GUI, display and water bath.}
     \label{fig:Rig2}
 \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{back}
+    \caption{Back side of the rig, top shelf: Speedgoat, power supplies and electronics to measure the sensors and control the motors and drain valve. Bottom shelf: power supplies connected to the motors.}
+    \label{fig:back}
+\end{figure}
+
+\subsection{Connections}
+The electrical connections in the rig was done according to \ref{fig:PressConn} - \ref{fig:PumpConn}. Figure \ref{fig:display} and \ref{fig:gui} show the GUI and the real-time data display screen from the rig.  
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{PressConn}
@@ -197,14 +212,14 @@ In Figure (\ref{fig:PressConn}-\ref{fig:PumpConn}) all connections in the test r
 \end{figure}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{Display}
-    \caption{The Display with all key values, read from sensors in the rig, and calculated}
+    \includegraphics[width=0.9\textwidth]{Display}
+    \caption{The Display showing rig data in real-time.}
     \label{fig:display}
 \end{figure}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\textwidth]{GUI}
-    \caption{The GUI implemented in Simulink and used to control the rig}
+    \includegraphics[width=0.9\textwidth]{GUI}
+    \caption{The GUI implemented in Simulink to control the rig.}
     \label{fig:gui}
 \end{figure}
 
@@ -227,9 +242,9 @@ The tests were conducted by changing the temperature, recirculation conductivity
 Data collected:
 
 \begin{itemize}
-\item Pressure(bar): feed, reject and permeate
-\item Flow(ml/min): feed, reject, permeate and drain
-\item Conductivity(\SI{}{\micro\siemens}/cm): inlet, feed, reject and permeate
+\item Pressure (bar): feed, reject and permeate
+\item Flow (ml/min): feed, reject, permeate and drain
+\item Conductivity (\SI{}{\micro\siemens}/cm): inlet, feed, reject and permeate
 \item Temperature ($^\circ$C): feed, reject and permeate
 \end{itemize}
 
@@ -308,7 +323,7 @@ By post-proccesing the data collected at the different steady states in test seq
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{Key20}
-    \caption{Graphs containing information on how the system performed during test sequence 1. The values used in the plots were calculated from the steady state measurements and show how the system changed when the feed conductivity, feed pump rpm was increased.}
+    \caption{Graphs containing information on how the system performed during test sequence 1. The values used in the plots were calculated from the steady state measurements and show how the system changed when the feed conductivity, feed pump RPM was increased.}
     \label{fig:K20}
 \end{figure}
 
@@ -328,12 +343,12 @@ The second test was carried out by setting the heater bath to 30 $^{\circ}$C and
 \newpage
 
 
-The data from the test was post processed in Matlab in exactly the same way as the previous test. The results are displalayed in figure \ref{fig:K30}. 
+The data from the test was post processed in Matlab in exactly the same way as the previous test. The results are displayed in figure \ref{fig:K30}. 
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{Key30}
-    \caption{Graphs containing information on how the system performed during test sequence 2. The values used in the plots were calculated from the steady state measurements and show how the system changed when the feed conductivity, feed pump rpm was increased.}
+    \caption{Graphs containing information on how the system performed during test sequence 2. The values used in the plots were calculated from the steady state measurements and show how the system changed when the feed conductivity, feed pump RPM was increased.}
     \label{fig:K30}
 \end{figure}
 
@@ -352,18 +367,18 @@ Finally the heating bath was set to 40 $^{\circ}$C and the test sequence was per
 
 \newpage
 
-Post processing in matlab generated the following data from the steady states.
+Post processing in Matlab generated the following data from the steady states.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{Key40}
-    \caption{Graphs containing information on how the system performed during test sequence 3. The values used in the plots were calculated from the steady state measurements and show how the system changed when the feed conductivity, feed pump rpm was increased.}
+    \caption{Graphs containing information on how the system performed during test sequence 3. The values used in the plots were calculated from the steady state measurements and show how the system changed when the feed conductivity, feed pump RPM was increased.}
     \label{fig:K40}
 \end{figure}
 
 \newpage
 
-In order to understand how the current system performed in different working conditions all plots from the post processing in Matlab were put togeheter. By doing this, it was possible to visuallize the effect of temperature on the system parameters. The following plots explain in more detail how the system parameters changed when the system temperature, feed conductivity and feed pressure incresed.  
+In order to understand how the current system performed in different working conditions all plots from the post processing in Matlab were put togeheter. By doing this, it was possible to visualize the effect of temperature on the system parameters. The following plots explain in more detail how the system parameters changed when the system temperature, feed conductivity and feed pressure incresed.  
 
 \subsection{Net driving pressure}
 
@@ -473,7 +488,7 @@ The test concluded that the initial theory that increased circulation flow would
 \\
 \newpage
 \subsubsection{Increased feed pressure}
-The next test was set up to investigate the effect of an increased feed pressure. During the test all parameters were kept constant except the rpm of the feed pump. An overview of the test can be seen in figure \ref{fig:FeedPumpIncrease40} and the key parameters calculated after the test can be seen in figure \ref{fig:FeedPumpIncrease40Key}.\\
+The next test was set up to investigate the effect of an increased feed pressure. During the test all parameters were kept constant except the RPM of the feed pump. An overview of the test can be seen in figure \ref{fig:FeedPumpIncrease40} and the key parameters calculated after the test can be seen in figure \ref{fig:FeedPumpIncrease40Key}.\\
 \\
 \begin{figure}[H]
     \centering
@@ -521,7 +536,7 @@ By plotting when it was possible to maintain $\sim$30 \SI{}{\micro\siemens}/cm a
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{FinalResult_1}
-    \caption{The opertional area of the membrane, blue dots represents when it was possible to generate a permeate conductivity of $\sim$30 \SI{}{\micro\siemens}/cm.}
+    \caption{The operational area of the membrane, blue dots represents when it was possible to generate a permeate conductivity of $\sim$30 \SI{}{\micro\siemens}/cm.}
     \label{fig:FinalResult_1}
 \end{figure}
 

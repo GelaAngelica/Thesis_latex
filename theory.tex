@@ -2,7 +2,7 @@
 
 \section{Semi-permeable membrane}
 \label{sec:membrane}
-A membrane is defined as a barrier between two homogeneous phases. The process is a continuous steady-state operation consisting of three streams: feed, permeate and reject. Main concern in the process boundary is the semipermeable barrier that selectively allows the passage of some components but not others. \cite{Singh}
+A membrane is defined as a barrier between two homogeneous phases. The process is a continuous steady-state operation consisting of three streams: feed, permeate and reject. The main component in the process boundary is the semipermeable barrier that selectively allows the passage of some components but not others. \cite{2}
 
 \section{Osmosis} 
 \label{sec:osmosis}
@@ -12,7 +12,7 @@ Osmosis is a naturally occurring phenomenon and one of the most important proces
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{Osmosis}
-    \caption{Osmosis}
+    \caption{Osmosis (https://puretecwater.com/reverse-osmosis/what-is-reverse-osmosis)}
     \label{fig:osmosis}
 \end{figure}
 
@@ -20,11 +20,11 @@ Osmosis is a naturally occurring phenomenon and one of the most important proces
 \label{RO}
 The reverse osmosis (RO) process is the reverse process of osmosis. By generating a pressure on the high concentration side it is possible to overcome the osmotic pressure, created by the difference in contaminant concentration. When pressure is applied to a semipermeable membrane, the water molecules are forced through the semipermeable membrane and the contaminants are not allowed through. The amount of pressure required depends on difference in salt concentration over the membrane. In order to achive reverse osmosis, the pressure applied must be greater than the osmosis pressure. The membrane employs cross filtration rather than standard filtration. With cross filtration, the solution leaves the RO-unit in two streams. One stream pass through the membrane and is called permeate, this is the filtered purified solution. The other stream contains the contaminants that did not pass through the membrane and is called reject or brine. This can be seen in figure \ref{fig:ROsystem}. \\
 \\
-The contaminants build up on the membrane surface and it is of great importance to try to sweep them away to maintain a clean surface. If the contaminants build up the performance of the membrane will decrease, and cleaning with chemicals or heat might be necessary \cite{Puretech}. The phenomenon of reverse osmosis can be seen in \ref{fig:ReverseOsmosis}. The water on the pressurized side is pushed through the membrane to the permeate side because the applied pressure is greater than the osmotic pressure. The result is a stream of pure water with only small amounts of contaminants. 
+The contaminants build up on the membrane surface and it is of great importance to try to sweep them away to maintain a clean surface. If the contaminants build up the performance of the membrane will decrease, and cleaning with chemicals or heat might be necessary \cite{3}. The phenomenon of reverse osmosis can be seen in \ref{fig:ReverseOsmosis}. The water on the pressurized side is pushed through the membrane to the permeate side because the applied pressure is greater than the osmotic pressure. The result is a stream of pure water with only small amounts of contaminants. 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.4\textwidth]{ReverseOsmosis}
-    \caption{Reverse Osmosis}
+    \caption{Reverse Osmosis, https://puretecwater.com/reverse-osmosis/what-is-reverse-osmosis}
     \label{fig:ReverseOsmosis}
 \end{figure}
 
@@ -48,7 +48,7 @@ The contaminants build up on the membrane surface and it is of great importance 
 
 
 \subsection{Fouling}
-Fouling occurs when contaminants accumulate on the surface of the membrane. Fouling contributes to a pressure drop that will decrease the performance of the membrane and reduce the permeate flow. Fouling will happen eventually to some extent given the fine pore size of the membrane but a high reject flow and proper pretreatment will extend the operational time between cleaning procedures of the membrane \cite{Puretech}. 
+Fouling occurs when contaminants accumulate on the surface of the membrane. Fouling contributes to a pressure drop that will decrease the performance of the membrane and reduce the permeate flow. Fouling will happen eventually to some extent given the fine pore size of the membrane but a high reject flow and proper pretreatment will extend the operational time between cleaning procedures of the membrane \cite{3}. 
 
 \section{Mathematical modeling of reverse osmosis} 
 \label{sec:soldiff}
@@ -227,16 +227,16 @@ The integral component (I) sums up the error over time. A small error term will 
 \\
 \\
 \paragraph{Derivative component (D)}
-The derivative component (D) causes the output to decrease if the process variable increases rapidly. The response is proportional to the rate of change of the process variable. Increasing the derivative time parameter will cause the control system to react more strongly to changes in the error term and will increase the overall control system response. \cite{PID}
+The derivative component (D) causes the output to decrease if the process variable increases rapidly. The response is proportional to the rate of change of the process variable. Increasing the derivative time parameter will cause the control system to react more strongly to changes in the error term and will increase the overall control system response. \cite{4}
 \\
 \\
 \subsection{Windup and methods to avoid it}
 Windup occurs when the integrating component increases and saturates the control signal. Below, two different ways of implementing anti-windup, conditional integration and Back-calculating, to avoid wind-up is presented.\\
 \\
 \paragraph{Conditional Integration}
-Conditional Integration is an anti-windup method that stops the integration process when the output has reached a saturation limit. The method ensures that while the controller is experiencing saturation there is no further increase in the value of the output. When or if the the error reduces below certain level, making the output come out of saturation level, the integrator start again \cite{clamping}.
+Conditional Integration is an anti-windup method that stops the integration process when the output has reached a saturation limit. The method ensures that while the controller is experiencing saturation there is no further increase in the value of the output. When or if the the error reduces below certain level, making the output come out of saturation level, the integrator start again \cite{5}.
 \paragraph{Back-calculating}
-Back-calculating is a method that uses a PID controller on parallell form with a back-calculation factor calculated from a model of the actuator model. The back-calculating method uses one parameter to calculate if the output signal has saturated and limits the integrating part until saturation is no longer experienced. \cite{clamping}. \\
+Back-calculating is a method that uses a PID controller on parallell form with a back-calculation factor calculated from a model of the actuator model. The back-calculating method uses one parameter to calculate if the output signal has saturated and limits the integrating part until saturation is no longer experienced. \cite{5}. \\
 \\
 \subsection{Tuning}
 The process of setting the optimal gains for the P, I and D component is called tuning. The components shall be designed in order to get an ideal response from the system. There are many concepts on how to tune a PID-controller. Some are presented below.\\
@@ -265,7 +265,7 @@ where $ T_{cl} $ is the time constant of the closed loop, T is the time constant
 The lambda method can be used with cancellation of a system pole for stable processes and without cancellation of system poles for stable or unstable processes. The lambda method requires only one tuning parameter, $ T_{cl} $ that is the desired closed loop constant. The choice of $ T_{cl} $ is a key decision in order to get a well performed system. $ T_{cl} $ can be choosen to any value, but in practice, an arbitrary choice can lead to poor performance or even instability, since the simple process models are only valid in certain frequency regions. Therefore the closed loop constant shall be related to the process dynamics, e.g. time constant (T) and time delay (L). To obtain a fast response with good rejection of disturbances it is desirable ta have a small value of $ T_{cl} $. A large value of $ T_{cl} $  gives a system that is more insensitive to parameter variations. \\
 \\
 If there is limited knowledge about the system dynamics it would be appropriate to use a relatively high value of $ T_{cl}  =T\lambda $ , where $\lambda$ is the adjustable parameter. If the system is considered having a little deadtime, a relatively small $ T_{cl} $ is appropriate. The $ T_{cl} $ can be determined by $ L\lambda $ in integrating processes. 
-\cite{lambda}
+\cite{6}
 
 
 
