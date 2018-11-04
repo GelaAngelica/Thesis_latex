@@ -5,7 +5,7 @@ A physical model of the membrane was made and the given results can be seen belo
 \\
 The model consists of the pump, pipes, valves and a tank. The water in the tank can be set to contain any salt concentration to be able to simulate different conductivity values. The speed of the pumps can be changed to change the flow and pressure characteristic over the membrane in the model. \\
 \\
-All plots in this section show expected behaviour according to the theory about membrane behaviour when the temperature is rising. Flow and conductivity on permeate/product side are increasing which is desirable to control in the system, and to be kept at limited values in order to have the water device to handle these differences in working conditions. The results of the simulations are considered to be realistic accrding to the theory of the membrane. More details of the parameters in the model can be  seen in subsections below.\\
+All plots in this section show expected behaviour according to the theory about membrane behaviour when the temperature is rising. Flow and conductivity on permeate/product side are increasing which is desirable to control in the system, and to be kept at limited values in order to have the water device to handle these differences in working conditions. The results of the simulations are considered to be realistic according to the theory of the membrane. More details of the parameters in the model can be  seen in subsections below.\\
 \\
 \begin{figure}[h]
 \label{fig:simscape}
@@ -36,7 +36,7 @@ In figure \ref{fig:temp} the simulated temperature, 278-316 K is shown. Plots \r
 
 \subsection{Salt concentration}
 In figure \ref{fig:msaltf} the salt concentration in kg/s on the feed side of the membrane is shown. The salt concentration increases with increasing temperature. In figure \ref{fig:msaltp} the salt concentration in the product water is shown. Due to the mass balance equation in \ref{sec:soldiff} the sign is negative, and the concentration increases with temperature. Figure \ref{fig:msaltr} shows the salt concentration on the reject side. It increases a little with temperature (negative sign due to the mass balance equations).\\
-The salt concentration in the feed water increases from  0.8 kg/s to 0.96 kg/s. The product water concentration increases from (-) 0.2 to 1.8 kg/s. The reject salt concentration increases from (-) 0.8 to 0.96 kg/s.\\
+The salt concentration in the feed water increases from 0.8 kg/s to 0.96 kg/s. The product water concentration increases from 0.2 to 1.8 kg/s. The reject salt concentration increases from 0.8 to 0.96 kg/s.\\
 \\
 The salt concentration characteristics is in line with the expected values of the system for the simulations and is considered to be realistic for the model. 
 \begin{figure}[H]
@@ -182,7 +182,7 @@ Safety systems were implemented to immediately shut down the rig if the pressure
     \caption{Back side of the rig, top shelf: Speedgoat, power supplies and electronics to measure the sensors and control the motors and drain valve. Bottom shelf: power supplies connected to the motors.}
     \label{fig:back}
 \end{figure}
-
+\newpage
 \subsection{Connections}
 The electrical connections in the rig was done according to \ref{fig:PressConn} - \ref{fig:PumpConn}. Figure \ref{fig:display} and \ref{fig:gui} show the GUI and the real-time data display screen from the rig.  
 

@@ -2,7 +2,7 @@
 \section{Simulations}
 When performing the simulations in Simscape the main objective was to isolate the characteristics of the membrane functionally. The temperature dependencies in flow and pressure were expected to be implemented in the model. In order to receive good results, equations from DOW, the manufacturer of the membrane, were used. The results from the simulations showed that the membrane behaviour meets the constraints from theory. One important parameter is the temperature correction factor, plotted in figure \ref{fig:tcf}. It is used to compensate for the differences in temperature for the membrane performance, both in flow, pressure and conductivity and give the model some realistic behaviour in different temperatures. \\
 \\
-The simulations in Simscape showed significant results on the membrane behaviour. The flow characteristics over the membrane, due to changes in temperature, meets the expectations from the theory. Pressure characteristics, seen in figure \ref{fig:deltap} is a bit high, which probably is due to the pump and pipes simulated in the model. \\
+The simulations in Simscape showed realistic results on the membrane behaviour, the simulations could be used to determine how the real system would behave but more iterative work would be required to get more precise numerical values. The flow characteristics over the membrane, due to changes in temperature, meets the expectations from the theory. Pressure characteristics, seen in figure \ref{fig:deltap} is a bit high, which probably is due to the pump and pipes simulated in the model. \\
 \\
 
 
@@ -34,7 +34,7 @@ By changing the flow path and adding another pump the feed pump can pressurize t
 
 The PID parameters for the controllers could be changed at runtime in the simulink real time GUI and the PID parameters that were used was found by trial and error. We found that the recirculation, and permeate flow controller could be fast without causing problems. The drain valve controller on the other hand needed to be very slow to not cause oscillations. \\
 \\
-No effort was made to try to find the best possbile PID parameters for the control loops. Since the pumps or the drain valve most likely would be changed if there were any further development on the two pump system we choose not to spend time trying to make the system as fast and stable as possible and instead focus on the algorithm. \\
+Little effort was made to try to find the best possbile PID parameters for the control loops. Since the pumps or the drain valve most likely would be changed if there were any further development on the two pump system we choose not to spend time trying to make the system as fast and stable as possible and instead focus on the algorithm. \\
 \\
 \section{Control System Design}
 

@@ -116,6 +116,9 @@ In order to model the osmotic pressure the van't Hoff principle can be used. It 
 where b is a proportionality in van't Hoff's equation b=RT, where R is the gas constant and T is the absolute temperature om the membrane system. 
 
 \subsection{Equations from DOW}
+
+To be able to mathematically model the membrane behavior a number of equations were used from the DOW FilmTec technical manual. These equations can be seen on the next page.  
+
 \label{sec:doweq}
 %\newcommand{\mathleft}{\@fleqntrue\@mathmargin0pt}
 \mathleft
@@ -144,8 +147,8 @@ Q_{p}=A_{i}\pi_{i} S_{E}(TCF)(FF)(P_{fi}-\frac{\Delta P_{fcj}}{2}-P_{pi}-\pi+\pi
 \label{eq:TCF}
 TCF =
 \begin{cases}
-e^{2640(\frac{1}{298}- \frac{1}{273+T})} , T\geq25 \\
-e^{3020(\frac{1}{298}- \frac{1}{273+T})} , T\leq25
+e^{(2640(\frac{1}{298}- \frac{1}{273+T}))} , T\geq25 \\
+e^{(3020(\frac{1}{298}- \frac{1}{273+T}))} , T\leq25
 \end{cases}
 \end{equation}
 
@@ -175,7 +178,7 @@ A(\pi) =
 \end{equation}
 
 \section{Control theory}
-Control theory deals with the behaviour of dynamical systems. The inputs and outputs may vary in numbers, and the reference signal, output is controlled by manipulating the input signal to obtain the desired output of the system. The characteristics of a system determines which control algorithms that are suitable. In order to design a controller that is capable of regulating the system parameters such as speed, linearity/non-linearity, complexity and robustness needs to be analysed before a specific method is chosen. Below, some key words and different types of control principles are presented. \\
+Control theory deals with the behaviour of dynamical systems. The output of a system is controlled by manipulating the input signal to obtain the desired output of the system. The system investigated in this thesis is a multiple input and output system which means that it has several inputs and outputs. The characteristics of a system determines which control algorithms that are suitable. In order to design a controller that is capable of regulating the system parameters such as speed, linearity/non-linearity, complexity and robustness needs to be analysed before a specific method is chosen. Below, some key words and different types of control principles are presented. \\
 \\
 
 

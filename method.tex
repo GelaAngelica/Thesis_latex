@@ -15,11 +15,10 @@ The data gathered from the tests could then be used to design an optimal control
     \includegraphics[width=0.8\textwidth]{Metod}
     \caption{Overview of method}
     \label{fig:metod}
-\end{figure}\newpage
+\end{figure}
 
 
-
-
+\clearpage
 \section{Modeling}
 The Simscape software tool described in section Appendix A is used to do a physical system model in order to model the characteristics of the membrane. The isolated system with pump, pipes, valves and water supply (tank) is implemented. The matematical equations used in the simulation can be seen in chapter \ref{sec:doweq}. The temperature correction factor, $TCF$ is implemented with equation \ref{eq:TCF} to simulate the temperature dependency of the membrane. The osmotic pressure, $P_{osm}$ is implemented in the model by equation \ref{eq:feedOsmP}. The polarization factor, $P_{f}$ that describes the polarization along the membrane surface is implemented with equation \ref{eq:polfac}. 
 \\
@@ -30,9 +29,9 @@ Dimensions on valves and pipes are implemented as the dimensions in the water de
 \label{Flowchart}
 Today, a system containing one pump is used by Baxter. The pump is positioned at the feed side of the membrane. The pump creates a pressure to overcome the osmotic pressure and creates a flow from feed to permeate side. The system can be seen in figure \ref{fig:System11}. The pump is used at two different set points on speed depending of the water quality (conductivity). There are no control implemented to adjust the speed (besides these two set points) of the pump in order to create different pressure and flow characteristics over the membrane to increase performance due to these different conditions. The valve in the recirculation path is adjusted when installing the water device at the clients and is not adjustable after that, other than by a service technician.\\
 \\
-\begin{figure}[h]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{Sys1}
+    \includegraphics[width=0.7\textwidth]{Sys1}
     \caption{One pump system}
     \label{fig:System11}
 \end{figure}
@@ -48,8 +47,8 @@ To be able to investigate the performance and the feasibility of replacing the o
 The expected results of an optimization is that: the permeate conductivity is minimized, fouling on the membrane surface is minimized, the temperature dependencies is taken care of, waste water is minimized and the energy efficiency of the system is increased. In this thesis the investigations are limited to:\\
 \\
 \begin{enumerate}
-\item Permeate conductivity is kept under 30 \SI{}{\micro\siemens}
-\item The temperature dependencies are handled with control asystem
+\item Permeate conductivity is kept under 30 \SI{}{\micro\siemens}/cm
+\item The temperature dependencies are handled with control system
 \item Waste water is minimized
 \item Energy efficiency is improved compared to current one pump solution
 \end{enumerate}
@@ -74,13 +73,13 @@ The second system considered has one pump on the feed side and one pump in the r
     \caption{System 2}
     \label{fig:Sys2}
 \end{figure}
-Both system 1 and system 2 enables the ability to control pressure and recirculation flow independently.However, one big disadvantage with system 1 is that one of the pumps is positioned on the  permeate side and this could potentially contaminate the permeate. System 1 was therefore precluded.
+Both system 1 and system 2 enables the ability to control pressure and recirculation flow independently. However, one big disadvantage with system 1 is that one of the pumps is positioned on the  permeate side and this could potentially contaminate the permeate. System 1 was therefore precluded.
 
 \section{Flow measurements using the pumps}
-In order to investigate the performance of the membrane, the pressure, flow, conductivity and temperature are measured and logged. The test rig should be able to operate at 15 bar and this made it difficult to find sensors that were able to function at such high pressure. The solution was to build our own sensor blocks and to use the feedback from the hall sensors in the pumps to measure the flow. \\
+In order to investigate the performance of the membrane the pressure, flow, conductivity and temperature is measured and logged. The test rig should be able to operate at 15 bar in the recirculation loop and this made it difficult to find flow sensors that were able to function at such high pressure and not cause a significant pressure drop. The solution was to build our own sensor blocks to measure temperature, conductivity and pressure and to use the feedback from the hall sensors in the pumps to measure the flow. \\
 \\
-Due to lack of instruments that could measure the flow under the high pressure some mapping of the flow from the pumps was made. The flow stream through the pumps were measured at different RPMs and with different pressure resistance on the outlet. The flow is depending on the RPM with negligible difference depending on the applied outlet pressure from the pump. The results from the mapping can be seen in the results chapter. 
-
+Due to lack of instruments that could measure the flow under the high pressure some mapping of the flow from the vane pumps was made. The flow stream through the pumps were measured at different RPMs and with different pressure resistance on the outlet. The flow is depending on the RPM with negligible difference depending on the applied outlet pressure from the pump. The results from the mapping can be seen in the results chapter. 
+\newpage
 \section{Implementation Test Rig}
 \subsection{Current System}
 In order to run all tests a physical rig was built. A first version was built to simulate the system used today, see figure \ref{fig:MeasCurrSys}, with all the measurement sensors implemented. The first version of the rig contained one pump with power supply, one RO-membrane, three needle valves, one drain valve, one heating bath, three measurement sensors, pipes and couplings. The heating bath is used to simulate different inlet water temperatures. The needle valves are used to adjust the pressure in the system to correspond with the real pressure characteristic in the water device. \\
@@ -108,6 +107,7 @@ Different interfaces, as $i^{2}c$, Analog I/O, Digital inputs, PWM were used to 
     \label{fig:MeasSys2}
 \end{figure}
 
+\newpage
 \section{Test setup}
 In order to compare the results from the current one pump system with the proposed two pump system, system 2, similar tests will be carried out on both systems. Measurements of interest are investigated in order to understand the how different working conditions affect the membrane. The same working conditions will be tested on both the current one pump system and on the two pump system. The critical operational areas for the membrane are considered to be high temperatures (over 30 $^\circ$C) and high conductivity (over 2000 \SI{}{\micro\siemens})/cm. The tests are performed in a range from 280-3000 \SI{}{\micro\siemens} and from 20-40 $^\circ$C. \\
 \\
